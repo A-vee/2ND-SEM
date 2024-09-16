@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>10. Write a C++ program to create an abstract class Instrument with abstract methods play() and tune(). Create derived classes for Guitar and Violin that extend the Instrument class and implement the respective methods to play and tune each instrument.
+
+
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        class Instrument {
+        public:
+            virtual void play() const = 0;
+            virtual void tune() const = 0;
+        };
+        
+        class Guitar : public Instrument {
+        public:
+            void play() const override {
+                std::cout << "Playing the Guitar: strum strum strum..." << std::endl;
+            }
+        
+            void tune() const override {
+                std::cout << "Tuning the Guitar: adjusting the strings." << std::endl;
+            }
+        };
+        
+        class Violin : public Instrument {
+        public:
+            void play() const override {
+                std::cout << "Playing the Violin: screech screech screech..." << std::endl;
+            }
+        
+            void tune() const override {
+                std::cout << "Tuning the Violin: tightening/loosening the strings." << std::endl;
+            }
+        };
+        
+        int main() {
+            Guitar guitar;
+            std::cout << "Guitar:" << std::endl;
+            guitar.play();
+            guitar.tune();
+        
+            std::cout << std::endl;
+        
+            Violin violin;
+            std::cout << "Violin:" << std::endl;
+            violin.play();
+            violin.tune();
+        
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        
+<pre>
+    <code>
+    Guitar:
+    Playing the Guitar: strum strum strum...
+    Tuning the Guitar: adjusting the strings.
+    
+    Violin:
+    Playing the Violin: screech screech screech...
+    Tuning the Violin: tightening/loosening the strings.
+    </code>
+    </pre>
+  </body>
+</html>

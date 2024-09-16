@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>40. Write a C++ program to print all unique element in an array</h1>
+    <pre><code>
+        #include&ltiostream&gt;
+        using namespace std;
+        int main() {
+            int ar[10], l;
+            cout &lt&lt "Enter the no. of elements : ";
+            cin &gt&gt l;
+            cout &lt&lt "Enter Array elements : " &lt&lt endl;
+            for(int i = 0; i &lt l; i++) {
+                cin &gt&gt ar[i];
+            }
+            int c = 0, con = 0;
+            cout &lt&lt "Unique elements of given array : ";
+            for(int i = 0; i &lt l; i++) {
+                c = 0;
+                for(int j = 0; j &lt l; j++) {
+                    if(ar[i] == ar[j]) {
+                        c++;
+                    }
+                }
+                if(c == 1) {
+                    cout &lt&lt ar[i] &lt&lt " ";
+                    con = 1;
+                }
+            }
+            if(con == 0) {
+                cout &lt&lt "No element found ";
+            }
+            return 0;
+        }</code></pre>    
+    <h1>Output</h1>
+    <pre><code>
+        Enter the no. of elements : 5
+        Enter Array elements :
+        1 2 3 2 1
+        Unique elements of given array : 3</code></pre>
+  </body>
+</html>

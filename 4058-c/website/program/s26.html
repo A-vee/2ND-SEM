@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>26. Program to find the number of the words in the given text file
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string.h&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            int words = 0;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, str);
+            for (int i = 0; i &lt; str.length(); i++)
+            {
+                for (int j = 0; str[i] != ' ' &amp;&amp; str[i] != '\0'; i++, j++)
+                    continue;
+                if (str[i + 1] != ' ')
+                    words++;
+            }
+            cout &lt;&lt; "Number of words in string : " &lt;&lt; words &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : The quick brown fox jumps over the lazy dog
+            Number of words in string : 9
+            </code>
+            </pre>
+            
+  </body>
+</html>

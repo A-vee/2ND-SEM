@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>26. Write a C++ program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        class Rectangle {
+        private:
+            double length;
+            double width;
+        
+        public:
+            void setLength(double newLength) {
+                length = newLength;
+            }
+        
+            double getLength() const {
+                return length;
+            }
+        
+            void setWidth(double newWidth) {
+                width = newWidth;
+            }
+        
+            double getWidth() const {
+                return width;
+            }
+        };
+        
+        int main() {
+            Rectangle rect;
+        
+            rect.setLength(5.0);
+            rect.setWidth(3.0);
+        
+            std::cout &lt;&lt; "Length: " &lt;&lt; rect.getLength() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Width: " &lt;&lt; rect.getWidth() &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Length: 5
+            Width: 3
+            </code>
+            </pre>
+            
+  </body>
+</html>

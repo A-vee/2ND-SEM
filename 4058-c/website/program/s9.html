@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>9. Program to count number of words in a String?
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string.h&gt;
+        
+        using namespace std;
+        
+        int main() {
+            char str[]="Hello how are you";
+        
+            int count = 1;
+        
+            for (int i = 0; str[i] != '\0'; i++) {
+                if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ) {
+                    count++;
+                }
+            }
+        
+            cout &lt;&lt; "The number of words in the string is: " &lt;&lt; count;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            The number of words in the string is: 4
+            </code>
+            </pre>
+            
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>103. Write a C++ method to check numbers is palindrome number or not
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+             int n;
+             cout&lt;&lt;"Enter the number : ";
+             cin&gt;&gt;n;
+                int temp=n,p=0;
+                while(n&gt;0){
+                  p=p*10+(n%10);
+                  n=n/10;
+                }
+                if (temp==p){
+                  cout&lt;&lt;"Pallindrome";
+                }
+                else{
+                  cout&lt;&lt;"Not a Pallindrome";
+                }
+             return 0;
+          }
+        </code>
+      </pre>
+      
+        <h1>Output</h1>
+        <pre>
+            <code>
+          Enter the number: 12321
+          Palindrome</code>
+          </pre>
+          
+</body>
+</html>

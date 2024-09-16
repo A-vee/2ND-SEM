@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>13. Write a C++ program to create a class called "Inventory" with a collection of products and methods to add and remove products, and to check for low inventory.
+    </h1><pre><code>
+        #include &ltiostream&gt
+        #include &ltvector&gt
+        #include &ltstring&gt
+        
+        class Inventory {
+        private:
+            std::vector&ltstd::string&gt a;
+        
+        public:
+            void b(const std::string&amp product) {
+                a.push_back(product);
+            }
+        
+            void c(const std::string&amp product) {
+                for (auto it = a.begin(); it != a.end(); ++it) {
+                    if (*it == product) {
+                        a.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void d() const {
+                if (a.size() &lt 5) {
+                    std::cout &lt&lt "Low inventory" &lt&lt std::endl;
+                } else {
+                    std::cout &lt&lt "Sufficient inventory" &lt&lt std::endl;
+                }
+            }
+        
+            void disp() const {
+                std::cout &lt&lt "Products in inventory: ";
+                for (const auto&amp product : a) {
+                    std::cout &lt&lt product &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            Inventory inv;
+        
+            inv.b("Product1");
+            inv.b("Product2");
+            inv.b("Product3");
+        
+            inv.disp();
+        
+            inv.c("Product2");
+        
+            inv.disp();
+        
+            inv.d();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Products in inventory: Product1, Product2, Product3,
+            Products in inventory: Product1, Product3,
+            Low inventory</code></pre>
+  </body>
+</html>

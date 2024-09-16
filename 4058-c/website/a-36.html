@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>36. Write a C++ program to find the number of even and odd integers in a given array of integers</h1>
+    pre><code>
+        #include&ltiostream&gt;
+        using namespace std;
+        int main() {
+            int ar[] = {1, 2, 3, 6, 8, 9, 7, 11};
+            int e = 0, o = 0;
+            cout &lt&lt "Array: " &lt&lt endl;
+            int l = sizeof(ar) / sizeof(int);
+            for(int i = 0; i &lt l; i++) {
+                cout &lt&lt ar[i] &lt&lt " ";  
+            }
+            for(int i = 0; i &lt l; i++) {
+                if(ar[i] % 2 == 0) {
+                    e++;
+                } else {
+                    o++;
+                }
+            } 
+            cout &lt&lt endl &lt&lt "No. of even elements in array: " &lt&lt e &lt&lt endl;
+            cout &lt&lt "No. of odd elements in array: " &lt&lt o &lt&lt endl;
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Array: 
+            1 2 3 6 8 9 7 11 
+            No. of even elements in array: 3
+            No. of odd elements in array: 5</code></pre>
+  </body>
+</html>

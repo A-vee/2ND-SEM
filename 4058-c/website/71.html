@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>71. Write a C++ program to get a substring of a given string between two specified positions</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        using namespace std;
+        
+        int main() {
+            string st, subst = "";
+            int strt, end;
+            cout &lt;&lt; "Enter the string  : ";
+            cin &gt;&gt; st;
+            cout &lt;&lt; "Enter the starting and ending position for substring : ";
+            cin &gt;&gt; strt &gt;&gt; end;
+            
+            if (strt &gt;= 0 && end &lt;= st.length()) {
+                for (int i = strt - 1; i &lt; end; i++) {
+                    subst += st[i];
+                }
+                cout &lt;&lt; "Substring : " &lt;&lt; subst;
+            } else {
+                cout &lt;&lt; "Invalid Range ";
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter the string: HelloWorld
+        Enter the starting and ending position for substring: 3 7
+        Substring: lloWo
+        </code>
+        </pre>
+</body>
+</html>

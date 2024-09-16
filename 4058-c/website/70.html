@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>70. Write a C++ program to trim a string (remove whitespaces)
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        using namespace std;
+        
+        int main() {
+            string st1 = "Hiii  hlo    hii hlo";
+            cout << "String before trim : " << st1 << endl;
+            int len = st1.length();
+            for (int i = 0; i &lt; len; i++) {
+                if (st1[i] == ' ') {
+                    for (int j = i; j &lt; len; j++) {
+                        st1[j] = st1[j + 1];
+                    }
+                }
+                if (st1[i] == ' ') {
+                    i--;
+                }
+            }
+            cout << "String after trim : " << st1;
+            return 0;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        String before trim : Hiii  hlo    hii hlo
+        String after trim : Hiiihlohiihlo
+        </code>
+        </pre>
+</body>
+</html>

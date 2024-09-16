@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>13. Write a C++ program to create an abstract class Bird with abstract methods fly() and makeSound(). Create derived classes Eagle and Hawk that extend the Bird class and implement the respective methods to describe how each bird flies and makes a sound.  </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        
+        class Bird {
+        public:
+            virtual void fly() const = 0;
+            virtual void makeSound() const = 0;
+        };
+        
+        
+        class Eagle : public Bird {
+        public:
+           
+            void fly() const override {
+                std::cout &lt;&lt; "Eagle soars high in the sky." &lt;&lt; std::endl;
+            }
+        
+          
+            void makeSound() const override {
+                std::cout &lt;&lt; "Eagle makes a piercing screech." &lt;&lt; std::endl;
+            }
+        };
+        
+        
+        class Hawk : public Bird {
+        public:
+          
+            void fly() const override {
+                std::cout &lt;&lt; "Hawk flies swiftly through the air." &lt;&lt; std::endl;
+            }
+        
+         
+            void makeSound() const override {
+                std::cout &lt;&lt; "Hawk emits a high-pitched scream." &lt;&lt; std::endl;
+            }
+        };
+        
+        int main() {
+        
+            Eagle eagle;
+            std::cout &lt;&lt; "Eagle:" &lt;&lt; std::endl;
+            eagle.fly();
+            eagle.makeSound();
+        
+            std::cout &lt;&lt; std::endl;
+        
+        
+            Hawk hawk;
+            std::cout &lt;&lt; "Hawk:" &lt;&lt; std::endl;
+            hawk.fly();
+            hawk.makeSound();
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Eagle:
+            Eagle soars high in the sky.
+            Eagle makes a piercing screech.
+            
+            Hawk:
+            Hawk flies swiftly through the air.
+            Hawk emits a high-pitched scream.
+            </code>
+            </pre>
+  </body>
+</html>

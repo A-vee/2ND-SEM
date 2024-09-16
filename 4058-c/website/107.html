@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>107. Write a C++ program to reverse an integer number</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+              int n,r=0,rem;
+              cout&lt;&lt;"Enter the number : ";
+              cin&gt;&gt;n;
+              while(n!=0){
+                  rem=n%10;
+                  r=r*10+rem;
+                  n/=10;
+              }
+              cout&lt;&lt;"Reverse of integer : "&lt;&lt;r;
+              return 0;
+          }
+        </code>
+      </pre>     
+    <h1>Output</h1>
+    <pre>
+        <code>
+          Enter the number: 12345
+          Reverse of integer: 54321
+        </code>
+      </pre>
+      
+      
+</body>
+</html>

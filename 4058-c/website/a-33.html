@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>33. Write a C++ program to find the duplicate values of an array of integer values</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int check(int a[],int num,int s){
+          for(int i=0;i&lt;s;i++){
+          if (a[i]==num){
+            return 0;
+          }
+          }
+          return 1;
+        }
+        int main(){
+          int ar[10],n,in=0,da[10];
+          cout&lt;&lt;"Enter the no. of elements of array: ";
+          cin&gt;&gt;n;
+          cout&lt;&lt;"Enter the elements of arrays : "; 
+          for(int i=0;i&lt;n;i++){
+            cin&gt;&gt;ar[i];
+          }
+          for(int i=0;i&lt;n;i++){
+            int c=0;
+            for(int j=0;j&lt;n;j++){
+               if(ar[i]==ar[j]){
+               c++;
+               }
+            }
+            if(c&gt;1){
+            if(check(da,ar[i],in)){
+              da[in]=ar[i];
+              in++;
+            }
+            }
+          }
+          if(in==0){
+            cout&lt;&lt;"No duplicate elements found ";
+          }
+          else{
+          cout&lt;&lt;"Duplicate elements of  array : "&lt;&lt;endl;
+          for(int i=0;i&lt;in;i++){
+             cout&lt;&lt;da[i]&lt;&lt;" ";
+          }}
+          return 0;}
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Duplicate elements of array :
+            2 4 
+            </code></pre>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>4. Write a C++ method to find all twin prime numbers less than 100.
+    </h1><pre>
+        <code>
+        #include&ltiostream>
+        using namespace std;
+        
+        void twinp() {
+            int tem = 1, c = 0;
+            for (int i = 2; i &lt 101; i++) {
+                c = 0;
+                for (int j = 2; j &lt i; j++) {
+                    if (i % j == 0) {
+                        c = 1;
+                        break;
+                    }
+                }
+                if (c == 0) {
+                    if ((i - tem) == 2) {
+                        cout &lt&lt tem &lt&lt "," &lt&lt i &lt&lt endl;
+                    }
+                    tem = i;
+                }
+            }
+        }
+        
+        int main() {
+            cout &lt&lt "Twin prime numbers less than 100 : " &lt&lt endl;
+            twinp();
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Twin prime numbers less than 100 : 
+            3,5
+            5,7
+            11,13
+            17,19
+            29,31
+            41,43
+            59,61
+            71,73
+            </code>
+            </pre>            
+  </body>
+</html>

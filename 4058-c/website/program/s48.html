@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>48. Write a C++ method to check whether a string is a valid password.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;cstring&gt;
+        
+        using namespace std;
+        
+        int main() {
+          char password[100];
+          int hasLower = 0, hasUpper = 0, hasDigit = 0, hasSpecial = 0;
+        
+          cout &lt;&lt; "Enter password: ";
+          cin &gt;&gt; password;
+        
+          int minLength = 8; 
+        
+          if (strlen(password) &lt; minLength) {
+            cout &lt;&lt; "Password is too short." &lt;&lt; endl;
+            return 1;
+          }
+        
+          for (int i = 0; password[i] != '\0'; i++) {
+            if (password[i] &gt;= 'a' &amp;&amp; password[i] &lt;= 'z') {
+              hasLower = 1;
+            } else if (password[i] &gt;= 'A' &amp;&amp; password[i] &lt;= 'Z') {
+              hasUpper = 1;
+            } else if (password[i] &gt;= '0' &amp;&amp; password[i] &lt;= '9') {
+              hasDigit = 1;
+            } else if (password[i] == '@' || password[i] == '#' || password[i] == '$' || password[i] == '%' || password[i] == '&') {
+              hasSpecial = 1;
+            }
+          }
+        
+          if (!hasLower || !hasUpper || !hasDigit || !hasSpecial) {
+            cout &lt;&lt; "Password must contain lowercase, uppercase, digit and special character." &lt;&lt; endl;
+            return 1;
+          }
+        
+          cout &lt;&lt; "Password is valid." &lt;&lt; endl;
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter password: Test@123
+            Password is valid.
+            </code>
+            </pre>
+            
+  </body>
+</html>

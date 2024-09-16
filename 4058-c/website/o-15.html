@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>15. Write a C++ program to create a class called "MusicLibrary" with a collection of songs and methods to add and remove songs, and to play a random song.
+    </h1><pre><code>
+        #include &ltiostream&gt
+        #include &ltvector&gt
+        #include &ltstring&gt
+        #include &ltcstdlib&gt
+        #include &ltctime&gt
+        
+        class MusicLibrary {
+        private:
+            std::vector&ltstd::string&gt a;
+        
+        public:
+            void b(const std::string&amp song) {
+                a.push_back(song);
+            }
+        
+            void c(const std::string&amp song) {
+                for (auto it = a.begin(); it != a.end(); ++it) {
+                    if (*it == song) {
+                        a.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void playRandomSong() const {
+                if (a.empty()) {
+                    std::cout &lt&lt "No songs in the library." &lt&lt std::endl;
+                } else {
+                    srand(time(nullptr));
+                    int randomIndex = rand() % a.size();
+                    std::cout &lt&lt "Playing: " &lt&lt a[randomIndex] &lt&lt std::endl;
+                }
+            }
+        
+            void disp() const {
+                std::cout &lt&lt "Songs in library: ";
+                for (const auto&amp song : a) {
+                    std::cout &lt&lt song &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            MusicLibrary musicLibrary;
+        
+            musicLibrary.b("Song1");
+            musicLibrary.b("Song2");
+            musicLibrary.b("Song3");
+        
+            musicLibrary.disp();
+        
+            musicLibrary.playRandomSong();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        pre><code>
+            Songs in library: Song1, Song2, Song3, 
+            Playing: Song2</code></pre>
+  </body>
+</html>

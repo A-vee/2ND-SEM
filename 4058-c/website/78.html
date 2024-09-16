@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>78. Write a C++ program to count total number of lines from a string</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        using namespace std;
+        
+        int main() {
+            string st = "hii hello hii \nThis that there\nthan their that";
+            cout &lt;&lt; "String : " &lt;&lt; endl &lt;&lt; st;
+            int c = 0;
+            for (int i = 0; i &lt; st.length(); i++) { 
+                if (st[i] == '\n') {
+                    c++;
+                }
+            }
+            cout &lt;&lt; endl &lt;&lt; "Total number of lines : " &lt;&lt; c + 1;
+            return 0;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre>
+        <code>
+        String :
+        hii hello hii
+        This that there
+        than their that
+        </code>
+        </pre>
+        
+</body>
+</html>

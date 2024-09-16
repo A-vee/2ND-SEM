@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>6. Program to display the lower triangular matrix
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+              int x, y, i, j, c=0;
+              cout&lt;&lt;"Enter the rows and columns For Matrix: ";
+              cin&gt;&gt;x&gt;&gt;y;
+              if(x==y){
+                  int mata[10][10];
+                  cout&lt;&lt;"Enter the elements of matrix : "&lt;&lt;endl;
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          cin&gt;&gt;mata[i][j];
+                      }
+                  }
+                  cout&lt;&lt;"Lower triangular matrix of the given matrix : "&lt;&lt;endl;
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          if (i==j){
+                              c=1;
+                              cout&lt;&lt;"  "&lt;&lt;mata[i][j];
+                          }
+                          else if (c==0){
+                              cout&lt;&lt;"  "&lt;&lt;mata[i][j];
+                          }
+                          else{
+                              cout&lt;&lt;"  "&lt;&lt;0;
+                          }
+                      }
+                      cout&lt;&lt;endl;
+                      c=0;
+                  }
+              }
+              else{
+                  cout&lt;&lt;"Not a square matrix";
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns For Matrix: 3 3
+              Enter the elements of matrix : 
+              1 2 3
+              4 5 6
+              7 8 9
+              Lower triangular matrix of the given matrix : 
+                1  0  0
+                4  5  0
+                7  8  9
+            </code>
+          </pre>
+  </body>
+</html>

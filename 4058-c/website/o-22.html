@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>22. Create a class showing an example of copy constructor.</h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        class Person {
+        private:
+            std::string name;
+            int age;
+        
+        public:
+            Person(std::string n, int a) : name(n), age(a) {}
+        
+            Person(const Person&amp; other) {
+                name = other.name;
+                age = other.age;
+            }
+        
+            void display() {
+                std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; std::endl;
+            }
+        };
+        
+        int main() {
+            Person person1("Alice", 30);
+            Person person2 = person1;
+            person1.display();
+            std::cout &lt;&lt; std::endl;
+            person2.display();
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Name: Alice
+            Age: 30
+            
+            Name: Alice
+            Age: 30
+            </code>
+            </pre>
+            
+  </body>
+</html>

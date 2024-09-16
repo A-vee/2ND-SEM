@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>9. Write a C++ program to create an abstract class Person with abstract methods eat() and exercise(). Create derived classes Athlete and LazyPerson that extend the Person class and implement the respective methods to describe how each person eats and exercises.
+    </h1><pre>
+    <code>
+    #include &lt;iostream&gt;
+    
+    
+    class Person {
+    public:
+      
+        virtual void eat() const = 0;
+        virtual void exercise() const = 0;
+    };
+    
+    
+    class Athlete : public Person {
+    public:
+     
+        void eat() const override {
+            std::cout &lt;&lt; "Athlete eats a balanced diet to maintain energy levels." &lt;&lt; std::endl;
+        }
+    
+     
+        void exercise() const override {
+            std::cout &lt;&lt; "Athlete engages in rigorous training sessions regularly." &lt;&lt; std::endl;
+        }
+    };
+    
+    
+    class LazyPerson : public Person {
+    public:
+      
+        void eat() const override {
+            std::cout &lt;&lt; "Lazy person eats whatever is convenient, often unhealthy food." &lt;&lt; std::endl;
+        }
+    
+        
+        void exercise() const override {
+            std::cout &lt;&lt; "Lazy person avoids physical activity and prefers sedentary lifestyle." &lt;&lt; std::endl;
+        }
+    };
+    
+    
+    int main() {
+       
+        Athlete athlete;
+        std::cout &lt;&lt; "Athlete:" &lt;&lt; std::endl;
+        athlete.eat();
+        athlete.exercise();
+    
+        std::cout &lt;&lt; std::endl;
+    
+      
+        LazyPerson lazyPerson;
+        std::cout &lt;&lt; "Lazy Person:" &lt;&lt; std::endl;
+        lazyPerson.eat();
+        lazyPerson.exercise();
+    
+        return 0;
+    }
+    </code>
+    </pre>
+        <h1>Output</h1>
+        <pre>
+<code>
+Athlete:
+Athlete eats a balanced diet to maintain energy levels.
+Athlete engages in rigorous training sessions regularly.
+
+Lazy Person:
+Lazy person eats whatever is convenient, often unhealthy food.
+Lazy person avoids physical activity and prefers sedentary lifestyle.
+</code>
+</pre>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>91. Write a C++ program to print out all Armstrong numbers between 1 to 600 using loop
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int i, j, sum, rem;
+            cout &lt;&lt; "Armstrong Number between 1-600 : ";
+            for (i = 1; i &lt;= 600; i++)
+            {
+                if (i &lt; 10)
+                {
+                    cout &lt;&lt; endl &lt;&lt; i;
+                }
+                else
+                {
+                    j = i;
+                    sum = 0;
+                    while (j != 0)
+                    {
+                        rem = j % 10;
+                        sum = sum + (rem * rem * rem);
+                        j = j / 10;
+                    }
+                    if (sum == i)
+                    {
+                        cout &lt;&lt; endl &lt;&lt; i;
+                    }
+                }
+            }
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Armstrong Number between 1-600 :
+            1
+            153
+            370
+            371
+            407
+            </code>
+            </pre>
+            
+</body>
+</html>

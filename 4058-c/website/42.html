@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>42. C++ program to find factorial of any number</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int n;
+            cout&lt;&lt;"Enter Any number to find factorial : "&lt;&lt;endl;
+            cin&gt;&gt;n;
+            int fact=1;
+            for(int i=1;i&lt;=n;i++) {
+                fact=fact*i;
+            }
+            cout&lt;&lt;endl&lt;&lt;"Factorial of "&lt;&lt;n&lt;&lt;" is : "&lt;&lt;fact;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter Any number to find factorial : 
+        6
+        Factorial of 6 is : 720</code></pre>
+</body>
+</html>

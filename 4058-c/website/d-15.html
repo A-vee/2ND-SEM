@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>15. C++ Program to convert Octal to Decimal</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int main(){
+            int d=0,o,p=1,temp;
+            cout&lt;&lt;"Enter the octal number : ";
+            cin&gt;&gt;o;
+            while(o!=0){
+                temp=o%10;
+                d=d+(p*temp);
+                o=o/10;
+                p=p*8;
+            }
+            cout&lt;&lt;"Decimal number : "&lt;&lt;d;
+            return 0;
+        }
+            </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the octal number : 17
+            Decimal number : 15
+            </code></pre>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>113. Create a class entering the command line arguments from the user and show all the arguments as output.</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+      
+          class A {
+          public:
+              void d(int argc, char* argv[]) {
+                  cout &lt;&lt; "Number of arguments: " &lt;&lt; argc &lt;&lt; endl;
+                  cout &lt;&lt; "Arguments:" &lt;&lt; endl;
+                  for (int i = 0; i &lt; argc; ++i) {
+                      cout &lt;&lt; "Argument " &lt;&lt; i &lt;&lt; ": " &lt;&lt; argv[i] &lt;&lt; endl;
+                  }
+              }
+          };
+      
+          int main(int argc, char* argv[]) {
+              A a;
+              a.d(argc, argv);
+              return 0;
+          }
+        </code>
+      </pre>   
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Number of arguments: 1
+              Arguments:
+              Argument 0:
+            </code>
+          </pre>          
+</body>
+</html>

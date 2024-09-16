@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>38. Write a C++ program to segregate all 0s on left side and all 1s on right side of a given array of 0s and 1s</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr[20], n, i;
+            cout &lt;&lt; "Entre number of elements (1-20) : ";
+            cin &gt;&gt; n;
+            for (i = 0; i &lt; n; i++) {
+                cout &lt;&lt; "Enter element " &lt;&lt; i + 1 &lt;&lt; " : ";
+                cin &gt;&gt; arr[i];
+            }
+            int c1 = 0, c0 = 0, j;
+            int ca1[20], ca0[20];
+            for (i = 0; i &lt; n; i++) {
+                if (arr[i] == 1) {
+                    c1++;
+                    for (j = 0; j &lt; c1; j++) {
+                        ca1[i] = arr[i];
+                    }
+                } else if (arr[i] == 0) {
+                    c0++;
+                    for (j = 0; j &lt; c0; j++) {
+                        ca0[i] = arr[i];
+                    }
+                }
+            }
+            cout &lt;&lt; endl;
+            for (i = 0; i &lt; c0; i++) {
+                cout &lt;&lt; "\t" &lt;&lt; ca0[i];
+            }
+            for (i = 0; i &lt; c1; i++) {
+                cout &lt;&lt; "\t" &lt;&lt; ca1[i];
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Entre number of elements (1-20) : 5
+        Enter element 1 : 1
+        Enter element 2 : 0
+        Enter element 3 : 1
+        Enter element 4 : 0
+        Enter element 5 : 1
+        
+                0       0       1       1       1</code>
+        </pre>
+</body>
+</html>

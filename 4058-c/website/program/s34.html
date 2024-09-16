@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>34. Program to replace the spaces of a string with a specific character
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            char ch;
+            string str;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, str);
+            cout &lt;&lt; "Enter the character: ";
+            cin &gt;&gt; ch;
+            for (int i = 0; i &lt; str.length(); i++)
+            {
+                if (str[i] == ' ')
+                    str[i] = ch;
+            }
+            cout &lt;&lt; "Resulting String : " &lt;&lt; str &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Enter the string : Hello World
+            Enter the character: *
+            Resulting String : Hello*World
+            </code>
+            </pre>
+            
+  </body>
+</html>

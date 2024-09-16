@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>105. Write a C++ method to find GCD and LCM of Two Numbers
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+            int a,b,r;
+            cout&lt;&lt;"Enter the number A and B : ";
+            cin&gt;&gt;a&gt;&gt;b;
+            if(a&gt;b){
+                r=b;
+            }
+            else{
+                r=a;
+            }
+            while(r>0){
+                if(a%r==0 && b%r==0){
+                    break;
+                }
+                r--;
+            }
+            cout&lt;&lt;"GCD of "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;" : "&lt;&lt;r&lt;&lt;endl;
+            cout&lt;&lt;"LCM of "&lt;&lt;a&lt;&lt;" and "&lt;&lt;b&lt;&lt;" : "&lt;&lt;(a*b)/r;
+            return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              GCD of 12 and 18 : 6
+              LCM of 12 and 18 : 36
+            </code>
+          </pre>
+          
+    
+</body>
+</html>

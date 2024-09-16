@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>43. Write a C++ Program to Search Key Elements in an Array</h1>
+    <pre><code>
+        #include&ltiostream&gt;
+        using namespace std;
+        int main() {
+            int ar[] = {1, 2, 3, 6, 8, 9, 7, 11};
+            int n;
+            cout &lt&lt "Array : " &lt&lt endl;
+            int l = sizeof(ar) / sizeof(int);
+            for(int i = 0; i &lt l; i++) {
+                cout &lt&lt ar[i] &lt&lt " ";
+            }
+            cout &lt&lt endl &lt&lt "Enter the element you want to check in array : ";
+            cin &gt&gt n;
+            int i;
+            for(i = 0; i &lt l; i++) {
+                if(ar[i] == n) {
+                    cout &lt&lt "Key Element found in array at index " &lt&lt i;
+                    break;
+                }
+            }
+            if(i == l) {
+                cout &lt&lt "Key Element not found in array ";
+            }
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Array :
+            1 2 3 6 8 9 7 11
+            Enter the element you want to check in array : 7
+            Key Element found in array at index 6</code></pre>
+  </body>
+</html>

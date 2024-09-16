@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>5. Write a C++ program to create an abstract class Animal with abstract methods eat() and sleep(). Create derived classes Lion, Tiger, and Deer that extend the Animal class and implement the eat() and sleep() methods differently based on their specific behavior.
+    </h1>
+    <pre>
+        <code>
+          #include &lt;iostream&gt;
+      
+          class Animal {
+          public:
+      
+              virtual void eat() const = 0;
+              virtual void sleep() const = 0;
+          };
+      
+      
+          class Lion : public Animal {
+          public:
+              
+              void eat() const override {
+                  std::cout &lt;&lt; "Lion eats meat." &lt;&lt; std::endl;
+              }
+      
+             
+              void sleep() const override {
+                  std::cout &lt;&lt; "Lion sleeps during the day." &lt;&lt; std::endl;
+              }
+          };
+      
+          class Tiger : public Animal {
+          public:
+           
+              void eat() const override {
+                  std::cout &lt;&lt; "Tiger eats meat and sometimes fish." &lt;&lt; std::endl;
+              }
+      
+              
+              void sleep() const override {
+                  std::cout &lt;&lt; "Tiger sleeps in a sheltered area." &lt;&lt; std::endl;
+              }
+          };
+      
+          class Deer : public Animal {
+          public:
+      
+              void eat() const override {
+                  std::cout &lt;&lt; "Deer eats grass and leaves." &lt;&lt; std::endl;
+              }
+      
+              void sleep() const override {
+                  std::cout &lt;&lt; "Deer sleeps at night and is active during the day." &lt;&lt; std::endl;
+              }
+          };
+      
+      
+          int main() {
+              Lion lion;
+              Tiger tiger;
+              Deer deer;
+      
+              std::cout &lt;&lt; "Lion: ";
+              lion.eat();
+              lion.sleep();
+      
+              std::cout &lt;&lt; "\nTiger: ";
+              tiger.eat();
+              tiger.sleep();
+      
+              std::cout &lt;&lt; "\nDeer: ";
+              deer.eat();
+              deer.sleep();
+      
+              return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Lion: Lion eats meat.
+              Lion sleeps during the day.
+          
+              Tiger: Tiger eats meat and sometimes fish.
+              Tiger sleeps in a sheltered area.
+          
+              Deer: Deer eats grass and leaves.
+              Deer sleeps at night and is active during the day.
+            </code>
+          </pre>          
+  </body>
+</html>

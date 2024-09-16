@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>108. Write a C++ program to round a float number to specified decimals</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;cmath&gt;
+          using namespace std;
+          int main(){
+              int n;
+              float f,r;
+              cout&lt;&lt;"Enter the float value : "; 
+              cin&gt;&gt;f;
+              cout&lt;&lt;"Enter the number of decimal to round up : ";
+              cin&gt;&gt;n;
+              r=round(f);
+              int temp=f,len=0;
+              while(temp!=0){
+                  len++;
+                  temp/=10;
+              }
+              r=(float)r/pow(10,len-n);
+              cout&lt;&lt;"Rounded float value : "&lt;&lt;round(r);
+              return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the float value: 3.14159
+              Enter the number of decimal places to round up: 2
+              Rounded float value: 3.14
+            </code>
+          </pre>
+          
+</body>
+</html>

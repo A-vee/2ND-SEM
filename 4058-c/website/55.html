@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>55. Write a C++ program to input 5 numbers from keyboard and find their sum and average
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n[5], sum = 0;
+            float avg;
+            for (int i = 0; i &lt; 5; i++)
+            {
+                cout &lt;&lt; "Enter number " &lt;&lt; i + 1 &lt;&lt; " : ";
+                cin &gt;&gt; n[i];
+                sum = sum + n[i];
+            }
+            avg = (float)sum / 5;
+            cout &lt;&lt; endl &lt;&lt; "Sum of entered numbers is : " &lt;&lt; sum;
+            cout &lt;&lt; endl &lt;&lt; "Average of entered numbers is : " &lt;&lt; avg;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter number 1 : 10
+        Enter number 2 : 20
+        Enter number 3 : 30
+        Enter number 4 : 40
+        Enter number 5 : 50
+        
+        Sum of entered numbers is : 150
+        Average of entered numbers is : 30
+        </code>
+        </pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>8. Write a C++ program to create a class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.
+    </h1>
+    <pre><code>
+        #include &ltiostream&gt
+        #include &ltstring&gt
+        class TrafficLight {
+        private:
+            std::string color;
+            int duration;
+        
+        public:
+            TrafficLight() : color("red"), duration(10) {}
+        
+            void changeColor(const std::string&amp newColor) {
+                color = newColor;
+            }
+        
+            bool isRed() const {
+                return color == "red";
+            }
+        
+            bool isGreen() const {
+                return color == "green";
+            }
+        };
+        
+        int main() {
+            TrafficLight trafficLight;
+        
+            std::cout &lt&lt "Initial color: " &lt&lt (trafficLight.isRed() ? "red" : "green") &lt&lt std::endl;
+        
+            trafficLight.changeColor("green");
+        
+            std::cout &lt&lt "Updated color: " &lt&lt (trafficLight.isRed() ? "red" : "green") &lt&lt std::endl;
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Initial color: red
+            Updated color: green</code></pre>
+  </body>
+</html>

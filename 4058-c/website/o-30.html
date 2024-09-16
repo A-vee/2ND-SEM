@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>30. Write a C++ program to create a class called Car with private instance variables company_name, model_name, year, and mileage. Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        #include &lt;vector&gt;
+        
+        class Student {
+        private:
+            int student_id;
+            std::string student_name;
+            std::vector&lt;int&gt; grades;
+        
+        public:
+            void setStudentID(int id) {
+                student_id = id;
+            }
+        
+            int getStudentID() const {
+                return student_id;
+            }
+        
+            void setStudentName(const std::string&amp; name) {
+                student_name = name;
+            }
+        
+            std::string getStudentName() const {
+                return student_name;
+            }
+        
+            void addGrade(int grade) {
+                if (grade &gt;= 0 && grade &lt;= 100) {
+                    grades.push_back(grade);
+                } else {
+                    std::cout &lt;&lt; "Invalid grade! Grade should be between 0 and 100." &lt;&lt; std::endl;
+                }
+            }
+        };
+        
+        int main() {
+            Student student;
+        
+            student.setStudentID(1001);
+            student.setStudentName(" Govind");
+        
+            student.addGrade(85);
+            student.addGrade(90);
+            student.addGrade(110); // Invalid grade
+        
+            std::cout &lt;&lt; "Student ID: " &lt;&lt; student.getStudentID() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Student Name: " &lt;&lt; student.getStudentName() &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Invalid grade! Grade should be between 0 and 100.
+            Student ID: 1001
+            Student Name:  Govind
+            </code>
+            </pre>
+  </body>
+</html>

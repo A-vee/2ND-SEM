@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>3. Define a class Matrix to represent matrices. Overload the * operator to multiply two matrices.
+    </h1><pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        class matrix{
+          int mat[10][10];
+          int row;
+          int col;
+          public:
+          matrix operator *(matrix &amp;c){
+             matrix temp;
+             temp.row=row;
+             temp.col=c.col;
+             for(int i=0;i&lt;row;i++){
+              for(int j=0;j&lt;c.col;j++){
+                temp.mat[i][j]=0;
+                for(int k=0;k&lt;col;k++){
+                    temp.mat[i][j]=temp.mat[i][j]+(mat[i][k]*c.mat[k][j]);
+                }
+              }
+             }
+             return temp;
+          }
+          void get(){
+            cout&lt;&lt;"Enter rows and columns for matrix : ";
+            cin&gt;&gt;row&gt;&gt;col;
+            cout&lt;&lt;"Enter the elements of matrix : "&lt;&lt;endl;
+            for(int i=0;i&lt;row;i++){
+              for(int j=0;j&lt;col;j++){
+                cin&gt;&gt;mat[i][j];
+              }
+          }
+          }
+          void display(){
+            for(int i=0;i&lt;row;i++){
+              for(int j=0;j&lt;col;j++){
+                cout&lt;&lt;mat[i][j]&lt;&lt;"  ";
+              }
+              cout&lt;&lt;endl;
+            }
+          }
+        };
+        int main(){
+          matrix m1,m2,m3;
+          m1.get();
+          m2.get();
+          m3=m1*m2;
+          cout&lt;&lt;"Multiplication of matrices by overloading '*' operator : "&lt;&lt;endl;
+          m3.display();
+          return 0;}
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre>
+        <code>
+        Multiplication of matrices by overloading '*' operator : 
+        2  3  
+        4  5  
+        </code>
+        </pre>
+        
+</body>
+</html>

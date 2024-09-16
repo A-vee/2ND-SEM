@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>7. Write a C++ program to append new data to an existing text file.</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1;
+              string ch, fd, rp;
+              f1.open("Newfile", ios::app);
+              f1&lt;&lt;"Appending new data in Existing file."&lt;&lt;endl;
+              f1.close();
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre> <code>
+            Hi Appending new data in Existing file.
+            Appendind new data in Existing file.
+            </pre></code>
+  </body>
+</html>

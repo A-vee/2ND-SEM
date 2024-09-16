@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>20. Program to find the duplicate characters in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() 
+        {
+            string str;
+            cout &lt;&lt; "Enter a string: ";
+            cin &gt;&gt; str;
+        
+            int charFrequency[256] = {0};
+        
+            for (char ch : str) {
+                charFrequency[ch]++;
+            }
+        
+            int duplicateCount = 0;
+        
+            for (int i = 0; i &lt; 256; ++i) {
+                if (charFrequency[i] > 1) {
+                    cout &lt;&lt; "Character '" &lt;&lt; char(i) &lt;&lt; "' appears " &lt;&lt; charFrequency[i] &lt;&lt; " times." &lt;&lt; endl;
+                    duplicateCount++;
+                }
+            }
+        
+            if (duplicateCount == 0) {
+                cout &lt;&lt; "No duplicate characters found in the string." &lt;&lt; endl;
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: abracadabra
+            Character 'a' appears 5 times.
+            Character 'b' appears 2 times.
+            Character 'r' appears 2 times.
+            </code>
+            </pre>
+            
+  </body>
+</html>

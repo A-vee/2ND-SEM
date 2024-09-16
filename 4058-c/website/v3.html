@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>4. Write a C++ program to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create derived classes: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type.
+    </h1>
+    <pre>
+        <code>
+          #include &lt;iostream&gt;
+      
+          class BankAccount {
+          protected:
+              double balance;
+      
+          public:
+              BankAccount() : balance(0) {}
+      
+              virtual void deposit(double amount) = 0;
+              virtual void withdraw(double amount) = 0;
+      
+              double getBalance() const {
+                  return balance;
+              }
+          };
+      
+          class SavingsAccount : public BankAccount {
+          public:
+              void deposit(double amount) override {
+                  balance += amount;
+                  std::cout &lt;&lt; "Deposited " &lt;&lt; amount &lt;&lt; " into Savings Account." &lt;&lt; std::endl;
+              }
+      
+              void withdraw(double amount) override {
+                  if (amount &lt;= balance) {
+                      balance -= amount;
+                      std::cout &lt;&lt; "Withdrawn " &lt;&lt; amount &lt;&lt; " from Savings Account." &lt;&lt; std::endl;
+                  } else {
+                      std::cout &lt;&lt; "Insufficient balance in Savings Account." &lt;&lt; std::endl;
+                  }
+              }
+          };
+      
+          class CurrentAccount : public BankAccount {
+          public:
+              void deposit(double amount) override {
+                  balance += amount;
+                  std::cout &lt;&lt; "Deposited " &lt;&lt; amount &lt;&lt; " into Current Account." &lt;&lt; std::endl;
+              }
+      
+              void withdraw(double amount) override {
+                  if (amount &lt;= balance) {
+                      balance -= amount;
+                      std::cout &lt;&lt; "Withdrawn " &lt;&lt; amount &lt;&lt; " from Current Account." &lt;&lt; std::endl;
+                  } else {
+                      std::cout &lt;&lt; "Insufficient balance in Current Account." &lt;&lt; std::endl;
+                  }
+              }
+          };
+      
+          int main() {
+              SavingsAccount savingsAccount;
+              std::cout &lt;&lt; "Initial balance in Savings Account: " &lt;&lt; savingsAccount.getBalance() &lt;&lt; std::endl;
+              savingsAccount.deposit(1000);
+              std::cout &lt;&lt; "Balance after deposit: " &lt;&lt; savingsAccount.getBalance() &lt;&lt; std::endl;
+              savingsAccount.withdraw(500);
+              std::cout &lt;&lt; "Balance after withdrawal: " &lt;&lt; savingsAccount.getBalance() &lt;&lt; std::endl;
+      
+              CurrentAccount currentAccount;
+              std::cout &lt;&lt; "\nInitial balance in Current Account: " &lt;&lt; currentAccount.getBalance() &lt;&lt; std::endl;
+              currentAccount.deposit(2000);
+              std::cout &lt;&lt; "Balance after deposit: " &lt;&lt; currentAccount.getBalance() &lt;&lt; std::endl;
+              currentAccount.withdraw(2500);
+              std::cout &lt;&lt; "Balance after withdrawal: " &lt;&lt; currentAccount.getBalance() &lt;&lt; std::endl;
+      
+              return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Initial balance in Savings Account: 0
+              Deposited 1000 into Savings Account.
+              Balance after deposit: 1000
+              Withdrawn 500 from Savings Account.
+              Balance after withdrawal: 500
+          
+              Initial balance in Current Account: 0
+              Deposited 2000 into Current Account.
+              Balance after deposit: 2000
+              Insufficient balance in Current Account.
+              Balance after withdrawal: 2000
+            </code>
+          </pre>
+          
+  </body>
+</html>

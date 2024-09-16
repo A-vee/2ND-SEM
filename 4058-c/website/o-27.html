@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>27. Write a C++ program to create a class called Rectangle with private instance variables length and width. Provide public getter and setter methods to access and modify these variables.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        #include &lt;iomanip&gt; // For std::setprecision
+        
+        class Employee {
+        private:
+            int employee_id;
+            std::string employee_name;
+            double employee_salary;
+        
+        public:
+            void setEmployeeID(int id) {
+                employee_id = id;
+            }
+        
+            int getEmployeeID() const {
+                return employee_id;
+            }
+        
+            void setEmployeeName(const std::string&amp; name) {
+                employee_name = name;
+            }
+        
+            std::string getEmployeeName() const {
+                return employee_name;
+            }
+        
+            void setEmployeeSalary(double salary) {
+                employee_salary = salary;
+            }
+        
+            std::string getFormattedSalary() const {
+                std::stringstream ss;
+                ss &lt;&lt; std::fixed &lt;&lt; std::setprecision(2) &lt;&lt; employee_salary;
+                return "$" + ss.str();
+            }
+        };
+        
+        int main() {
+            Employee emp;
+        
+            emp.setEmployeeID(101);
+            emp.setEmployeeName(" sachin");
+            emp.setEmployeeSalary(500);
+        
+            std::cout &lt;&lt; "Employee ID: " &lt;&lt; emp.getEmployeeID() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Employee Name: " &lt;&lt; emp.getEmployeeName() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Employee Salary: " &lt;&lt; emp.getFormattedSalary() &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Employee ID: 101
+            Employee Name:  sachin
+            Employee Salary: $500.00
+            </code>
+            </pre>            
+  </body>
+</html>

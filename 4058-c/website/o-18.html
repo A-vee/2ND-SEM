@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>18. Write a C++ program to create a class called "Restaurant" with attributes for menu items, prices, and ratings, and methods to add and remove items, and to calculate average rating.
+</h1> <pre><code>
+    #include &ltiostream&gt
+    #include &ltvector&gt
+    #include &ltstring&gt
+    #include &lcmath&gt
+    #include &lnumeric&gt
+    
+    class Restaurant {
+    private:
+        std::vector&ltstd::string&gt items;
+        std::vector&ltdouble&gt prices;
+        std::vector&ltint&gt ratings;
+    
+    public:
+        void addItem(const std::string&amp item, double price, int rating) {
+            items.push_back(item);
+            prices.push_back(price);
+            ratings.push_back(rating);
+        }
+    
+        void removeItem(const std::string&amp item) {
+            for (auto it = items.begin(); it != items.end(); ++it) {
+                if (*it == item) {
+                    int index = it - items.begin();
+                    items.erase(it);
+                    prices.erase(prices.begin() + index);
+                    ratings.erase(ratings.begin() + index);
+                    break;
+                }
+            }
+        }
+    
+        double averageRating() const {
+            if (ratings.empty()) {
+                return 0;
+            } else {
+                return static_cast&ltdouble&gt(std::accumulate(ratings.begin(), ratings.end(), 0)) / ratings.size();
+            }
+        }
+    };
+    
+    int main() {
+        Restaurant restaurant;
+    
+        restaurant.addItem("Burger", 9.99, 4);
+        restaurant.addItem("Pizza", 12.99, 5);
+        restaurant.addItem("Salad", 7.99, 3);
+    
+        std::cout &lt&lt "Average Rating: " &lt&lt restaurant.averageRating() &lt&lt std::endl;
+    
+        restaurant.removeItem("Salad");
+    
+        std::cout &lt&lt "Average Rating: " &lt&lt restaurant.averageRating() &lt&lt std::endl;
+    
+        return 0;
+    }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Average Rating: 4
+            Average Rating: 4.5</code></pre>
+  </body>
+</html>

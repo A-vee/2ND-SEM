@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<h1>8. Write a C++ program to create an abstract class Vehicle with abstract methods startEngine() and stopEngine(). Create derived classes Car and Motorcycle that extend the Vehicle class and implement the respective methods to start and stop the engines for each vehicle type.
+</h1>
+<pre>
+<code>
+        #include &lt;iostream&gt;
+        
+            class Vehicle {
+            public:
+         
+         virtual void startEngine() const = 0;
+            virtual void stopEngine() const = 0;
+        };
+        
+        
+           class Car : public Vehicle {
+           public:
+            void startEngine() const override {
+                std::cout &lt;&lt; "Car engine started." &lt;&lt; std::endl;
+            }
+        
+            void stopEngine() const override {
+                std::cout &lt;&lt; "Car engine stopped." &lt;&lt; std::endl;
+            }
+        };
+        
+        class Motorcycle : public Vehicle {
+        public:
+           
+            void startEngine() const override {
+                std::cout &lt;&lt; "Motorcycle engine started." &lt;&lt; std::endl;
+            }
+        
+            void stopEngine() const override {
+                std::cout &lt;&lt; "Motorcycle engine stopped." &lt;&lt; std::endl;
+            }
+        };
+        
+        
+        int main() {
+        
+            Car car;
+            std::cout &lt;&lt; "Car:" &lt;&lt; std::endl;
+            car.startEngine();
+            car.stopEngine();
+        
+            std::cout &lt;&lt; std::endl;
+        
+        
+            Motorcycle motorcycle;
+            std::cout &lt;&lt; "Motorcycle:" &lt;&lt; std::endl;
+            motorcycle.startEngine();
+            motorcycle.stopEngine();
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Car:
+            Car engine started.
+            Car engine stopped.
+            
+            Motorcycle:
+            Motorcycle engine started.
+            Motorcycle engine stopped.
+            </code>
+            </pre>            
+  </body>
+</html>

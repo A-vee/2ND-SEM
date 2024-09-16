@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>2. Create a class Fraction to represent fractions. Overload the + operator to add two fractions.
+    </h1><pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        class fraction{
+          int num;
+          int den;
+          public:
+          fraction(int i,int r){
+            num=r;
+            den=i;
+          }
+          fraction(){
+            num=0;
+            den=0;
+          }
+          fraction operator +(fraction &amp;c){
+             fraction temp;
+             temp.num=num*c.den+c.num*den;
+             temp.den=den*c.den;
+             return temp;
+          }
+          void display(){
+            cout&lt;&lt;num&lt;&lt;"/"&lt;&lt;den&lt;&lt;endl;
+          }
+        };
+        int main(){
+           fraction f1(2,3),f2(5,4),f3;
+           cout&lt;&lt;"Fractions : "&lt;&lt;endl;
+           f1.display();
+           f2.display();
+           f3=f1+f2;
+           cout&lt;&lt;"Sum of fractions  by overloading '+' operator : ";
+           f3.display();
+           return 0;}
+        </code>
+        </pre>
+        
+    <h1>Output</h1>
+    <pre><code>
+        Fractions : 
+        3/2
+        4/5
+        Sum of fractions by overloading '+' operator : 23/10
+        </code></pre>
+</body>
+</html>

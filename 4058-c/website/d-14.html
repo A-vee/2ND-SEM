@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>14. C++ Program to convert Decimal to Hex
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        using namespace std;
+        int main(){
+            int d,p=1,temp;
+            string st="";
+            cout&lt;&lt;"Enter the decimal number : ";
+            cin&gt;&gt;d;
+            while(d!=0){
+               temp=d%16;
+               if(temp&gt;9){
+                if (temp==10){
+                    st=st+'A';
+                }
+                else if (temp==11){
+                    st=st+'B';
+                }
+                else if (temp==12){
+                    st=st+'C';
+                }
+                else if (temp==13){
+                    st=st+'D';
+                }
+                else if (temp==14){
+                    st=st+'E';
+                }
+                else{
+                    st=st+'F';
+                }
+               }
+               else{
+                st=st+(char)(temp+'0');
+               }
+               d=d/16;
+            }
+            int l=st.length();
+            char ch;
+            for(int i=0;i&lt;l/2;i++){
+                ch=st[i];
+                st[i]=st[l-i-1];
+                st[l-i-1]=ch;
+            }
+            cout&lt;&lt;"Hexadecimal value of decimal : "&lt;&lt;st;
+            return 0;
+        }
+            </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the decimal number : 31
+            Hexadecimal value of decimal : 1F
+            </code></pre>
+  </body>
+</html>

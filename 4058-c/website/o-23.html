@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>23. Create a class entering the rollno, name and class of the student from user but rollno should be automatically generated as we enter the information of 10 students
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        class AreaCalculator {
+        public:
+            double calculateArea(double radius) {
+                return 3.14 * radius * radius; // Area of circle
+            }
+        
+            double calculateArea(double length, double width) {
+                return length * width; // Area of rectangle
+            }
+        };
+        
+        int main() {
+            AreaCalculator calculator;
+        
+            double radius, length, width;
+            std::cout &lt;&lt; "Enter radius of circle: ";
+            std::cin &gt;&gt; radius;
+            std::cout &lt;&lt; "Area of circle: " &lt;&lt; calculator.calculateArea(radius) &lt;&lt; std::endl;
+        
+            std::cout &lt;&lt; "Enter length of rectangle: ";
+            std::cin &gt;&gt; length;
+            std::cout &lt;&lt; "Enter width of rectangle: ";
+            std::cin &gt;&gt; width;
+            std::cout &lt;&lt; "Area of rectangle: " &lt;&lt; calculator.calculateArea(length, width) &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter radius of circle: 5
+            Area of circle: 78.5
+            
+            Enter length of rectangle: 4
+            Enter width of rectangle: 6
+            Area of rectangle: 24
+            </code>
+            </pre>            
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>
+        12. C++ Program to convert Decimal to Binary</h1>
+        <pre><code>
+            #include&lt;iostream&gt;
+            using namespace std;
+            int main(){
+                int d,p=1,temp;
+                long long b=0;
+                cout&lt;&lt;"Enter the decimal number : ";
+                cin&gt;&gt;d;
+                while (d!=0){
+                   temp=d%2;
+                   b=b+(temp*p);
+                   p=p*10;
+                   d=d/2;
+                }
+                cout&lt;&lt;"Binary value of decimal: "&lt;&lt;b;
+                return 0;
+            }
+                </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the decimal number : 10
+            Binary value of decimal: 1010
+            </code></pre>
+  </body>
+</html>

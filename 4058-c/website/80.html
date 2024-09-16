@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>80. Write a C++ Program to Accept the Marks of a Student and find Total Marks and Percentage
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int marks[10], n, sum = 0;
+            cout &lt;&lt; "Enter number of subjects (1-10) : ";
+            cin &gt;&gt; n;
+            for (int i = 0; i &lt; n; i++)
+            {
+                cout &lt;&lt; "Enter marks of subject " &lt;&lt; i + 1 &lt;&lt; " : ";
+                cin &gt;&gt; marks[i];
+                sum = sum + marks[i];
+            }
+            float avg = (float)sum / n;
+            cout &lt;&lt; endl &lt;&lt; "Total Marks Obtained : " &lt;&lt; sum;
+            cout &lt;&lt; endl &lt;&lt; "Average : " &lt;&lt; avg;
+        }
+        </code>
+        </pre>
+        
+    <h1>Output</h1>
+    <pre>
+        <code>
+        Enter number of subjects (1-10) : 5
+        Enter marks of subject 1 : 85
+        Enter marks of subject 2 : 90
+        Enter marks of subject 3 : 78
+        Enter marks of subject 4 : 92
+        Enter marks of subject 5 : 88
+        
+        Total Marks Obtained : 433
+        Average : 86.6
+        </code>
+        </pre>
+        
+</body>
+</html>

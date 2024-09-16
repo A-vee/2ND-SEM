@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>13. Write a C++ program to decrypt the contents of a text file encrypted using the above algorithm.
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1, f2;
+              f1.open("encryptf", ios::in);
+              f2.open("Newfile", ios::out);
+              char ch;
+              while (f1.get(ch)) {
+                  if (ch == '\n' || ch == ' ') {
+                      f2 &lt;&lt; ch;
+                  }
+                  else {
+                      ch = ch - 7;
+                      f2 &lt;&lt; ch;
+                  }
+              }
+              f1.close();
+              f2.close();
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Decryption algorithm :- shifting character by 7 ascii numbers to the left
+            </code>
+          </pre>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>15. Write a C++ program to calculate the average of numbers stored in a file.
+    </h1>
+    <pre>
+        <code>
+          #include &lt;iostream&gt;
+          #include &lt;fstream&gt;
+          #include &lt;string&gt;
+      
+          using namespace std;
+      
+          int main() {
+              fstream f;
+              f.open("Newfile", ios::in);
+              int n, s = 0, c = 0;
+              while (f &gt;&gt; n) {
+                  s = s + n;
+                  c++;
+              }
+              cout &lt;&lt; "Average of numbers stored in file : " &lt;&lt; (float)s / c;
+              f.close();
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre><code>
+            Average of no. stored in file : [average value]
+            </pre></code>
+  </body>
+</html>

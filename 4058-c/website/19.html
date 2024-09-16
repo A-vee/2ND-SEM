@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>19. Write a C++ program to convert seconds to hour, minute and seconds</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;iomanip&gt;
+          using namespace std;
+          int main(){
+             int s,h=0,m=0;
+             cout&lt;&lt;"Enter the seconds : ";
+             cin&gt;&gt;s;
+             m=s/60;
+             s=s%60;
+             h=m/60;
+             m=m%60;
+             cout&lt;&lt;setw(3)&lt;&lt;"H"&lt;&lt;setw(3)&lt;&lt;"M"&lt;&lt;setw(3)&lt;&lt;"S"&lt;&lt;endl;
+             cout&lt;&lt;setw(3)&lt;&lt;h&lt;&lt;setw(3)&lt;&lt;m&lt;&lt;setw(3)&lt;&lt;s;
+             return 0;
+          }
+        </code>
+      </pre>         
+    <h1>Output</h1>
+    <pre>
+        <code>
+          Enter the seconds : 3665
+              H    M    S
+              1    1    5
+        </code>
+      </pre>
+      
+</body>
+</html>

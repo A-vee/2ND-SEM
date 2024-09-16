@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>40. Write a program to check if two Strings are created with same characters?
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+            string str1, str2;
+            cout &lt;&lt; "Enter the first string: ";
+            cin &gt;&gt; str1;
+            cout &lt;&lt; "Enter the second string: ";
+            cin &gt;&gt; str2;
+        
+            // Sort both strings
+            for (size_t i = 0; i &lt; str1.length(); ++i) {
+                for (size_t j = i + 1; j &lt; str1.length(); ++j) {
+                    if (str1[i] &gt; str1[j]) {
+                        char temp = str1[i];
+                        str1[i] = str1[j];
+                        str1[j] = temp;
+                    }
+                }
+            }
+        
+            for (size_t i = 0; i &lt; str2.length(); ++i) {
+                for (size_t j = i + 1; j &lt; str2.length(); ++j) {
+                    if (str2[i] &gt; str2[j]) {
+                        char temp = str2[i];
+                        str2[i] = str2[j];
+                        str2[j] = temp;
+                    }
+                }
+            }
+        
+            // Check if sorted strings are equal
+            if (str1 == str2) {
+                cout &lt;&lt; "Both strings are created with the same characters." &lt;&lt; endl;
+            } else {
+                cout &lt;&lt; "Strings are not created with the same characters." &lt;&lt; endl;
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Strings are not created with the same characters.
+            </code>
+            </pre>
+            
+  </body>
+</html>

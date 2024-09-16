@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>25. Write a C++ program to create a class called Person with private instance variables name, age. and country. Provide public getter and setter methods to access and modify these variables.
+</h1><pre>
+    <code>
+    #include &lt;iostream&gt;
+    
+    class BankAccount {
+    private:
+        int accountNumber;
+        double balance;
+    
+    public:
+        void setAccountNumber(int newAccountNumber) {
+            accountNumber = newAccountNumber;
+        }
+    
+        int getAccountNumber() const {
+            return accountNumber;
+        }
+    
+        void setBalance(double newBalance) {
+            balance = newBalance;
+        }
+    
+        double getBalance() const {
+            return balance;
+        }
+    };
+    
+    int main() {
+        BankAccount account;
+    
+        account.setAccountNumber(123456);
+        account.setBalance(1000.50);
+    
+        std::cout &lt;&lt; "Account Number: " &lt;&lt; account.getAccountNumber() &lt;&lt; std::endl;
+        std::cout &lt;&lt; "Balance: " &lt;&lt; account.getBalance() &lt;&lt; std::endl;
+    
+        return 0;
+    }
+    </code>
+    </pre>
+    
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Account Number: 123456
+            Balance: 1000.50
+            </code>
+            </pre>            
+  </body>
+</html>

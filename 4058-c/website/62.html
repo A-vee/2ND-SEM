@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>62. Write a C++ program that reads an positive integer and count the number of digits
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, c = 0;
+            int m;
+            cout &lt;&lt; "Enter any positive number : ";
+            cin &gt;&gt; n;
+            if (n &gt; 0)
+            {
+                m = n;
+                while (m != 0)
+                {
+                    m = m / 10;
+                    c++;
+                }
+                cout &lt;&lt; endl &lt;&lt; "Number of digits in " &lt;&lt; n &lt;&lt; " are : " &lt;&lt; c;
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "Entered number is negative";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter any positive number : -123
+        Entered number is negative
+        </code>
+        </pre>
+</body>
+</html>

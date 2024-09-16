@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>6. Write a C++ program to find and replace a specific word in a text file.
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1, f2;
+              string ch, fd, rp;
+              f1.open("Newfile",ios::in);
+              f2.open("cpNewfile",ios::out);
+              cout&lt;&lt;"Enter the word to find : ";
+              cin&gt;&gt;fd;
+              cout&lt;&lt;"Enter the word to replace : ";
+              cin&gt;&gt;rp;
+              while(!f1.eof()){
+                  f1&gt;&gt;ch;
+                  if(ch==fd){
+                      f2&lt;&lt;rp&lt;&lt;" ";
+                  }
+                  else{
+                      f2&lt;&lt;ch&lt;&lt;" ";
+                  }
+              }
+              f1.close();
+              f2.close();
+              f1.open("Newfile",ios::out);
+              f2.open("cpNewfile",ios::in);
+              while(!f2.eof()){
+                  getline(f2,ch);
+                  f1&lt;&lt;ch;
+              }
+              f1.close();
+              f2.close();
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the word to find : old
+              Enter the word to replace : new
+            </code>
+          </pre>
+  </body>
+</html>

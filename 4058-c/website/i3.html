@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>3. Write a C++ program to create a class called Shape with a method called getArea(). Create a derived class called Rectangle that overrides the getArea() method to calculate the area of a rectangle.
+    </h1><pre><code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        class Shape
+        {
+        public:
+            void getArea()
+            {
+                cout &lt;&lt; "Area of rectangle" &lt;&lt; endl;
+            }
+        };
+        
+        class Rectangle : public Shape  
+        {
+        private:
+            float length;
+            float breath;
+        public:
+            void getArea()
+            {
+                cout &lt;&lt; "Enter length of rectangle : ";
+                cin &gt;&gt; length;
+                cout &lt;&lt; "Enter width of rectangle : ";
+                cin &gt;&gt; breath;
+                cout &lt;&lt; "Area of the rectangle is : " &lt;&lt; length * breath;
+            }
+        };
+        
+        int main()
+        {
+            Rectangle area;
+            area.getArea();
+        }
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter length of rectangle : 5
+            Enter width of rectangle : 3
+            Area of the rectangle is : 15
+            </code></pre>
+  </body>
+</html>

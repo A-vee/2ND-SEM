@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>8. C++ Program to convert double to String
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        #include&lt;sstream&gt;
+        using namespace std;
+        int main(){
+            double d;
+            stringstream s1;
+            string st="";
+            cout&lt;&lt;"Enter the double to convert it into string : ";
+            cin&gt;&gt;d;
+            s1&lt;&lt;d;
+            s1&gt;&gt;st;
+            cout&lt;&lt;"String after conversion to double : "&lt;&lt;st;
+            return 0;
+        }
+            </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the double to convert it into string : 3.14
+            String after conversion to double : 3.14
+            </code></pre>
+  </body>
+</html>

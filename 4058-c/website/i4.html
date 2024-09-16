@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>4. Write a C++ program to create a class called Employee with methods called work() and getSalary(). Create a derived class called HRManager that overrides the work() method and adds a new method called addEmployee().
+    </h1><pre><code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        class Employee
+        {
+            private:
+                int salary;
+                char name[10];
+            public:
+                void work()
+                {
+                    cout &lt;&lt; "Enter name of employee : ";
+                    cin &gt;&gt; name;
+                }
+            
+                void getSalary()
+                {
+                    cout &lt;&lt; "Enter your salary : ";
+                    cin &gt;&gt; salary;
+                    cout &lt;&lt; "your salary is : " &lt;&lt; salary &lt;&lt; endl;
+                }
+        };
+        
+        class HRManager :public Employee  
+        {
+            private :
+               char title[10];
+            public :
+                void work()
+                {
+                    cout &lt;&lt; " Enter your job title : " &lt;&lt; endl;
+                    cin &gt;&gt; title;   
+                }
+                void addEmployee()
+                {
+                    cout &lt;&lt; "Employee numbers is 1200. ";
+                }
+        };
+        
+        int main()
+        {
+            HRManager obj;
+            obj.getSalary();
+            obj.work();
+            obj.addEmployee();    
+        }
+        </code></pre>
+        
+        <h1>Output</h1>
+        <pre><code>
+            Enter your salary : 5000
+            your salary is : 5000
+             Enter your job title : 
+            Manager
+            Employee numbers is 1200.
+            </code></pre>
+  </body>
+</html>

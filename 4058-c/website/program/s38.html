@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>38. Read two String user input and check if first contains second?
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        bool containsSubstring(const string&amp; str, const string&amp; substr) {
+            return str.find(substr) != string::npos;
+        }
+        
+        int main() {
+            string firstString, secondString;
+        
+            cout &lt;&lt; "Enter the first string: ";
+            getline(cin, firstString);
+        
+            cout &lt;&lt; "Enter the second string: ";
+            getline(cin, secondString);
+        
+            if (containsSubstring(firstString, secondString)) {
+                cout &lt;&lt; "The first string contains the second string." &lt;&lt; endl;
+            } else {
+                cout &lt;&lt; "The first string does not contain the second string." &lt;&lt; endl;
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        </html>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the first string: This is a sample string.
+            Enter the second string: sample
+            The first string contains the second string.
+            </code>
+            </pre>
+            
+  </body>
+</html>

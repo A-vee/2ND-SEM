@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>40. C++ program to check vowel or consonant</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            char c;
+            cout&lt;&lt;"Enter a character : "&lt;&lt;endl;
+            cin&gt;&gt;c;
+            switch(c) {
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U':
+                    cout&lt;&lt;"Entered Character is a vowel";
+                    break;
+                default:
+                    cout&lt;&lt;"Entered Character is a consonant";
+            }
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre>
+        <code>Enter a character : 
+        A
+        Entered Character is a vowel</code></pre>
+</body>
+</html>

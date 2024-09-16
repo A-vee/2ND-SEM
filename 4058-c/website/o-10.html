@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>10. Write a C++ program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.
+    </h1>
+    <pre><code>#include &ltiostream&gt
+        #include &ltvector&gt
+        #include &ltstring&gt
+        
+        class Student {
+        private:
+            std::string name;
+            int grade;
+            std::vector&ltstd::string&gt courses;
+        
+        public:
+            Student(const std::string&amp name, int grade) : name(name), grade(grade) {}
+        
+            void addCourse(const std::string&amp course) {
+                courses.push_back(course);
+            }
+        
+            void removeCourse(const std::string&amp course) {
+                for (auto it = courses.begin(); it != courses.end(); ++it) {
+                    if (*it == course) {
+                        courses.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void printCourses() const {
+                std::cout &lt&lt "Courses: ";
+                for (const auto&amp course : courses) {
+                    std::cout &lt&lt course &lt&lt " ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            Student student("John Doe", 10);
+        
+            student.addCourse("Math");
+            student.addCourse("Science");
+            student.addCourse("History");
+        
+            student.printCourses();
+        
+            student.removeCourse("Science");
+            student.printCourses();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Courses: Math Science History
+            Courses: Math History</code></pre>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>33. Program to replace lower-case characters with upper-case and vice-versa
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;ctype.h&gt;
+        
+        using namespace std;
+        
+        int main() {
+          char ch;
+        
+          cout&lt;&lt;"Enter a character: ";
+          cin&gt;&gt;ch;
+        
+          if (isalpha(ch)) {
+            if (islower(ch)) {
+              ch = toupper(ch);
+              cout&lt;&lt;"Converted character (uppercase): "&lt;&lt;ch&lt;&lt;endl;
+            } else {
+              ch = tolower(ch);
+              cout&lt;&lt;"Converted character (lowercase): "&lt;&lt;ch&lt;&lt;endl;
+            }
+          } else {
+            cout&lt;&lt;"Input is not an alphabet."&lt;&lt;endl;
+          }
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a character: a
+            Converted character (uppercase): A
+            </code>
+            </pre>
+            
+  </body>
+</html>

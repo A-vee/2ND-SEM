@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>1. Write a C++ program to create a class called Animal with a method called makeSound(). Create a derived class called Cat that overrides the makeSound() method to bark.
+    </h1><pre><code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        class Animal
+        {
+        public:
+            void makeSound()
+            {
+                cout &lt;&lt; "Animal makes a sound " &lt;&lt; endl;
+            }
+        };
+        
+        class Cat : public Animal  
+        {
+        private:
+            /* data */
+        public:
+            void makeSound()
+            {
+                cout &lt;&lt; "Cat makes a sound " &lt;&lt; endl;
+            }
+        };
+        
+        int main()
+        {
+            Cat cat;
+            cat.makeSound();
+        }
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Cat makes a sound
+        </code></pre>
+  </body>
+</html>

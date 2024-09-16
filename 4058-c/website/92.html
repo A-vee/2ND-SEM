@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>92. Write a C++ program to count total number of notes in entered amount using loop
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        #include&lt;string.h&gt;
+        using namespace std;
+        
+        int main()
+        {
+            char num[20];
+            int c = 0;
+            cout &lt;&lt; "Enter amount : ";
+            cin &gt;&gt; num;
+            int l = strlen(num);
+            for (int i = 0; i &lt; l; i++)
+            {
+                if (num[i] == ',')
+                {
+                    c++;
+                }
+            }
+            cout &lt;&lt; endl &lt;&lt; "Number of notes in entered amount " &lt;&lt; num &lt;&lt; " : " &lt;&lt; c;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter amount: 1,000,000
+            
+            Number of notes in entered amount 1,000,000 : 2
+            </code>
+            </pre>
+            
+</body>
+</html>

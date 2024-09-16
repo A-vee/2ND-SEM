@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>22. Write a C++ program to check if a positive number is a palindrome or not</h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int main() {
+           int n;
+           cout &lt;&lt; "Enter the number : ";
+           cin &gt;&gt; n;
+           int temp = n, p = 0;
+           while (n > 0) {
+              p = p * 10 + (n % 10);
+              n = n / 10;
+           }
+           if (temp == p) {
+              cout &lt;&lt; "Palindrome";
+           } else {
+              cout &lt;&lt; "Not a Palindrome";
+           }
+           return 0;
+        }
+        </code>
+        </pre>
+           
+        <h1>Output</h1>
+    <pre><code>
+        Enter the number : 121
+        Palindrome
+        
+</code></pre>
+</body>
+</html>

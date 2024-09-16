@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>63. Write a C++ program that accepts three numbers and check All numbers are equal or not
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int x, y, z;
+            cout &lt;&lt; "Enter first number : ";
+            cin &gt;&gt; x;
+            cout &lt;&lt; "Enter second number : ";
+            cin &gt;&gt; y;
+            cout &lt;&lt; "Enter third number : ";
+            cin &gt;&gt; z;
+            if (x == y && y == z && x == z)
+            {
+                cout &lt;&lt; endl &lt;&lt; "All numbers are equal";
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "All numbers are not equal";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter first number : 1
+        Enter second number : 2
+        Enter third number : 3
+        All numbers are not equal
+        </code>
+        </pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>18. Write a C++ program to convert a string to an integer</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;string&gt;
+          using namespace std;
+          int main(){
+              string st;
+              int n=0,p=10;
+              cout&lt;&lt;"Enter the integers for string : ";
+              cin&gt;&gt;st;
+              for(int i=0;i&lt;st.length();i++){
+                  n=p*n+(st[i]-'0');
+                  cout&lt;&lt;p&lt;&lt;endl;
+              }
+              cout&lt;&lt;n;
+              return 0;
+          }
+        </code>
+      </pre>          
+    <h1>Output</h1>
+    <pre>
+        <code>
+          Enter the integers for string : 12345
+          12345
+        </code>
+      </pre>
+      
+</body>
+</html>

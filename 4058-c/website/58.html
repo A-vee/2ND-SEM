@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>58. Write a C++ program to display the cube of the number upto given an integer
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, cube = 1;
+            cout &lt;&lt; "Enter any integer : ";
+            cin &gt;&gt; n;
+            for (int i = 1; i &lt;= 3; i++)
+            {
+                cube = cube * n;
+            }
+            cout &lt;&lt; endl &lt;&lt; "Cube of " &lt;&lt; n &lt;&lt; " is : " &lt;&lt; cube;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter any integer : 2
+        Cube of 2 is : 8
+        </code>
+        </pre>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>20. Write a C++ program to compute the sum of the first 100 prime numbers</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+             int s=0,c=0;
+             for(int i=2;i&lt;101;i++){
+              c=0;
+              for(int j=2;j&lt;i;j++){
+                 if(i%j==0){
+                    c=1;        
+                 }
+              }
+              if(c==0){
+                  s=s+i;
+              }
+             }
+             cout&lt;&lt;"Sum Of First 100 Prime No. : "&lt;&lt;s;
+             return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Sum Of First 100 Prime No. : 24133
+            </code>
+          </pre>          
+</body>
+</html>

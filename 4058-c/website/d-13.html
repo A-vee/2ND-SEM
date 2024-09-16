@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>13. C++ Program to convert Hex to Decimal
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string&gt;
+        using namespace std;
+        int main(){
+            int d=0,p=1,dig;
+            string st;
+            cout&lt;&lt;"Enter the Hexadecimal number (alpha values must be capital): ";
+            cin&gt;&gt;st;
+            for(int i=st.length()-1;i>=0;i--){
+               dig=st[i]-'0';
+               if (dig>=0 && dig&lt;=9){
+               d=d+(dig*p);
+               }
+               else{
+                dig=st[i]+'0';
+                char hex[]="ABCDEF";
+                if (st[i]==hex[0]){
+                    d=d+(10*p);
+                }
+                else if (st[i]==hex[1]){
+                    d=d+(11*p);
+                }
+                else if (st[i]==hex[2]){
+                    d=d+(12*p);
+                }
+                else if (st[i]==hex[3]){
+                    d=d+(13*p);
+                }
+                else if (st[i]==hex[4]){
+                    d=d+(14*p);
+                }
+                else{
+                    d=d+(15*p);
+                }
+               }
+               p=p*16;
+            }
+            cout&lt;&lt;"Decimal value of Hexadecimal : "&lt;&lt;d;
+            return 0;
+        }
+            </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the Hexadecimal number (alpha values must be capital): 1F
+            Decimal value of Hexadecimal : 31
+            </code></pre>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>41. Write a program to find out first non repeated character from input String?
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+            string str;
+            cout&lt;&lt;"Enter a string: ";
+            cin&gt;&gt;str;
+        
+            int ch[256] = {0};
+        
+            for (int i = 0; i &lt; str.length(); ++i) {
+                ch[str[i]]++;
+            }
+        
+            char result = '\0';
+            for (int i = 0; i &lt; str.length(); ++i) {
+                if (ch[str[i]] == 1) {
+                    result = str[i];
+                    break;
+                }
+            }
+        
+            if (result != '\0') {
+                cout&lt;&lt;"The first non-repeated character is: "&lt;&lt;result&lt;&lt;endl;
+            } else {
+                cout&lt;&lt;"No non-repeated character found."&lt;&lt;endl;
+            }
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: hello
+            The first non-repeated character is: h
+            </code>
+            </pre>
+            
+  </body>
+</html>

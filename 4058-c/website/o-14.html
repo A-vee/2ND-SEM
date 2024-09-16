@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>14. Write a C++ program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.</h1><pre><code>
+        #include &ltiostream&gt
+        #include &ltvector&gt
+        #include &ltstring&gt
+        
+        class School {
+        private:
+            std::vector&ltstd::string&gt a;
+            std::vector&ltstd::string&gt b;
+            std::vector&ltstd::string&gt c;
+        
+        public:
+            void addStudent(const std::string&amp student) {
+                a.push_back(student);
+            }
+        
+            void removeStudent(const std::string&amp student) {
+                for (auto it = a.begin(); it != a.end(); ++it) {
+                    if (*it == student) {
+                        a.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void addTeacher(const std::string&amp teacher) {
+                b.push_back(teacher);
+            }
+        
+            void removeTeacher(const std::string&amp teacher) {
+                for (auto it = b.begin(); it != b.end(); ++it) {
+                    if (*it == teacher) {
+                        b.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void createClass(const std::string&amp className) {
+                c.push_back(className);
+            }
+        
+            void show() const {
+                std::cout &lt&lt "Students: ";
+                for (const auto&amp student : a) {
+                    std::cout &lt&lt student &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+        
+                std::cout &lt&lt "Teachers: ";
+                for (const auto&amp teacher : b) {
+                    std::cout &lt&lt teacher &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+        
+                std::cout &lt&lt "Classes: ";
+                for (const auto&amp className : c) {
+                    std::cout &lt&lt className &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            School school;
+        
+            school.addStudent("Student1");
+            school.addStudent("Student2");
+            school.addStudent("Student3");
+        
+            school.addTeacher("Teacher1");
+            school.addTeacher("Teacher2");
+        
+            school.createClass("ClassA");
+            school.createClass("ClassB");
+        
+            school.show();
+        
+            school.removeStudent("Student2");
+            school.removeTeacher("Teacher1");
+        
+            school.show();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Students: Student1, Student2, Student3, 
+            Teachers: Teacher1, Teacher2, 
+            Classes: ClassA, ClassB, 
+            Students: Student1, Student3, 
+            Teachers: Teacher2, 
+            Classes: ClassA, ClassB, </code></pre>
+  </body>
+</html>

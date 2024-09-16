@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>9. Write a C++ program to create a vehicle class hierarchy. The base class should be Vehicle, with derived classes Truck, Car and Motorcycle. Each derived class should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+    </h1><pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        class Vehicle
+        {
+            public:
+        
+                char make[20];
+                char model[20];
+                int year;
+                char fuelType[20];  
+                void fuelEfficiency()
+                {
+                    float litre,kilometrs,fuelEfficiency;
+                    cout&lt;&lt;"Enter the fuel consumed by your vhicle in liter: ";
+                    cin&gt;&gt;litre;
+                    cout&lt;&lt;"Enter the distance you covers in the fuel consumed in km : ";
+                    cin&gt;&gt;kilometrs;
+                    fuelEfficiency = kilometrs/litre;
+                    cout&lt;&lt;"The fuelEfficiency of your vhicle is : "&lt;&lt;fuelEfficiency&lt;&lt;"km/lit"&lt;&lt;endl;
+                }
+                void distanceTraveled()
+                {
+                    float speed,time,distance;;   
+                    cout&lt;&lt;"Enter the speed of your vhicle in miles/h : ";
+                    cin&gt;&gt;speed;
+                    cout&lt;&lt;"Enter the time you reach at your destination in hour or minutes : ";
+                    cin&gt;&gt;time;
+                    distance = speed*time;
+                    cout&lt;&lt;"The distance you traveles is : "&lt;&lt;distance&lt;&lt;"km";
+                }
+        };
+        
+        class Truck :public Vehicle
+        {
+            private:
+                char make[20];
+                char model[20];
+                int year;
+                char fuelType[20]; 
+        };
+        
+        int main()
+        {
+            Truck a;
+            a.fuelEfficiency();
+            a.distanceTraveled();   
+        }
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the fuel consumed by your vehicle in liters: 20
+            Enter the distance you covered with the fuel consumed in kilometers: 200
+            The fuel efficiency of your vehicle is: 10 km/l
+            
+            Enter the speed of your vehicle in kilometers/hour: 60
+            Enter the time you reach at your destination in hours: 3
+            The distance you traveled is: 180 kilometers
+            </code></pre>
+            
+  </body>
+</html>

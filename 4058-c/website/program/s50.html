@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>50. Write a C++ method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false</h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        using namespace std;
+        
+        int isMiddlePoint(int a, int b, int c);
+        
+        int main() {
+            int num1, num2, num3;
+            cout &lt;&lt; "Enter three integers: ";
+            cin &gt;&gt; num1 &gt;&gt; num2 &gt;&gt; num3;
+        
+            if (isMiddlePoint(num1, num2, num3))
+                cout &lt;&lt; "One of the integers is the middle point between the other two." &lt;&lt; endl;
+            else
+                cout &lt;&lt; "None of the integers is the middle point between the other two." &lt;&lt; endl;
+        
+            return 0;
+        }
+        
+        int isMiddlePoint(int a, int b, int c) {
+            if ((a &lt;= b &amp;&amp; b &lt;= c) || (c &lt;= b &amp;&amp; b &lt;= a))
+                return 1;
+            else
+                return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Generated integers: X, Y, Z
+            One of the integers is the middle point between the other two.
+            </code>
+            </pre>
+            
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>30. Program to Print even length words
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+            string str;
+            cout &lt;&lt; "Enter a string: ";
+            cin &gt;&gt; str;
+            string Word = "";
+            for (int i= 0; i&lt;str.length(); ++i) {
+                if (str[i] == ' ' || i == str.length() - 1) {
+                    if (Word.length() % 2 == 0 &amp;&amp; Word.length() != 0) {
+                        cout&lt;&lt;Word&lt;&lt;endl;
+                    }
+                    Word = "";
+                } else {
+                    Word+=str[i];
+                }
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: Hello World
+            World
+            </code>
+            </pre>
+            
+  </body>
+</html>

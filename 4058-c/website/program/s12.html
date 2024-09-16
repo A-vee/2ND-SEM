@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>12. Program to count the total number of vowels and consonants in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;conio.h&gt;
+        #include &lt;string.h&gt;
+        
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            cout &lt;&lt; "Enter string: ";
+            cin &gt;&gt; str;
+        
+            int vowel = 0, consonant = 0;
+            for (int i = 0; str[i] != '\0'; i++) {
+                if (str[i] =='a' || str[i] =='e' || str[i] =='i' || str[i] =='o' || str[i] =='u') {
+                    vowel += 1;
+                }
+                else {
+                    consonant += 1;
+                }
+            }
+        
+            cout &lt;&lt; "The total number of vowels in the string is: " &lt;&lt; vowel &lt;&lt; endl;
+            cout &lt;&lt; "The total number of consonants in the string is: " &lt;&lt; consonant;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter string: hello
+            The total number of vowels in the string is: 2
+            The total number of consonants in the string is: 3
+            </code>
+            </pre>
+            
+  </body>
+</html>

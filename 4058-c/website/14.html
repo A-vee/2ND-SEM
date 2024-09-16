@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>14. Write a C++ program that accepts an integer (n) and computes the value of n+nn+nnn</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;cctype&gt;
+          using namespace std;
+          int main(){
+              int n,t,p=1,s=0;
+              cout&lt;&lt;"Enter the number : ";
+              cin&gt;&gt;n;
+              if (isdigit(n)){
+                  cout&lt;&lt;"Enter the number of Times : ";
+                  cin&gt;&gt;t;
+                  p*=n;
+                  for (int i=0;i&lt;t;i++){
+                      s+=p;
+                      p=p*10+n;
+                  }
+                  cout&lt;&lt;"Result : "&lt;&lt;s;
+              }
+              else{
+                  cout&lt;&lt;"Integer is require for this Equation ";
+              }
+              return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the number : 5
+              Enter the number of Times : 3
+              Result : 615
+            </code>
+          </pre>          
+</body>
+</html>

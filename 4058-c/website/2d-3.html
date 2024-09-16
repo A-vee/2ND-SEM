@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>3. Program to Multiply Two Matrices
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;iomanip&gt;
+          using namespace std;
+          int main(){
+              int x,y,m,n,i,j;
+              cout&lt;&lt;"Enter the rows and columns for A matrix : ";
+              cin&gt;&gt;x&gt;&gt;y;
+              cout&lt;&lt;"Enter the rows and columns for B matrix : ";
+              cin&gt;&gt;m&gt;&gt;n;
+              if(y==m){
+                  cout&lt;&lt;"Enter element of A Matrix : "&lt;&lt;endl;
+                  int mata[10][10];
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          cin&gt;&gt;mata[i][j];
+                      }
+                  }
+                  cout&lt;&lt;"Enter element of B Matrix : "&lt;&lt;endl;
+                  int matb[10][10];
+                  for(i=0;i&lt;m;i++){
+                      for(j=0;j&lt;n;j++){
+                          cin&gt;&gt;matb[i][j];
+                      }
+                  }
+                  int mul[10][10];
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;n;j++){
+                          mul[i][j]=0;
+                          for(int k=0;k&lt;y;k++){
+                              mul[i][j]=mul[i][j]+mata[i][k]*matb[k][j];
+                          }
+                      }
+                  }
+                  cout&lt;&lt;"A Matrix : ";
+                  for(i=0;i&lt;x;i++){
+                      cout&lt;&lt;endl;
+                      for(j=0;j&lt;y;j++){
+                          cout&lt;&lt;setw(5)&lt;&lt;mata[i][j];
+                      }
+                  }
+                  cout&lt;&lt;endl;
+                  cout&lt;&lt;"B Matrix : "&lt;&lt;endl;
+                  for(i=0;i&lt;m;i++){
+                      for(j=0;j&lt;n;j++){
+                          cout&lt;&lt;setw(5)&lt;&lt;matb[i][j];
+                      }
+                      cout&lt;&lt;endl;
+                  }
+                  cout&lt;&lt;"A X B Matrix : "&lt;&lt;endl;
+                  for(i=0;i&lt;x;i++){
+                      cout&lt;&lt;endl;
+                      for(j=0;j&lt;n;j++){
+                          cout&lt;&lt;setw(5)&lt;&lt;mul[i][j];
+                      }
+                  }
+              }
+              else{
+                  cout&lt;&lt;"Matrix Multiplication not applicable";
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns for A matrix : 2 2
+              Enter the rows and columns for B matrix : 2 2
+              Enter element of A Matrix : 
+              1 2
+              3 4
+              Enter element of B Matrix : 
+              5 6
+              7 8
+              A Matrix : 
+                  1    2
+                  3    4
+              B Matrix : 
+                  5    6
+                  7    8
+              A X B Matrix : 
+                 19   22
+                 43   50
+            </code>
+          </pre>
+  </body>
+</html>

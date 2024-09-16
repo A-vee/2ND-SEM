@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>45. C++ Program to calculate compound interest</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            float p,r,t,ci;
+            cout&lt;&lt;"Enter Principle Amount : "&lt;&lt;endl;
+            cin&gt;&gt;p;
+            cout&lt;&lt;"Enter Rate of Interest : "&lt;&lt;endl;
+            cin&gt;&gt;r;
+            cout&lt;&lt;"Enter Time : "&lt;&lt;endl;
+            cin&gt;&gt;t;
+            ci=(p*r*t)/100;
+            cout&lt;&lt;endl&lt;&lt;"Compound Interest : "&lt;&lt;ci;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter Principle Amount : 
+        1000
+        Enter Rate of Interest : 
+        5
+        Enter Time : 
+        3
+        Compound Interest : 150</code></pre>
+</body>
+</html>

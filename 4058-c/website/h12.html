@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>12. Write a C++ program to encrypt the contents of a text file using a simple encryption algorithm.
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              /*Encryption algorithm :- shifting character by 7 ascii numbers to the right */
+              fstream f1, f2;
+              f1.open("NewFile", ios::in);
+              f2.open("encryptf", ios::out);
+              char ch;
+              while (f1.get(ch)) {
+                  if (isalpha(ch)) {        
+                      ch = ch + 7;
+                      f2 &lt;&lt; ch;
+                  }
+                  else {
+                      f2 &lt;&lt; ch;
+                  }
+              }
+              cout &lt;&lt; "File encrypted";
+              f1.close();
+              f2.close();
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              File encrypted
+            </code>
+          </pre>
+  </body>
+</html>

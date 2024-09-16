@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>1. Program to copy all elements of one array into another array</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr1[5],arr2[5],i;
+            cout&lt;&lt;"Enter 5 elements of array to copy : "&lt;&lt;endl;
+            for(i=0;i<5;i++) {
+                cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;" : ";
+                cin&gt;&gt;arr1[i];
+                arr2[i]=arr1[i];
+            }
+            cout&lt;&lt;endl&lt;&lt;"After copying array to another array : ";
+            for(i=0;i<5;i++) {
+                cout&lt;&lt;endl&lt;&lt;"Element "&lt;&lt;i+1&lt;&lt;" : "&lt;&lt;arr2[i];
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter 5 elements of array to copy : 
+        Enter element 1 : 10
+        Enter element 2 : 20
+        Enter element 3 : 30
+        Enter element 4 : 40
+        Enter element 5 : 50
+        
+        After copying array to another array : 
+        Element 1 : 10
+        Element 2 : 20
+        Element 3 : 30
+        Element 4 : 40
+        Element 5 : 50</code>
+        </pre>
+</body>
+</html>

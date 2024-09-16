@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>31. Program to print smallest and biggest possible palindrome word in a given string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+          string str;
+          cout &lt;&lt; "Enter a string: ";
+          getline(cin, str);
+        
+          int n = str.length();
+          string smallest, biggest;
+        
+          // Iterate through all substrings
+          for (int i = 0; i &lt; n; ++i) {
+            for (int j = i; j &lt; n; ++j) {
+              string current = str.substr(i, j - i + 1); // Extract substring
+        
+              // Check if palindrome (manually)
+              int isPalindrome = 1;
+              for (int k = 0; k &lt; current.length() / 2; ++k) {
+                if (tolower(current[k]) != tolower(current[current.length() - 1 - k])) {
+                  isPalindrome = 0;
+                  break;
+                }
+              }
+        
+              // Update smallest and biggest
+              if (isPalindrome) {
+                if (smallest.empty() || current.length() &lt; smallest.length()) {
+                  smallest = current;
+                }
+                if (biggest.empty() || current.length() &gt; biggest.length()) {
+                  biggest = current;
+                }
+              }
+            }
+          }
+        
+          if (smallest.empty() &amp;&amp; biggest.empty()) {
+            cout &lt;&lt; "No palindromes found in the string." &lt;&lt; endl;
+          } else {
+            cout &lt;&lt; "Smallest palindrome: " &lt;&lt; smallest &lt;&lt; endl;
+            cout &lt;&lt; "Biggest palindrome: " &lt;&lt; biggest &lt;&lt; endl;
+          }
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: racecar
+            Smallest palindrome: racecar
+            Biggest palindrome: racecar
+            </code>
+            </pre>
+            
+  </body>
+</html>

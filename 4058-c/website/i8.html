@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>8. Write a C++ program to create a class called Shape with methods called getPerimeter() and getArea(). Create a derived class called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.
+    </h1><pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;iomanip&gt;
+        using namespace std;
+        class shape 
+        {
+        
+            public:
+                float radius;
+                float perimeter;
+                float area;
+                float length;
+                float breath;
+        
+            public:
+                void getPerimeter()
+                {
+                    cout &lt;&lt; "Perimeter";
+                }
+                void getArea()
+                {
+                    cout &lt;&lt; "Area";
+                }
+        };
+        
+        class Circle :public shape
+        {
+            public:
+            void getPerimeter()
+            {
+                cout &lt;&lt; "perimeter of a circle : " &lt;&lt; endl;
+                cout &lt;&lt; "enter the radius of the circle : ";
+                cin &gt;&gt; radius;
+                perimeter = 3.14*2*radius;
+                cout &lt;&lt; "The perimeter of the Circle is : " &lt;&lt; perimeter &lt;&lt; endl;
+            }
+            void getArea()
+            {
+                cout &lt;&lt; "Area of a circle : " &lt;&lt; endl;
+                cout &lt;&lt; "enter the radius of the circle : ";
+                cin &gt;&gt; radius;
+                area = 3.14*radius*radius;
+                cout &lt;&lt; "The Area of the circle is : " &lt;&lt; area &lt;&lt; endl;
+            }  
+        };
+        
+        int main()
+        {
+            Circle a;
+            a.getPerimeter();
+            a.getArea();
+        }
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Perimeter of a circle : 
+            The perimeter of the Circle is : 31.4
+            Area of a circle : 
+            The Area of the circle is : 78.5
+            </code></pre>
+            
+  </body>
+</html>

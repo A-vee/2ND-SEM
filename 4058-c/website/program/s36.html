@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>36. Program to Splitting into a number of sub-strings
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;cstring&gt;
+        
+        using namespace std;
+        
+        int main() {
+            const char* str = "This is the 36th program of strings";
+            char delimiter = ' ';
+            int start = 0;
+        
+            while (const char* p = strchr(str + start, delimiter)) {
+                int sub_len = p - (str + start);
+                char sub_str[sub_len + 1];
+                strncpy(sub_str, str + start, sub_len);
+                sub_str[sub_len] = '\0';
+        
+                cout&lt;&lt;sub_str&lt;&lt;endl;
+        
+                start = p - str + 1;
+            }
+        
+            int sub_len = strlen(str + start);
+            char sub_str[sub_len + 1];
+            strncpy(sub_str, str + start, sub_len);
+            sub_str[sub_len] = '\0';
+        
+            cout&lt;&lt;sub_str&lt;&lt;endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            This
+            is
+            the
+            36th
+            program
+            of
+            strings
+            </code>
+            </pre>
+            
+  </body>
+</html>

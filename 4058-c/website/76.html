@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>76. Write a C++ program to remove a particular character from a string
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;string.h&gt;
+        using namespace std;
+        
+        int main() {
+            char str[20], ch;
+            int l, i = 0;
+            cout &lt;&lt; "Enter a string : ";
+            cin &gt;&gt; str;
+            cout &lt;&lt; "Enter a character to find in string : ";
+            cin &gt;&gt; ch;
+            l = strlen(str);
+            cout &lt;&lt; endl &lt;&lt; "String after removing character " &lt;&lt; ch &lt;&lt; " : ";
+            for (i = 0; i &lt; l; i++) {
+                if (str[i] == ch) {
+                    continue;
+                } else {
+                    cout &lt;&lt; str[i];
+                }
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter a string : Hello
+        Enter a character to find in string : l
+        String after removing character l : Heo
+        </code></pre>
+</body>
+</html>

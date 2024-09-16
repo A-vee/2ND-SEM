@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>1. Write a C++ program to create a new text file and write some text into it.
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1;
+              string ch;
+              f1.open("Newfile",ios::out);
+              cout&lt;&lt;"Enter the data for file : ";
+              getline(cin,ch);
+              f1&lt;&lt;ch;
+              cout&lt;&lt;"File created .";
+              f1.close();
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the data for file : Hello, this is a test file.
+              File created .
+            </code>
+          </pre>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>86. Write a C++ program that reads a set of integers, and then prints the sum of the even and odd integers using loop
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n[20], sumo = 0, sume = 0;
+            int i, x;
+            cout &lt;&lt; "Enter number of integers (1-20) : ";
+            cin &gt;&gt; x;
+            for (i = 0; i &lt; x; i++)
+            {
+                cout &lt;&lt; "Enter number " &lt;&lt; i + 1 &lt;&lt; " : ";
+                cin &gt;&gt; n[i];
+            }
+            for (i = 0; i &lt; x; i++)
+            {
+                if (n[i] % 2 == 0)
+                {
+                    sume = sume + n[i];
+                }
+                else
+                {
+                    sumo = sumo + n[i];
+                }
+            }
+            cout &lt;&lt; endl &lt;&lt; "Sum of all Even numbers : " &lt;&lt; sume;
+            cout &lt;&lt; endl &lt;&lt; "Sum of all Odd numbers : " &lt;&lt; sumo;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter number of integers (1-20) : 4
+            Enter number 1 : 3
+            Enter number 2 : 5
+            Enter number 3 : 6
+            Enter number 4 : 8
+            
+            Sum of all Even numbers : 14
+            Sum of all Odd numbers : 8
+            </code>
+            </pre>
+            
+</body>
+</html>

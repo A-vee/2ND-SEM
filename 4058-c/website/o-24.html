@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>24. Create a class showing the area of circle and rectangle by method overloading.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        class Person {
+        private:
+            std::string name;
+            int age;
+            std::string country;
+        
+        public:
+            void setName(const std::string&amp; newName) {
+                name = newName;
+            }
+        
+            std::string getName() const {
+                return name;
+            }
+        
+            void setAge(int newAge) {
+                age = newAge;
+            }
+        
+            int getAge() const {
+                return age;
+            }
+        
+            void setCountry(const std::string&amp; newCountry) {
+                country = newCountry;
+            }
+        
+            std::string getCountry() const {
+                return country;
+            }
+        };
+        
+        int main() {
+            Person person;
+        
+            person.setName("kailsah");
+            person.setAge(19);
+            person.setCountry("India");
+        
+            std::cout &lt;&lt; "Name: " &lt;&lt; person.getName() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Age: " &lt;&lt; person.getAge() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Country: " &lt;&lt; person.getCountry() &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>  
+        <h1>Output</h1>
+        <p>Name: kailsah</p>
+<p>Age: 19</p>
+<p>Country: India</p>
+
+  </body>
+</html>

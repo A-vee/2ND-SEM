@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>
+        4. Write a C++ program to count the number of words in a text file.
+        
+        </h1>
+        <pre>
+            <code>
+              #include&lt;iostream&gt;
+              #include&lt;fstream&gt;
+              #include&lt;string&gt;
+          
+              using namespace std;
+              int main(){
+                  fstream f1;
+                  string ch;
+                  int c=0;
+                  f1.open("Newfile",ios::in);
+                  while(!f1.eof()){
+                      f1&gt;&gt;ch;
+                      c++;
+                  }
+                  cout&lt;&lt;"No of words in file : "&lt;&lt;c;
+                  f1.close();
+                  return 0;
+              }
+            </code>
+          </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              No of words in file : 6
+            </code>
+          </pre>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>31. Write a C++ program to create a class called Student with private instance variables student_id, student_name, and grades. Provide public getter and setter methods to access and modify the student_id and student_name variables. However, provide a method called addGrade() that allows adding a grade to the grades variable while performing additional validation.</h1>
+
+    <pre><code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        #include &lt;vector&gt;
+        
+        class Student {
+        private:
+            int student_id;
+            std::string student_name;
+            std::vector&lt;int&gt; grades;
+        
+        public:
+            Student(int id, std::string name) : student_id(id), student_name(name) {}
+        
+            int getStudentId() const {
+                return student_id;
+            }
+        
+            void setStudentId(int id) {
+                student_id = id;
+            }
+        
+            std::string getStudentName() const {
+                return student_name;
+            }
+        
+            void setStudentName(std::string name) {
+                student_name = name;
+            }
+        
+            void addGrade(int grade) {
+                if (grade &gt;= 0 && grade &lt;= 100) {
+                    grades.push_back(grade);
+                } else {
+                    std::cout &lt;&lt; "Invalid grade! Grade should be between 0 and 100." &lt;&lt; std::endl;
+                }
+            }
+        
+            void display() const {
+                std::cout &lt;&lt; "Student ID: " &lt;&lt; student_id &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Student Name: " &lt;&lt; student_name &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Grades: ";
+                for (int grade : grades) {
+                    std::cout &lt;&lt; grade &lt;&lt; " ";
+                }
+                std::cout &lt;&lt; std::endl;
+            }
+        };
+        
+        int main() {
+            Student student(1001, "Alice");
+            std::cout &lt;&lt; "Initial Details:" &lt;&lt; std::endl;
+            student.display();
+            student.setStudentId(1002);
+            student.setStudentName("Bob");
+            std::cout &lt;&lt; "\nModified Details:" &lt;&lt; std::endl;
+            student.display();
+            student.addGrade(85);
+            student.addGrade(92);
+            student.addGrade(78);
+            student.addGrade(105);
+            std::cout &lt;&lt; "\nFinal Details:" &lt;&lt; std::endl;
+            student.display();
+            return 0;
+        }
+        </code></pre>        
+        <h1>Output</h1>   
+<pre><code>Initial Details:
+    Student ID: 1001
+    Student Name: Alice
+    Grades: 
+    
+    Modified Details:
+    Student ID: 1002
+    Student Name: Bob
+    Grades: 
+    
+    Final Details:
+    Student ID: 1002
+    Student Name: Bob
+    Grades: 85 92 78 Invalid grade! Grade should be between 0 and 100.
+    </code></pre>
+  </body>
+</html>

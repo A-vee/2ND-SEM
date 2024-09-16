@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>6. Write a C++ program to create a class called Animal with a method named move(). Create a derived class called Cheetah that overrides the move() method to run.
+    </h1><pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        class Animal 
+        {
+            public:
+                void move() 
+                {
+                    cout &lt;&lt; "Animal moves" &lt;&lt; endl;
+                }
+        };
+        
+        class Cheetah : public Animal 
+        {
+            public:  
+                void move()  
+                {
+                    cout &lt;&lt; "Cheetah runs !!" &lt;&lt; endl;
+                }
+        };
+        
+        int main() 
+        {
+            Cheetah cheeta;
+            cheeta.move(); 
+        }
+        </code></pre>
+        <h1>Output</h1>
+        <pre><code>Cheetah runs !!
+        </code></pre>
+  </body>
+</html>

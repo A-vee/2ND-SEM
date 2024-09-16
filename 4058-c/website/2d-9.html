@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>9. Program to find the sum of each row and each column of a matrix
+
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+              int x, y, i, j;
+              cout&lt;&lt;"Enter the rows and columns For Matrix: ";
+              cin&gt;&gt;x&gt;&gt;y;
+              int mata[10][10], r[10], c[10];
+              cout&lt;&lt;"Enter the elements of matrix : "&lt;&lt;endl;
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      cin&gt;&gt;mata[i][j];
+                  }
+              }
+              for(i=0;i&lt;x;i++){
+                  r[i]=0;
+                  for(j=0;j&lt;y;j++){
+                      r[i]=r[i]+mata[i][j];
+                  }
+              }
+              for(i=0;i&lt;y;i++){
+                  c[i]=0;
+                  for(j=0;j&lt;x;j++){
+                      c[i]=c[i]+mata[j][i];
+                  }
+              }
+              for(i=0;i&lt;x;i++){
+                  cout&lt;&lt;"Sum Of Row "&lt;&lt;i+1&lt;&lt;": "&lt;&lt;r[i]&lt;&lt;endl;
+              }
+              for(i=0;i&lt;y;i++){
+                  cout&lt;&lt;"Sum Of Column "&lt;&lt;i+1&lt;&lt;": "&lt;&lt;c[i]&lt;&lt;endl;
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns For Matrix: 2 2
+              Enter the elements of matrix : 
+              1 2
+              3 4
+              Sum Of Row 1: 3
+              Sum Of Row 2: 7
+              Sum Of Column 1: 4
+              Sum Of Column 2: 6
+            </code>
+          </pre>
+  </body>
+</html>

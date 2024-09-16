@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>2. Program to Add Two Matrices
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;iomanip&gt;
+          using namespace std;
+          int main(){
+              int x,y,i,j;
+              cout&lt;&lt;"Enter the rows and columns : ";
+              cin&gt;&gt;x&gt;&gt;y;
+              int mata[10][10];
+              cout&lt;&lt;"Enter elements of Matrix A "&lt;&lt;endl;
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      cin&gt;&gt;mata[i][j];
+                  }
+              }
+              int matb[10][10];
+              cout&lt;&lt;"Enter elements of Matrix B"&lt;&lt;endl;
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      cin&gt;&gt;matb[i][j];
+                  }
+              }
+              cout&lt;&lt;"A Matrix : ";
+              for(i=0;i&lt;x;i++){
+                  cout&lt;&lt;endl;
+                  for(j=0;j&lt;y;j++){
+                      cout&lt;&lt;setw(5)&lt;&lt;mata[i][j];
+                  }
+              }
+              cout&lt;&lt;endl;
+              cout&lt;&lt;"B Matrix : ";
+              for(i=0;i&lt;x;i++){
+                  cout&lt;&lt;endl;
+                  for(j=0;j&lt;y;j++){
+                      cout&lt;&lt;setw(5)&lt;&lt;matb[i][j];
+                  }
+              }
+              cout&lt;&lt;endl;
+              cout&lt;&lt;"A+B Matrix : "&lt;&lt;endl;
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      cout&lt;&lt;setw(5)&lt;&lt;mata[i][j]+matb[i][j];
+                  }
+                  cout&lt;&lt;endl;
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns : 3 3
+              Enter elements of Matrix A 
+              1 2 3
+              4 5 6
+              7 8 9
+              Enter elements of Matrix B
+              9 8 7
+              6 5 4
+              3 2 1
+              A Matrix : 
+                  1    2    3
+                  4    5    6
+                  7    8    9
+              B Matrix : 
+                  9    8    7
+                  6    5    4
+                  3    2    1
+              A+B Matrix : 
+                 10   10   10
+                 10   10   10
+                 10   10   10
+            </code>
+          </pre>
+  </body>
+</html>

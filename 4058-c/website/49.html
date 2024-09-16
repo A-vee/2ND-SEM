@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>49. C++ Program To Calculate Power Of Number</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, p, ans = 1;
+            cout &lt;&lt; "Enter number and its power : ";
+            cin &gt;&gt; n &gt;&gt; p;
+            for (int i = 1; i &lt;= p; i++)
+            {
+                ans = ans * n;
+            }
+            cout &lt;&lt; endl &lt;&lt; n &lt;&lt; " raise to power " &lt;&lt; p &lt;&lt; " = " &lt;&lt; ans;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter number and its power : 2 3
+        
+        2 raised to power 3 = 8
+        </code>
+        </pre>
+</body>
+</html>

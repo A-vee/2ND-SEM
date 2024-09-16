@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>5. Program to remove all occurrences of a given character from input String?
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        #include&lt;conio.h&gt;
+        #include&lt;string.h&gt;
+        
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            char ch;
+        
+            cout&lt;&lt;"Enter string: ";
+            cin&gt;&gt;str;
+            cout&lt;&lt;"Enter the character which you want to remove: ";
+            cin&gt;&gt;ch;
+        
+            string result;
+            for(int i=0; str[i] != '\0'; i++){
+                char r=str[i];
+                if(r != ch){
+                    result+=r;
+                }
+            }
+            
+            cout&lt;&lt;"String after removing "&lt;&lt;ch&lt;&lt;" : "&lt;&lt;result&lt;&lt;endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Enter string: hello
+            Enter the character which you want to remove: l
+            String after removing l : heo
+            </code>
+            </pre>
+            
+  </body>
+</html>

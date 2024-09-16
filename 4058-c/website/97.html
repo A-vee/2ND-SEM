@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>97. Write a C++ method to check whether an year entered by the user is a leap year or not
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int main(){
+            int y;
+            cout &lt;&lt; "Enter the year : ";
+            cin &gt;&gt; y;
+            if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) {
+                cout &lt;&lt; "Leap year ";
+            }
+            else {
+                cout &lt;&lt; "Not a leap year ";
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the year: 2024
+            Leap year
+            </code>
+            </pre>
+            
+    
+</body>
+</html>

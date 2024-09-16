@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>23. Write a C++ program to add two numbers without using any arithmetic operators</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;math.h&gt;
+          using namespace std;
+          int main(){
+             int a,b;
+             cout&lt;&lt;"Enter the number A and B : ";
+             cin&gt;&gt;a&gt;&gt;b;
+             for(int i=0;i&lt;b;i++,a++);
+             cout&lt;&lt;"Sum of A and B without arthmetic operators : "&lt;&lt;a;
+             return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the number A and B : 5 3
+              Sum of A and B without arithmetic operators : 8
+            </code>
+          </pre>
+          
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>99. Write a C++ method to compute the sum of the digits in an integer
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int main(){
+            int a, s = 0;
+            cout &lt;&lt; "Enter the number : ";
+            cin &gt;&gt; a;
+            int r;
+            while (a != 0) {
+                r = a % 10;
+                s += r;
+                a /= 10;
+            }
+            cout &lt;&lt; "Sum of digits of an integer : " &lt;&lt; s;
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre><code>
+            Enter the number: 12345
+            Sum of digits of an integer: 15
+            </code></pre>
+            
+</body>
+</html>

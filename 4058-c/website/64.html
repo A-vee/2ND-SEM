@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>64. Write a C++ program that accepts three numbers from the user and check if numbers are in "increasing” or “decreasing” order.
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int x, y, z;
+            cout &lt;&lt; "Enter first number : ";
+            cin &gt;&gt; x;
+            cout &lt;&lt; "Enter second number : ";
+            cin &gt;&gt; y;
+            cout &lt;&lt; "Enter third number : ";
+            cin &gt;&gt; z;
+            if (x > y && y > z)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Numbers are in Decreasing Order";
+            }
+            else if (x < y && y < z)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Numbers are in Increasing Order";
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "Numbers are in Random Order";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter first number : 3
+        Enter second number : 5
+        Enter third number : 2
+        Numbers are in Random Order
+        </code>
+        </pre>
+</body>
+</html>

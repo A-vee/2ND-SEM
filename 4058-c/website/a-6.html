@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>6. Program to print the elements of an array in reverse order</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr[5],i;
+            cout&lt;&lt;"Enter 5 elements of array : "&lt;&lt;endl;
+            for(i=0;i&lt;5;i++) {
+                cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;" : ";
+                cin&gt;&gt;arr[i];
+            }
+            cout&lt;&lt;endl&lt;&lt;"Printing array elements in reverse order: "&lt;&lt;endl;
+            for(i=4;i>=0;i--) {
+                cout&lt;&lt;" \t "&lt;&lt;arr[i];
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>Enter 5 elements of array : 
+        Enter element 1 : 10
+        Enter element 2 : 20
+        Enter element 3 : 30
+        Enter element 4 : 40
+        Enter element 5 : 50
+        
+        Printing array elements in reverse order: 
+             50     40     30     20     10</code>
+        </pre>
+</body>
+</html>

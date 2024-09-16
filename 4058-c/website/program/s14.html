@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>14. Program to determine whether one string is a rotation of another
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+            string str1, str2;
+            cout &lt;&lt; "Enter the first string: ";
+            cin &gt;&gt; str1;
+            cout &lt;&lt; "Enter the second string: ";
+            cin &gt;&gt; str2;
+           
+            if (str1.length() != str2.length()) {
+                cout &lt;&lt; "These strings are of different lengths. So, they cannot be rotations of each other." &lt;&lt; endl;
+                return 0;
+            }
+            
+            string st3 = str1 + str1;
+           
+            if (st3.find(str2) != string::npos)
+                cout &lt;&lt; str2 &lt;&lt; " is a rotation of " &lt;&lt; str1 &lt;&lt; endl;
+            else
+                cout &lt;&lt; str2 &lt;&lt; " is not a rotation of " &lt;&lt; str1 &lt;&lt; endl;
+            
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the first string: watermelon
+            Enter the second string: lemonwater
+            lemonwater is a rotation of watermelon
+            </code>
+            </pre>
+            
+  </body>
+</html>

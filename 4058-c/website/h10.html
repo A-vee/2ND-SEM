@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>
+        10. Write a C++ program to split a large text file into smaller files of equal size.
+        </h1>
+        <pre>
+            <code>
+              #include&lt;iostream&gt;
+              #include&lt;fstream&gt;
+              #include&lt;string&gt;
+              #include&lt;cmath&gt;
+          
+              using namespace std;
+          
+              int main() {
+                  ifstream f1;
+                  ofstream f2;
+                  string st = "";
+                  char ch;
+                  int tc = 0;
+                  f1.open("Newfile.txt", ios::in);
+          
+                  while (f1.get(ch)) {
+                      if (ch == '\n') {
+                          tc++;
+                      }
+                  }
+                  f1.clear(); 
+                  f1.seekg(0, ios::beg); 
+                  double ps = sqrt(tc); 
+                  int ips = static_cast&lt;int&gt;(ps); 
+                  int i = 0;
+                  while (i &lt; ips) {
+                      string on = "Output" + to_string(i + 1) + ".txt";
+                      f2.open(on, ios::out);
+                      for (int j = 0; j &lt; ips &amp;&amp; f1.get(ch); j++) {
+                          f2.put(ch);
+                      }
+                      f2.close();
+                      i++;
+                  }
+                  f1.close();
+                  return 0;
+              }
+            </code>
+          </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              There is no specific output to display. The program reads the content of a file named "Newfile.txt", calculates the square root of the number of lines in the file, and creates multiple output files named "Output1.txt", "Output2.txt", etc., with a portion of the content from "Newfile.txt" written into each output file.
+            </code>
+          </pre>
+  </body>
+</html>

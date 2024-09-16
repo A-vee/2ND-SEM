@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>6. Write a C++ program to swap two variables</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+              int a,b;
+              cout&lt;&lt;"Enter the Number A and B : ";
+              cin&gt;&gt;a&gt;&gt;b;
+              a=a+b;
+              b=a-b;
+              a=a-b;
+              cout&lt;&lt;"Value of A and B after swapping : "&lt;&lt;endl;
+              cout&lt;&lt;"A : "&lt;&lt;a&lt;&lt;endl&lt;&lt;"B : "&lt;&lt;b;
+              return 0;
+          }
+        </code>
+      </pre>         
+    <h1>Output</h1>
+    <pre>
+        <code>
+          Enter the numbers A and B : 5 10
+          Value of A and B after swapping :
+          A : 10
+          B : 5
+        </code>
+      </pre>
+      
+</body>
+</html>

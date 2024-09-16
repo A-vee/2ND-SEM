@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>2. Write a C++ program to open an existing text file and display its contents on the console.
+
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1;
+              string ch;
+              f1.open("Newfile",ios::in);
+              while(!f1.eof()){
+                  getline(f1,ch);
+              }
+              cout&lt;&lt;"Data inside file : "&lt;&lt;endl&lt;&lt;ch;
+              f1.close();
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Data inside file : 
+              Hello, this is a test file.
+            </code>
+          </pre>
+  </body>
+</html>

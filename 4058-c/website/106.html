@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>106. Write a C++ method to find factorial using recursion</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int facrec(int n){
+              if(n&lt;=1){
+                  return 1;
+              }
+              else{
+                  return n*facrec(n-1);
+              }
+          }
+          int main(){
+              int num;
+              cout&lt;&lt;"Enter the number for factorial : ";
+              cin&gt;&gt;num;
+              cout&lt;&lt;"Factorial using recursion : "&lt;&lt;facrec(num);
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Factorial using recursion: 120
+            </code>
+          </pre>
+          
+</body>
+</html>

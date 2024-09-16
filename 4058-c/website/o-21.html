@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>21. Create a class showing an example of parameterized constructor.</h1>
+    <pre><code>
+        #include &ltiostream&gt
+        #include &ltstring&gt
+        
+        class Example {
+        private:
+            int a;
+            std::string b;
+        
+        public:
+            Example(int a, const std::string&amp b) : a(a), b(b) {}
+        
+            // Copy constructor
+            Example(const Example&amp other) : a(other.a), b(other.b) {}
+        
+            void display() {
+                std::cout &lt&lt "a: " &lt&lt a &lt&lt ", b: " &lt&lt b &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            Example obj1(10, "example");
+            obj1.display();
+        
+            Example obj2 = obj1; // Copy constructor invoked
+            obj2.display();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            a: 10, b: example
+            a: 10, b: example</code></pre>
+  </body>
+</html>

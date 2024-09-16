@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>29. Write a C++ program to create a class called Circle with a private instance variable radius. Provide public getter and setter methods to access and modify the radius variable. However, provide two methods called calculateArea() and calculatePerimeter() that return the calculated area and perimeter based on the current radius value.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        class Car {
+        private:
+            std::string company_name;
+            std::string model_name;
+            int year;
+            double mileage;
+        
+        public:
+            void setCompanyName(const std::string&amp; name) {
+                company_name = name;
+            }
+        
+            std::string getCompanyName() const {
+                return company_name;
+            }
+        
+            void setModelName(const std::string&amp; name) {
+                model_name = name;
+            }
+        
+            std::string getModelName() const {
+                return model_name;
+            }
+        
+            void setYear(int yr) {
+                year = yr;
+            }
+        
+            int getYear() const {
+                return year;
+            }
+        
+            void setMileage(double miles) {
+                mileage = miles;
+            }
+        
+            double getMileage() const {
+                return mileage;
+            }
+        };
+        
+        int main() {
+            Car myCar;
+        
+            myCar.setCompanyName("Toyota");
+            myCar.setModelName("Camry");
+            myCar.setYear(2020);
+            myCar.setMileage(15000.5);
+        
+            std::cout &lt;&lt; "Car Company Name: " &lt;&lt; myCar.getCompanyName() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Car Model Name: " &lt;&lt; myCar.getModelName() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Car Year: " &lt;&lt; myCar.getYear() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Car Mileage: " &lt;&lt; myCar.getMileage() &lt;&lt; " miles" &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Car Company Name: Toyota
+            Car Model Name: Camry
+            Car Year: 2020
+            Car Mileage: 15000.5 miles
+            </code>
+            </pre>
+            
+  </body>
+</html>

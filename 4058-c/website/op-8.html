@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>8. Define a class Time to represent time. Overload the << operator to display the time in HH:MM format.
+    </h1><pre>
+        <code class="language-cpp">
+        #include&lt;iostream>
+        using namespace std;
+        class Time{
+          int hour;
+          int min;
+          public:
+          Time(int a,int b){
+             hour=a;
+             min=b;
+             simp();
+          }
+          friend ostream&amp; operator &lt;&lt;(ostream &amp;o,Time &amp;t);
+          void simp(){
+            hour=hour+(min/60);
+            min=min%60;
+          }
+        };
+        ostream&amp; operator &lt;&lt;(ostream &amp;o,Time &amp;t){
+           o&lt;&lt;t.hour&lt;&lt;":"&lt;&lt;t.min&lt;&lt;endl;
+        }
+        int main(){
+          Time t1(10,90);
+          cout&lt;&lt;"Displaying Time in HH:MM format by overloading '<<' : "&lt;&lt;t1;
+          return 0;}
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Displaying Time in HH:MM format by overloading '<<' : 11:30</code></pre>
+</body>
+</html>

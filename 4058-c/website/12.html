@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>12. Write a C++ program to count the letters, spaces, numbers and other characters of an input string</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;cctype&gt;
+          #include&lt;string&gt;
+          using namespace std;
+          int main(){
+              string st;
+              int i,n=0,l=0,s=0,o=0;
+              cout&lt;&lt;"Enter the string : ";
+              getline(cin,st);
+              for(i=0;i&lt;st.length();i++){
+                  if(isalpha(st[i])){
+                      l++;
+                  }
+                  else if(isdigit(st[i])){
+                      n++;
+                  }
+                  else if(st[i]==' '){
+                      s++;
+                  }
+                  else{
+                      o++;
+                  }
+              }
+              cout&lt;&lt;"Number of Letters : "&lt;&lt;l&lt;&lt;endl;
+              cout&lt;&lt;"Number of Digit characters : "&lt;&lt;n&lt;&lt;endl;
+              cout&lt;&lt;"Number of Spaces : "&lt;&lt;s&lt;&lt;endl;
+              cout&lt;&lt;"Number of other characters : "&lt;&lt;o&lt;&lt;endl;
+              return 0;
+          }
+        </code>
+      </pre>          
+    <h1>Output</h1>
+    <pre>
+        <code>
+          Enter the string : Hello World 123 !
+          Number of Letters : 10
+          Number of Digit characters : 3
+          Number of Spaces : 2
+          Number of other characters : 1
+        </code>
+      </pre>
+      
+</body>
+</html>

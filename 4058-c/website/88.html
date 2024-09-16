@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>88. Write a C++ program to calculate HCF of Two given numbers using loop
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int x, y, i, c = 0;
+            cout &lt;&lt; "Enter first number : ";
+            cin &gt;&gt; x;
+            cout &lt;&lt; "Enter second number : ";
+            cin &gt;&gt; y;
+            if (x &lt; y)
+            {
+                for (i = 2; i &lt;= x; i++)
+                {
+                    if (x % i == 0 && y % i == 0)
+                    {
+                        cout &lt;&lt; "HCF of " &lt;&lt; x &lt;&lt; " and " &lt;&lt; y &lt;&lt; " : " &lt;&lt; i;
+                        c++;
+                        break;
+                    }
+                }
+            }
+            else if (x > y)
+            {
+                for (i = 2; i &lt;= y; i++)
+                {
+                    if (x % i == 0 && y % i == 0)
+                    {
+                        cout &lt;&lt; "HCF of " &lt;&lt; x &lt;&lt; " and " &lt;&lt; y &lt;&lt; " : " &lt;&lt; i;
+                        c++;
+                        break;
+                    }
+                }
+            }
+            if (c == 0)
+            {
+                cout &lt;&lt; endl &lt;&lt; "HCF of " &lt;&lt; x &lt;&lt; " and " &lt;&lt; y &lt;&lt; " : 1";
+            }
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter first number: 13
+            Enter second number: 17
+            HCF of 13 and 17 : 1
+            </code>
+            </pre>
+            
+</body>
+</html>

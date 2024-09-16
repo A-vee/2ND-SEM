@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>7. Write a C++ program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). Create derived classes Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape
+    </h1>
+    <pre>
+<code>
+    #include &lt;iostream&gt;
+    #include &lt;cmath&gt;
+    
+    class Shape3D {
+    public:
+        virtual double calculateVolume() const = 0;
+        virtual double calculateSurfaceArea() const = 0;
+    };
+    
+    class Sphere : public Shape3D {
+    private:
+        double radius;
+    
+    public:
+        Sphere(double r) : radius(r) {}
+    
+        double calculateVolume() const override {
+            return (4.0 / 3.0) * M_PI * std::pow(radius, 3);
+        }
+    
+        double calculateSurfaceArea() const override {
+            return 4 * M_PI * std::pow(radius, 2);
+        }
+    };
+    
+    class Cube : public Shape3D {
+    private:
+        double side;
+    
+    public:
+        Cube(double s) : side(s) {}
+    
+        double calculateVolume() const override {
+            return std::pow(side, 3);
+        }
+    
+        double calculateSurfaceArea() const override {
+            return 6 * std::pow(side, 2);
+        }
+    };
+    
+    int main() {
+        Sphere sphere(5);
+        std::cout &lt;&lt; "Sphere: Volume = " &lt;&lt; sphere.calculateVolume() &lt;&lt; ", Surface Area = " &lt;&lt; sphere.calculateSurfaceArea() &lt;&lt; std::endl;
+    
+        Cube cube(4);
+        std::cout &lt;&lt; "Cube: Volume = " &lt;&lt; cube.calculateVolume() &lt;&lt; ", Surface Area = " &lt;&lt; cube.calculateSurfaceArea() &lt;&lt; std::endl;
+    
+        return 0;
+    }
+
+</code>
+</pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Sphere: Volume = 523.599, Surface Area = 314.159
+            Cube: Volume = 64, Surface Area = 96
+            </code>
+            </pre>
+         
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>22. Program to Print Odd and Even Numbers from an array</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr[20],n,i,j;
+            int even[20],odd[20],e=0,o=0;
+            cout&lt;&lt;"Entre number of elements (1-20) : ";
+            cin&gt;&gt;n;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;" : ";
+                cin&gt;&gt;arr[i];
+            }
+            for(i=0;i&lt;n;i++) {
+                if(arr[i]%2==0) {
+                    e++;
+                    even[e-1]=arr[i];
+                }
+                else {
+                    o++;
+                    odd[o-1]=arr[i];
+                }
+            }
+            cout&lt;&lt;endl&lt;&lt;"Even elements of array : "&lt;&lt;endl;
+            for(i=0;i&lt;e;i++) {
+                cout&lt;&lt;"\t"&lt;&lt;even[i];
+            }
+            cout&lt;&lt;endl&lt;&lt;"Odd elements of array : "&lt;&lt;endl;
+            for(i=0;i&lt;o;i++) {
+                cout&lt;&lt;"\t"&lt;&lt;odd[i];
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Entre number of elements (1-20) : 5
+        Enter element 1 : 12
+        Enter element 2 : 5
+        Enter element 3 : 7
+        Enter element 4 : 8
+        Enter element 5 : 10
+        
+        Even elements of array : 
+            12    8    10
+        Odd elements of array : 
+            5    7</code>
+        </pre>
+</body>
+</html>

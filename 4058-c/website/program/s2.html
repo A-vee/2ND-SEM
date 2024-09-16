@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>2. Program to Swapping Pair of Characters
+    </h1>
+
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string s;
+            int flag = 1;
+            char ch1, ch2;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, s);
+            cout &lt;&lt; "Enter the character for swapping : ";
+            cin &gt;&gt; ch1;
+            cout &lt;&lt; "Enter the character with whom you want to swap : ";
+            cin &gt;&gt; ch2;
+        
+            for (int i = 0; i &lt; s.length(); i++)
+            {
+                if (s[i] == ch1)
+                {
+                    for (int j = 0; j &lt; s.length(); j++)
+                    {
+                        if (s[j] == ch2)
+                        {
+                            swap(s[i], s[j]);
+                            flag = 0;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            if (flag != 0)
+                cout &lt;&lt; "Character is not present with whom you want to swap." &lt;&lt; endl;
+            else
+                cout &lt;&lt; "Resulting string : " &lt;&lt; s &lt;&lt; endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Enter the string : hello
+            Enter the character for swapping : e
+            Enter the character with whom you want to swap : o
+            Resulting string : holl
+            </code>
+            </pre>
+            
+  </body>
+</html>

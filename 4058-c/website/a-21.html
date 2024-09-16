@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>21. Program to Remove Duplicate Element in an array</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr[20],t,n,i;
+            cout&lt;&lt;"Entre number of elements (1-20) : ";
+            cin&gt;&gt;n;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;" : ";
+                cin&gt;&gt;arr[i];
+            }
+            cout&lt;&lt;endl&lt;&lt;"Array before removing duplicate elements : "&lt;&lt;endl;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"\t"&lt;&lt;arr[i];
+            }
+            for(i=0;i&lt;n;i++) {
+                for(int j=i+1;j&lt;n;j++) {
+                    if(arr[i]==arr[j]) {
+                        for(int k=j;k&lt;n;k++) {
+                            arr[k]=arr[k+1];
+                        }
+                        j--;
+                        n--;
+                    }
+                }
+            }
+            cout&lt;&lt;endl&lt;&lt;"Array after removing duplicate elements : "&lt;&lt;endl;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"\t"&lt;&lt;arr[i];
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Entre number of elements (1-20) : 5
+        Enter element 1 : 10
+        Enter element 2 : 20
+        Enter element 3 : 30
+        Enter element 4 : 10
+        Enter element 5 : 20
+        
+        Array before removing duplicate elements : 
+            10    20    30    10    20
+        Array after removing duplicate elements : 
+            10    20    30</code>
+        </pre>
+</body>
+</html>

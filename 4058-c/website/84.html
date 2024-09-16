@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>84. Write a C++ program to find the factorial value of any number entered through the keyboard
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, fact = 1;
+            cout &lt;&lt; "Enter any number to find Factorial : ";
+            cin &gt;&gt; n;
+            for (int i = 1; i &lt;= n; i++)
+            {
+                fact = fact * i;
+            }
+            cout &lt;&lt; endl &lt;&lt; "Factorial of " &lt;&lt; n &lt;&lt; " is : " &lt;&lt; fact;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter any number to find Factorial: 5
+            
+            Factorial of 5 is: 120
+            </code>
+            </pre>
+            
+</body>
+</html>

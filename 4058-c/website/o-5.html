@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>5. Write a C++ program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection.
+</h1> <pre><code>
+    #include&ltiostream&gt;
+    #include&ltstring&gt;
+    using namespace std;
+    
+    class Book {
+        string title;
+        string author;
+        string ISBN;
+    public:
+        void get() {
+            cout &lt&lt "Enter the title : ";
+            cin >> title;
+            cout &lt&lt "Enter the author : ";
+            cin >> author;
+            cout &lt&lt "Enter the ISBN : ";
+            cin >> ISBN;
+        }
+    
+        string gettitle() {
+            return title;
+        }
+    
+        string getauthor() {
+            return author;
+        }
+    
+        string getISBN() {
+            return ISBN;
+        }
+    };
+    
+    int i = 0;
+    
+    class Collection {
+        Book c[30];
+    public:
+        void add() {
+            c[i].get();
+            i++;
+        }
+    
+        int find(string ch) {
+            int m = 0;
+            for (m = 0; m &lt i; m++) {
+                if (ch == c[m].getISBN()) {
+                    return m;
+                }
+            }
+            return -1;
+        }
+    
+        void remove(string ch) {
+            int a = find(ch);
+            if (a >= 0) {
+                cout &lt&lt "Book with title " &lt&lt c[a].gettitle() &lt&lt " is removed from the collection ." &lt&lt endl;
+                for (int j = a; j &lt i; j++) {
+                    c[j] = c[j + 1];
+                }
+                i--;
+            }
+            else {
+                cout &lt&lt "No book found with this ISBN ." &lt&lt endl;
+            }
+        }
+    };
+    
+    int main() {
+        Collection c1;
+        c1.add();
+        c1.add();
+        string st;
+        cout &lt&lt "Enter the ISBN of the book you want to remove : ";
+        cin >> st;
+        c1.remove(st);
+        return 0;
+    }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the title : Book1
+            Enter the author : Author1
+            Enter the ISBN : ISBN1
+            Enter the title : Book2
+            Enter the author : Author2
+            Enter the ISBN : ISBN2
+            Enter the ISBN of the book you want to remove : ISBN2
+            
+            Book with title Book2 is removed from the collection .</code></pre>
+  </body>
+</html>

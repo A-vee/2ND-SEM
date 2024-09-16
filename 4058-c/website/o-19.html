@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>19. Write a C++ program to create a class with methods to search for flights and hotels, and to book and cancel reservations.
+    </h1><pre><code>
+        #include &ltiostream&gt
+        #include &ltstring&gt
+        
+        class BookingSystem {
+        public:
+            void searchFlights(const std::string&amp query) {
+                std::cout &lt&lt "Searching for flights: " &lt&lt query &lt&lt std::endl;
+            }
+        
+            void searchHotels(const std::string&amp query) {
+                std::cout &lt&lt "Searching for hotels: " &lt&lt query &lt&lt std::endl;
+            }
+        
+            void bookReservation(const std::string&amp type, const std::string&amp details) {
+                std::cout &lt&lt "Booking " &lt&lt type &lt&lt " reservation: " &lt&lt details &lt&lt std::endl;
+            }
+        
+            void cancelReservation(const std::string&amp type, const std::string&amp details) {
+                std::cout &lt&lt "Canceling " &lt&lt type &lt&lt " reservation: " &lt&lt details &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            BookingSystem bookingSystem;
+        
+            bookingSystem.searchFlights("New York to London");
+            bookingSystem.searchHotels("London");
+        
+            bookingSystem.bookReservation("flight", "Flight from New York to London on 2024-04-06");
+            bookingSystem.bookReservation("hotel", "Hotel in London for 3 nights");
+        
+            bookingSystem.cancelReservation("flight", "Flight from New York to London on 2024-04-06");
+            bookingSystem.cancelReservation("hotel", "Hotel in London for 3 nights");
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Searching for flights: New York to London
+            Searching for hotels: London
+            Booking flight reservation: Flight from New York to London on 2024-04-06
+            Booking hotel reservation: Hotel in London for 3 nights
+            Canceling flight reservation: Flight from New York to London on 2024-04-06
+            Canceling hotel reservation: Hotel in London for 3 nights</code></pre>
+  </body>
+</html>

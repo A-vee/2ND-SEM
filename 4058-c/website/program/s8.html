@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>8. Program to Convert Enum to String
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        enum Fruit {APPLE, MANGO, BANANA, ORANGE, GRAPES};
+        
+        int main() {
+            Fruit fruit = MANGO;
+            string fruitString;
+        
+            switch (fruit) {
+                case APPLE:
+                    fruitString = "Apple";
+                    break;
+                case MANGO:
+                    fruitString = "Mango";
+                    break;
+                case BANANA:
+                    fruitString = "Banana";
+                    break;
+                case ORANGE:
+                    fruitString = "Orange";
+                    break;
+                case GRAPES:
+                    fruitString = "Grapes";
+                    break;
+                default:
+                    fruitString = "Unknown";
+            }
+        
+            cout &lt;&lt; "The fruit is: " &lt;&lt; fruitString &lt;&lt; endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            The fruit is: Mango
+            </code>
+            </pre>
+            
+  </body>
+</html>

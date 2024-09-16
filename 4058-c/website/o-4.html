@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>4. Write a C++ program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.
+    </h1>  <pre><code>
+        #include&ltiostream&gt;
+        using namespace std;
+        
+        class Circle {
+            float radius;
+        public:
+            void get() {
+                cout &lt&lt "Enter the radius : ";
+                cin >> radius;
+            }
+        
+            void dis() {
+                cout &lt&lt "Radius : " &lt&lt radius &lt&lt endl;
+            }
+        
+            void area() {
+                cout &lt&lt "Area : " &lt&lt 22.0/7.0 * (radius * radius) &lt&lt endl;
+            }
+        
+            void circu() {
+                cout &lt&lt "Circumference : " &lt&lt 2.0 * (22.0/7.0) * radius &lt&lt endl;
+            }
+        };
+        
+        int main() {
+            Circle c;
+            c.get();
+            c.dis();
+            c.circu();
+            c.area();
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the radius : 5
+            Radius : 5
+            Circumference : 31.4286
+            Area : 78.5714</code></pre>
+  </body>
+</html>

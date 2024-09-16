@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>104. Write a C++ method to displays prime numbers between 1 to 20</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+             int c=0;
+             cout&lt;&lt;"Prime numbers between 1 to 20 : "&lt;&lt;endl;
+             for(int i=1;i&lt;21;i++){
+              c=0;
+              for(int j=2;j&lt;i;j++){
+                 if(i%j==0){
+                    c=1;        
+                 }
+              }
+              if(c==0){
+                  cout&lt;&lt;i&lt;&lt;endl;
+              }
+             }
+             return 0;
+          }
+        </code>
+      </pre>      
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Prime numbers between 1 to 20:
+              1
+              2
+              3
+              5
+              7
+              11
+              13
+              17
+              19
+            </code>
+          </pre>
+          
+</body>
+</html>

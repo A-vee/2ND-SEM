@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>43. C++ Program to calculate electricity bill</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int p,uc,ou,nu,puc;
+            float tax,bill;
+            cout&lt;&lt;"Enter Old Unit : "&lt;&lt;endl;
+            cin&gt;&gt;ou;
+            cout&lt;&lt;"Enter New Unit : "&lt;&lt;endl;
+            cin&gt;&gt;nu;
+            cout&lt;&lt;"Enter Per Unit Charge : "&lt;&lt;endl;
+            cin&gt;&gt;puc;
+            uc=nu-ou;
+            p=uc*puc;
+            tax=(float)((p*12)/100);
+            bill=p+tax;
+            cout&lt;&lt;endl&lt;&lt;"Total Bill : "&lt;&lt;bill;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter Old Unit : 
+        200
+        Enter New Unit : 
+        250
+        Enter Per Unit Charge : 
+        8
+        Total Bill : 216</code></pre>
+</body>
+</html>

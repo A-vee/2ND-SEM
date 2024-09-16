@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>10. Write a C++ program that creates a class hierarchy for employees of a company. The base class should be Employee, with derived classes Manager, Developer, and Programmer. Each derived class should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.
+    </h1><pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;cstring&gt;
+        
+        using namespace std;
+        
+        class Employee
+        {
+        
+        private:
+        
+        public:
+        
+            void calculatingBonus(){
+                int hour ,salary,bonus,extra;
+                cout&lt;&lt;"Enter your salary : ";
+                cin&gt;&gt;salary;
+                cout&lt;&lt;"Enter no. of your extra working hours in last month : ";
+                cin&gt;&gt;hour;
+        
+                if (hour&gt;210)
+                {
+                    extra = 10*salary/100;
+                    bonus = salary+extra;
+                   cout&lt;&lt;"you got 10% bonus of your salary for the extra work, the bonus you got is : "&lt;&lt;bonus&lt;&lt;endl;
+                   
+                }
+                else {
+                    cout&lt;&lt;"you hven't work that much so no extra bonus " &lt;&lt;endl;
+                }
+        
+                
+            }
+            void performanceReports(){
+        
+                int pj;
+                cout&lt;&lt;"Enter no. of projects you submit : ";
+                cin&gt;&gt;pj;
+                if (pj&gt;100)
+                {
+                    cout&lt;&lt;"You got A perfomance level "&lt;&lt;endl;
+                }
+                else if (pj&gt;50)
+                {
+                    cout&lt;&lt;"You got B perfomance level "&lt;&lt;endl;
+                }
+                else  
+                {
+                    cout&lt;&lt;"You got C perfomance level "&lt;&lt;endl;
+                }
+                
+        
+            }
+            void managingProjects(){
+                char Jobtit[20];
+        
+            cout &lt;&lt; "Enter your Job title (choose from the below options): " &lt;&lt; endl;
+            cout &lt;&lt; "1. CEO 2. HR 3. Employee: ";
+            cin &gt;&gt; Jobtit;
+        
+            if (strcmp(Jobtit, "CEO") == 0) {
+                cout &lt;&lt; "You have to attend meetings." &lt;&lt; endl;
+            } else if (strcmp(Jobtit, "HR") == 0) {
+                cout &lt;&lt; "You have to manage 12 projects." &lt;&lt; endl;
+            } else if (strcmp(Jobtit, "Employee") == 0) {
+                cout &lt;&lt; "You have to manage 70 projects." &lt;&lt; endl;
+            } else {
+                cout &lt;&lt; "Invalid job title." &lt;&lt; endl;
+            }
+            }
+        
+        };
+        
+        class Manager:public Employee
+        {
+                private:
+        
+                char name[20];
+                char address[30];
+                int salary;
+                char jobTitle[20];
+        
+                public :
+                void info (){
+                    cout&lt;&lt;"Enter your name : "&lt;&lt;endl;
+                    cin&gt;&gt;name;
+                    cout&lt;&lt;"Enter your address : "&lt;&lt;endl;
+                    cin&gt;&gt;address;
+                    cout&lt;&lt;"Enter your salary : "&lt;&lt;endl;
+                    cin&gt;&gt;salary;
+                    cout&lt;&lt;"Enter your jobTitle : "&lt;&lt;endl;
+                    cin&gt;&gt;jobTitle;
+                } 
+        
+                void display(){
+                    cout&lt;&lt;" The name of the employee is "&lt;&lt;name&lt;&lt;endl;
+                    cout&lt;&lt;" The address of the employee is "&lt;&lt;address&lt;&lt;endl;
+                    cout&lt;&lt;" The salary of the employee is "&lt;&lt;salary&lt;&lt;endl;
+                    cout&lt;&lt;" The jobTitle of the employee is "&lt;&lt;name&lt;&lt;endl;
+                }
+        
+        
+        };
+        
+        class Devloper:public Employee
+        {
+        
+                private:
+        
+                char name[20];
+                char address[30];
+                int salary;
+                char jobTitle[20];
+        
+                public :
+                void info (){
+                    cout&lt;&lt;"Enter your name : "&lt;&lt;endl;
+                    cin&gt;&gt;name;
+                    cout&lt;&lt;"Enter your address : "&lt;&lt;endl;
+                    cin&gt;&gt;address;
+                    cout&lt;&lt;"Enter your salary : "&lt;&lt;endl;
+                    cin&gt;&gt;salary;
+                    cout&lt;&lt;"Enter your jobTitle : "&lt;&lt;endl;
+                    cin&gt;&gt;jobTitle;
+                } 
+        
+                void display(){
+                    cout&lt;&lt;" The name of the employee is "&lt;&lt;name&lt;&lt;endl;
+                    cout&lt;&lt;" The address of the employee is "&lt;&lt;address&lt;&lt;endl;
+                    cout&lt;&lt;" The salary of the employee is "&lt;&lt;salary&lt;&lt;endl;
+                    cout&lt;&lt;" The jobTitle of the employee is "&lt;&lt;name&lt;&lt;endl;
+                }
+        
+        
+        };
+        
+        class Programmer:public Employee
+        {
+        
+                private:
+        
+                char name[20];
+                char address[30];
+                int salary;
+                char jobTitle[20];
+        
+                public :
+                void info (){
+                    cout&lt;&lt;"Enter your name : "&lt;&lt;endl;
+                    cin&gt;&gt;name;
+                    cout&lt;&lt;"Enter your address : "&lt;&lt;endl;
+                    cin&gt;&gt;address;
+                    cout&lt;&lt;"Enter your salary : "&lt;&lt;endl;
+                    cin&gt;&gt;salary;
+                    cout&lt;&lt;"Enter your jobTitle : "&lt;&lt;endl;
+                    cin&gt;&gt;jobTitle;
+                } 
+        
+                void display(){
+                    cout&lt;&lt;" The name of the employee is "&lt;&lt;name&lt;&lt;endl;
+                    cout&lt;&lt;" The address of the employee is "&lt;&lt;address&lt;&lt;endl;
+                    cout&lt;&lt;" The salary of the employee is "&lt;&lt;salary&lt;&lt;endl;
+                    cout&lt;&lt;" The jobTitle of the employee is "&lt;&lt;jobTitle&lt;&lt;endl;
+                }
+        
+        
+        };
+        
+        int main(){
+            Programmer obj1;
+            obj1.calculatingBonus();
+            obj1.performanceReports();
+            obj1.managingProjects();
+            obj1.info();
+            obj1.display();
+        }
+        </code></pre>
+        
+        <h1>Output</h1>
+        <pre><code>
+            Enter your salary : 5000
+            Enter no. of your extra working hours in last month : 220
+            you got 10% bonus of your salary for the extra work, the bonus you got is : 5500
+            Enter no. of projects you submit : 80
+            You got B perfomance level 
+            Enter your Job title (choose from the below options): 
+            1. CEO 2. HR 3. Employee: Developer
+            Invalid job title.
+            Enter your name : John
+            Enter your address : New York
+            Enter your salary : 6000
+            Enter your jobTitle : Developer
+             The name of the employee is John
+             The address of the employee is New York
+             The salary of the employee is 6000
+             The jobTitle of the employee is Developer
+            </code></pre>
+            
+  </body>
+</html>

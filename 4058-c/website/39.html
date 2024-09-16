@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>39. C++ program to calculate average marks</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            float marks[10],sum=0;
+            int n,i;
+            cout&lt;&lt;"Enter number of subjects : "&lt;&lt;endl;
+            cin&gt;&gt;n;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"Enter Marks of Subject "&lt;&lt;i+1&lt;&lt;" : "&lt;&lt;endl;
+                cin&gt;&gt;marks[i];
+                sum=sum+marks[i];
+            }
+            float avg=(sum/n);
+            cout&lt;&lt;endl&lt;&lt;"Total Marks : "&lt;&lt;sum;
+            cout&lt;&lt;endl&lt;&lt;"Average Marks : "&lt;&lt;avg;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter number of subjects : 
+        5
+        Enter Marks of Subject 1 : 
+        80
+        Enter Marks of Subject 2 : 
+        85
+        Enter Marks of Subject 3 : 
+        90
+        Enter Marks of Subject 4 : 
+        75
+        Enter Marks of Subject 5 : 
+        88
+        Total Marks : 418
+        Average Marks : 83.6</code></pre>
+</body>
+</html>

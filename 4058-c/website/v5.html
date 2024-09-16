@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>6. Write a C++ program to create an abstract class Employee with abstract methods calculateSalary() and displayInfo(). Create derived classes Manager and Programmer that extend the Employee class and implement the respective methods to calculate salary and display information for each role.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        class Employee {
+        protected:
+            std::string name;
+            int id;
+        
+        public:
+            Employee(const std::string&amp; name, int id) : name(name), id(id) {}
+        
+            virtual double calculateSalary() const = 0;
+            virtual void displayInfo() const = 0;
+        };
+        
+        class Manager : public Employee {
+        private:
+            double baseSalary;
+            double bonus;
+        
+        public:
+            Manager(const std::string&amp; name, int id, double baseSalary, double bonus)
+                : Employee(name, id), baseSalary(baseSalary), bonus(bonus) {}
+        
+            double calculateSalary() const override {
+                return baseSalary + bonus;
+            }
+        
+            void displayInfo() const override {
+                std::cout &lt;&lt; "Manager Name: " &lt;&lt; name &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Manager ID: " &lt;&lt; id &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Manager Salary: $" &lt;&lt; calculateSalary() &lt;&lt; std::endl;
+            }
+        };
+        
+        class Programmer : public Employee {
+        private:
+            double hourlyRate;
+            int hoursWorked;
+        
+        public:
+            Programmer(const std::string&amp; name, int id, double hourlyRate, int hoursWorked)
+                : Employee(name, id), hourlyRate(hourlyRate), hoursWorked(hoursWorked) {}
+        
+            double calculateSalary() const override {
+                return hourlyRate * hoursWorked;
+            }
+        
+            void displayInfo() const override {
+                std::cout &lt;&lt; "Programmer Name: " &lt;&lt; name &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Programmer ID: " &lt;&lt; id &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Programmer Salary: $" &lt;&lt; calculateSalary() &lt;&lt; std::endl;
+            }
+        };
+        
+        int main() {
+            Manager manager("John Doe", 1001, 5000, 1000);
+            manager.displayInfo();
+        
+            std::cout &lt;&lt; std::endl;
+        
+            Programmer programmer("Jane Smith", 2001, 50, 160);
+            programmer.displayInfo();
+        
+            return 0;
+        }
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Manager Name: John Doe
+            Manager ID: 1001
+            Manager Salary: $6000
+            
+            Programmer Name: Jane Smith
+            Programmer ID: 2001
+            Programmer Salary: $8000
+            </code>
+            </pre>
+            
+  </body>
+</html>

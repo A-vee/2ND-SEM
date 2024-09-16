@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>43. Write a C++ method to count all vowels in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;cstring&gt;
+        #include &lt;string.h&gt;
+        using namespace std;
+        
+        int main() {
+          char str[100];
+          int count = 0;
+          int word = 0;  
+          cout &lt;&lt; "Enter a string: ";
+          gets(str);
+        
+            int length;
+            length = strlen(str);
+        
+          for (int i = 0; i &lt; length; i++) {
+            if (isspace(str[i])) {
+              word = 0; 
+            } else if (!word) {
+              word = 1;  
+              count += 1;
+            }
+          }
+        
+          if (word) {
+            count += 1;  
+          }
+        
+          cout &lt;&lt; "Number of words in the string is: " &lt;&lt; count - 1 &lt;&lt; endl;
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+  </body>
+  <pre>
+    <code>
+    Enter a string: This is a sample string
+    Number of words in the string is: 5
+    </code>
+    </pre>
+    
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>22. Program to find the frequency of characters
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string s;
+            string cha;
+            char ch;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, s);
+            int count[100], c = 1, m = 0, flag = 1;
+            for (int i = 0; i &lt; s.length(); i++)
+            {
+                ch = s[i];
+                for (int j = 0; j &lt; cha.length(); j++)
+                {
+                    if (ch == cha[j])
+                        flag = 0;
+                }
+                if (flag != 0)
+                {
+                    cha.append(1, s[i]);
+                    for (int k = 0; k &lt; s.length(); k++)
+                    {
+                        if (k != i)
+                            if (ch == s[k])
+                                c++;
+                    }
+                    count[m] = c;
+                    c = 1;
+                    m++;
+                }
+                flag = 1;
+            }
+            cout &lt;&lt; "Frequency of characters: " &lt;&lt; endl;
+            for (int i = 0; i &lt; cha.length(); i++)
+            {
+                cout &lt;&lt; "character : " &lt;&lt; cha[i] &lt;&lt; " "
+                     &lt;&lt; " , with count : " &lt;&lt; count[i] &lt;&lt; endl;
+            }
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : abracadabra
+            Frequency of characters: 
+            character : a  , with count : 5
+            character : b  , with count : 2
+            character : r  , with count : 2
+            character : c  , with count : 1
+            character : d  , with count : 1
+            </code>
+            </pre>
+            
+  </body>
+</html>

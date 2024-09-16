@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>21. Program to find the duplicate words in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string.h&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            char s[100][100];
+            char words[100][100];
+            int m = 0, count[100] = {0};
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, str);
+            for (int i = 0; i &lt; str.length(); i++)
+            {
+                for (int j = 0; str[i] != ' ' &amp;&amp; str[i] != '\0'; i++)
+                {
+                    words[m][j] = str[i];
+                    count[m]++;
+                    j++;
+                }
+                if (str[i + 1] != ' ')
+                    m++;
+            }
+        
+            for (int i = 0; i &lt; m; i++)
+            {
+                cout &lt;&lt; "Words : ";
+                for (int j = 0; j &lt; count[i]; j++)
+                    cout &lt;&lt; words[i][j];
+                cout &lt;&lt; " , Count : " &lt;&lt; count[i] &lt;&lt; endl;
+            }
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : This is a test string
+            Words : This , Count : 4
+            Words : is , Count : 2
+            Words : a , Count : 1
+            Words : test , Count : 4
+            Words : string , Count : 6
+            </code>
+            </pre>
+            
+  </body>
+</html>

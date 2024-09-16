@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>18. Program to find maximum and minimum occurring character in a string
+    </h1>
+
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string s;
+            string str;
+            char ch;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, s);
+            int max, min, max_pos = 0, min_pos = 0, count[100], c = 1, m = 0, flag = 1;
+            for (int i = 0; i &lt; s.length(); i++)
+            {
+                ch = s[i];
+                for (int j = 0; j &lt; str.length(); j++)
+                {
+                    if (ch == str[j])
+                        flag = 0;
+                }
+                if (flag != 0)
+                {
+                    str.append(1, s[i]);
+                    for (int k = 0; k &lt; s.length(); k++)
+                    {
+                        if (k != i)
+                            if (ch == s[k])
+                                c++;
+                    }
+                    count[m] = c;
+                    c = 1;
+                    m++;
+                }
+                flag = 1;
+            }
+        
+            max = count[0];
+            min = count[0];
+            for (int i = 0; i &lt; m; i++)
+            {
+                if (max &lt; count[i])
+                    max_pos = i;
+        
+                else if (min &gt;= count[i])
+                    min_pos = i;
+            }
+            cout &lt;&lt; "Maximum occuring character : " &lt;&lt; str[max_pos] &lt;&lt; " , with count : " &lt;&lt; count[max_pos] &lt;&lt; endl;
+            cout &lt;&lt; "Mininmum occuring character : " &lt;&lt; str[min_pos] &lt;&lt; " , with count : " &lt;&lt; count[min_pos] &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : abracadabra
+            Maximum occuring character : a , with count : 5
+            Mininmum occuring character : b , with count : 2
+            </code>
+            </pre>
+            
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>11. Write a C++ program to create an abstract class Shape2D with abstract methods draw() and resize(). Create derived classes Rectangle and Circle that extend the Shape2D class and implement the respective methods to draw and resize each shape.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        class Shape2D {
+        public:
+            virtual void draw() const = 0;
+            virtual void resize(double factor) = 0;
+        };
+        
+        class Rectangle : public Shape2D {
+        private:
+            double width;
+            double height;
+        
+        public:
+            Rectangle(double w, double h) : width(w), height(h) {}
+        
+            void draw() const override {
+                std::cout &lt;&lt; "Drawing Rectangle with width: " &lt;&lt; width &lt;&lt; " and height: " &lt;&lt; height &lt;&lt; std::endl;
+            }
+        
+            void resize(double factor) override {
+                width *= factor;
+                height *= factor;
+                std::cout &lt;&lt; "Resizing Rectangle by factor: " &lt;&lt; factor &lt;&lt; std::endl;
+            }
+        };
+        
+        class Circle : public Shape2D {
+        private:
+            double radius;
+        
+        public:
+            Circle(double r) : radius(r) {}
+        
+            void draw() const override {
+                std::cout &lt;&lt; "Drawing Circle with radius: " &lt;&lt; radius &lt;&lt; std::endl;
+            }
+        
+            void resize(double factor) override {
+                radius *= factor;
+                std::cout &lt;&lt; "Resizing Circle by factor: " &lt;&lt; factor &lt;&lt; std::endl;
+            }
+        };
+        
+        int main() {
+            Rectangle rectangle(5, 3);
+            std::cout &lt;&lt; "Rectangle:" &lt;&lt; std::endl;
+            rectangle.draw();
+            rectangle.resize(1.5);
+            rectangle.draw();
+        
+            std::cout &lt;&lt; std::endl;
+        
+            Circle circle(4);
+            std::cout &lt;&lt; "Circle:" &lt;&lt; std::endl;
+            circle.draw();
+            circle.resize(2);
+            circle.draw();
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Rectangle:
+            Drawing Rectangle with width: 5 and height: 3
+            Resizing Rectangle by factor: 1.5
+            Drawing Rectangle with width: 7.5 and height: 4.5
+            
+            Circle:
+            Drawing Circle with radius: 4
+            Resizing Circle by factor: 2
+            Drawing Circle with radius: 8
+            </code>
+            </pre>            
+  </body>
+</html>

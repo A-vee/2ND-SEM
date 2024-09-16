@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>17. Write a C++ program to create a class called "Movie" with attributes for title, director, actors, and reviews, and methods for adding and retrieving reviews.
+    </h1> <pre><code>
+        #include &ltiostream&gt
+        #include &ltstring&gt
+        #include &ltvector&gt
+        
+        class Movie {
+        private:
+            std::string title;
+            std::string director;
+            std::vector&ltstd::string&gt actors;
+            std::vector&ltstd::string&gt reviews;
+        
+        public:
+            Movie(const std::string&amp title, const std::string&amp director, const std::vector&ltstd::string&gt&amp actors) 
+                : title(title), director(director), actors(actors) {}
+        
+            void addReview(const std::string&amp review) {
+                reviews.push_back(review);
+            }
+        
+            const std::vector&ltstd::string&gt&amp getReviews() const {
+                return reviews;
+            }
+        
+            void displayInfo() const {
+                std::cout &lt&lt "Title: " &lt&lt title &lt&lt std::endl;
+                std::cout &lt&lt "Director: " &lt&lt director &lt&lt std::endl;
+                std::cout &lt&lt "Actors: ";
+                for (const auto&amp actor : actors) {
+                    std::cout &lt&lt actor &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            std::vector&ltstd::string&gt actors = {"Actor1", "Actor2", "Actor3"};
+            Movie movie("Movie Title", "Director Name", actors);
+        
+            movie.addReview("Great movie!");
+            movie.addReview("Not bad, could be better.");
+        
+            movie.displayInfo();
+        
+            std::cout &lt&lt "Reviews:" &lt&lt std::endl;
+            const std::vector&ltstd::string&gt&amp reviews = movie.getReviews();
+            for (const auto&amp review : reviews) {
+                std::cout &lt&lt "- " &lt&lt review &lt&lt std::endl;
+            }
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Title: Movie Title
+            Director: Director Name
+            Actors: Actor1, Actor2, Actor3
+            Reviews:
+            - Great movie!
+            - Not bad, could be better.</code></pre>
+  </body>
+</html>

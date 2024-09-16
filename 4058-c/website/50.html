@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>50. Write a C++ program to take three numbers from the user and print the greatest number</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int x, y, z;
+            cout &lt;&lt; "Enter First number : ";
+            cin &gt;&gt; x;
+            cout &lt;&lt; "Enter Second number : ";
+            cin &gt;&gt; y;
+            cout &lt;&lt; "Enter Third number : ";
+            cin &gt;&gt; z;
+            if (x &gt; y &amp;&amp; x &gt; z)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Greatest Number is : " &lt;&lt; x;
+            }
+            else if (y &gt; x &amp;&amp; y &gt; z)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Greatest Number is : " &lt;&lt; y;
+            }
+            else if (z &gt; x &amp;&amp; z &gt; y)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Greatest Number is : " &lt;&lt; z;
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "Numbers are Equal";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter First number : 5
+        Enter Second number : 10
+        Enter Third number : 7
+        
+        Greatest Number is : 10
+        </code>
+        </pre>
+</body>
+</html>

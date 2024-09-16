@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>2. Write a C++ program to create a class called Vehicle with a method called drive(). Create a derived class called Car that overrides the drive() method to print "Repairing a car".
+</h1><pre><code>
+    #include &lt;iostream&gt;
+    using namespace std;
+    
+    class Vhicle
+    {
+    public:
+        void drive()
+        {
+            cout &lt;&lt; "I drive BMW" &lt;&lt; endl;
+        }
+    };
+    
+    class Car : public Vhicle  
+    {
+    public:
+        void drive()
+        {
+            cout &lt;&lt; "I drive Ferrari " &lt;&lt; endl;
+        }
+    };
+    
+    int main()
+    {
+        Car obj1;
+        obj1.drive();
+    }
+    </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            I drive Ferrari
+        </code></pre>
+  </body>
+</html>

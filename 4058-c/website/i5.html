@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>5. Write a C++ program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a derived class called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.
+    </h1><pre><code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        class BankAccount
+        {
+            public:
+                int currentBal;
+                int afterwithdraw;
+                void  deposit()
+                {
+                    int depositAmt;
+                    cout&lt;&lt;"The current Balance  is : "&lt;&lt;currentBal&lt;&lt;endl;
+                    cout&lt;&lt;"Enter the amount you want to deposit : ";
+                    cin&gt;&gt;depositAmt;
+                    currentBal+=depositAmt;
+                    cout&lt;&lt;"After deposit your balance is : "&lt;&lt;currentBal&lt;&lt;endl;
+                }
+                void withdraw()
+                {
+                    int withdrawamt;
+                    cout&lt;&lt;"Enter the amount you want to withdraw : ";
+                    cin&gt;&gt;withdrawamt;
+                    if(withdrawamt&gt;currentBal)
+                    {
+                        cout&lt;&lt;"There is not enough money to complete your transaction";
+                    }
+                    int afterwithdraw = currentBal - withdrawamt;
+                    currentBal=afterwithdraw;
+                    cout&lt;&lt;"After withdraw your amount is : "&lt;&lt;currentBal&lt;&lt;endl;     
+                }
+                BankAccount()
+                {
+                    currentBal = 0;
+                }
+        };
+        
+        class SavingAccount :public BankAccount
+        {
+            public: 
+            void withdraw()
+            {
+                if(currentBal&lt;100)
+                {
+                    cout&lt;&lt; "There should be atleast 100 rupees in your Savings Account for withdrawl" ;
+                }
+                else
+                {
+                    BankAccount::withdraw();
+                }  
+            }
+        };
+        
+        int main()
+        {
+            SavingAccount obj1;
+            obj1.deposit();
+            obj1.withdraw();
+        }
+        </code></pre>
+        
+        <h1>Output</h1>
+        <pre><code>
+            The current Balance is : 0
+            Enter the amount you want to deposit : 200
+            After deposit your balance is : 200
+            Enter the amount you want to withdraw : 150
+            After withdraw your amount is : 50
+            </code></pre>
+            
+  </body>
+</html>

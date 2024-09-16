@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>3. Write a C++ method to display the middle character of a string.
+        Explanation -
+        Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream>
+        #include&lt;string>
+        using namespace std;
+        string midch(string st){
+            int l=st.length();
+            if((l&amp;1)==1){ 
+            string mi="";  
+            mi+=st[l/2];     
+            return mi;
+            }
+            else{
+                string mi="";
+                mi=mi+st[l/2-1]+st[l/2];
+                return mi; 
+            }
+            }
+        int main(){
+            cout&lt;&lt;"Enter the string : ";
+            string s;
+            cin&gt;&gt;s;
+            cout&lt;&lt;"Middle character of a string : "&lt;&lt;midch(s); 
+            return 0;}
+        </code>
+        </pre>        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : abcdefg
+            Middle character of a string : d
+            </code>
+            </pre>            
+  </body>
+</html>

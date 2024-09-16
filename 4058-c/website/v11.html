@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>12. Write a C++ program to create an abstract class Shape with abstract methods area() and perimeter(). Create derived classes Triangle and Square that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape
+</h1><pre>
+    <code>
+    #include &lt;iostream&gt;
+    #include &lt;cmath&gt;
+    
+    class Shape {
+    public:
+        virtual double area() const = 0;
+        virtual double perimeter() const = 0;
+    };
+    
+    class Triangle : public Shape {
+    private:
+        double side1, side2, side3;
+    
+    public:
+        Triangle(double s1, double s2, double s3) : side1(s1), side2(s2), side3(s3) {}
+    
+        double area() const override {
+            double s = (side1 + side2 + side3) / 2;
+            return sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        }
+    
+        double perimeter() const override {
+            return side1 + side2 + side3;
+        }
+    };
+    
+    class Square : public Shape {
+    private:
+        double side;
+    
+    public:
+        Square(double s) : side(s) {}
+    
+        double area() const override {
+            return side * side;
+        }
+    
+        double perimeter() const override {
+            return 4 * side;
+        }
+    };
+    
+    int main() {
+        Triangle triangle(3, 4, 5);
+        std::cout &lt;&lt; "Triangle: Area = " &lt;&lt; triangle.area() &lt;&lt; ", Perimeter = " &lt;&lt; triangle.perimeter() &lt;&lt; std::endl;
+    
+        Square square(4);
+        std::cout &lt;&lt; "Square: Area = " &lt;&lt; square.area() &lt;&lt; ", Perimeter = " &lt;&lt; square.perimeter() &lt;&lt; std::endl;
+    
+        return 0;
+    }
+    </code>
+    </pre>
+        <h1>Output</h1>
+        <pre>
+<code>
+Triangle: Area = 6, Perimeter = 12
+Square: Area = 16, Perimeter = 16
+</code>
+</pre>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>54. Write a C++ program that takes a year from user and print whether that year is a leap year or not
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int yn;
+            cout &lt;&lt; "Enter Year : ";
+            cin &gt;&gt; yn;
+            if (yn % 4 == 0)
+            {
+                if (yn % 100 == 0)
+                {
+                    if (yn % 400 == 0)
+                    {
+                        cout &lt;&lt; endl &lt;&lt; "Entered year is a leap year";
+                    }
+                    else
+                    {
+                        cout &lt;&lt; endl &lt;&lt; "Entered year is not a leap year";
+                    }
+                }
+                else
+                {
+                    cout &lt;&lt; endl &lt;&lt; "Entered year is a leap year";
+                }
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "Entered year is not a leap year";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter Year : 2023
+        Entered year is not a leap year
+        </code>
+        </pre>
+</body>
+</html>

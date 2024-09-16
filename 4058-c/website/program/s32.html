@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>32. Program to remove all the white spaces from a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            string str, s;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, str);
+            for (int i = 0; i &lt; str.length(); i++)
+            {
+                if (str[i] == ' ')
+                    while (str[i + 1] == ' ')
+                        i++;
+                else
+                    s.append(1, str[i]);
+            }
+            cout &lt;&lt; "Resulting String : " &lt;&lt; s &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string :   Hello     World  
+            Resulting String : HelloWorld
+            </code>
+            </pre>
+            
+  </body>
+</html>

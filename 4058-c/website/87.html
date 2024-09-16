@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>87. Write a C++ program to check whether the number is a prime number or not
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, c = 0;
+            cout &lt;&lt; "Enter any number : ";
+            cin &gt;&gt; n;
+            for (int i = 2; i &lt;= (n / 2); i++)
+            {
+                if (n % i == 0)
+                {
+                    c++;
+                    break;
+                }
+            }
+            if (c == 0)
+            {
+                cout &lt;&lt; endl &lt;&lt; n &lt;&lt; " is a prime number";
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; n &lt;&lt; " is not a prime number";
+            }
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter any number: 20
+            20 is not a prime number
+            </code>
+            </pre>
+            
+</body>
+</html>

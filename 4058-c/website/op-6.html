@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>6. Implement a class Money to represent money. Overload the + operator to add two amounts of money.
+    </h1><pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        class money{
+          int rup;
+          int paise;
+          public:
+          money(int a,int b){
+            rup=a;
+            paise=b;
+            simp();
+          }
+          money(){
+            rup=0;
+            paise=0;
+          }
+          money operator +(money &amp;m){
+            money temp;
+            temp.rup=rup+m.rup;
+            temp.paise=paise+m.paise;
+            temp.simp();
+            return temp;
+          }
+          void display(){
+            cout&lt;&lt;rup&lt;&lt;"."&lt;&lt;paise&lt;&lt;endl;
+          }
+          void simp(){
+            rup=rup+(paise/100);
+            paise=paise%100;
+          }
+        };
+        int main(){
+          money m1(20,678),m2(230,32),m3;
+          cout&lt;&lt;"Money : "&lt;&lt;endl;
+          m1.display();
+          m2.display();
+          m3=m1+m2;
+          cout&lt;&lt;"Addition of money by overloading '+' operator : ";
+          m3.display();
+          return 0;}
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre>
+        <code>
+        Money : 
+        20.678
+        230.32
+        Addition of money by overloading '+' operator : 250.10
+        </code>
+        </pre>
+        
+</body>
+</html>

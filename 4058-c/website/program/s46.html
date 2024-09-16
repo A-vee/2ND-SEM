@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>46. Write a C++ method to compute the future investment value at a given interest rate for a specified number of years.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;cmath&gt;
+        
+        using namespace std;
+        
+        int main() {
+            double investment, rate;
+            int years;
+        
+            cout &lt;&lt; "Enter the initial investment amount: ";
+            cin &gt;&gt; investment;
+        
+            cout &lt;&lt; "Enter the annual interest rate in percentage: ";
+            cin &gt;&gt; rate;
+        
+            cout &lt;&lt; "Enter the number of years: ";
+            cin &gt;&gt; years;
+        
+            double futureVal = investment * pow(1 + rate / 100, years);
+        
+            cout &lt;&lt; "Future value after " &lt;&lt; years &lt;&lt; " years: " &lt;&lt; futureVal &lt;&lt; endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Enter the initial investment amount: 1000
+            Enter the annual interest rate in percentage: 5
+            Enter the number of years: 10
+            Future value after 10 years: 1628.89
+            </code>
+            </pre>
+            
+  </body>
+</html>

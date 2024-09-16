@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>11. Program to count the total number of punctuation characters exists in a String
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;conio.h&gt;
+        #include &lt;string.h&gt;
+        
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            cout &lt;&lt; "Enter String: ";
+            cin &gt;&gt; str;
+        
+            int count = 0;
+        
+            for (int i = 0; str[i] != '\0'; i++) {
+                if (ispunct(str[i])) {
+                    count += 1;
+                }
+            }
+            
+            cout &lt;&lt; "The total number of punctuation character exists in the string is: " &lt;&lt; count &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter String: Hello! How are you?
+            The total number of punctuation character exists in the string is: 2
+            </code>
+            </pre>
+            
+  </body>
+</html>

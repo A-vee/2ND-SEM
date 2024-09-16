@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>46. C++ Program To Calculate Batting Average</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int match,run=0,r;
+            cout&lt;&lt;"Enter number of matches player played : "&lt;&lt;endl;
+            cin&gt;&gt;match;
+            for(int i=0;i&lt;match;i++) {
+                cout&lt;&lt;"Enter run of match "&lt;&lt;i+1&lt;&lt;" : "&lt;&lt;endl;
+                cin&gt;&gt;r;
+                run=run+r;
+            }
+            float ba=(float)run/match;
+            cout&lt;&lt;endl&lt;&lt;"Batting Average : "&lt;&lt;ba;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre></pre>
+</body>
+</html>

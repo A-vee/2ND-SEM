@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>51. Write a C++ program to find the number of days in a month</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n;
+            cout &lt;&lt; "Enter month number : ";
+            cin &gt;&gt; n;
+            switch(n)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    cout &lt;&lt; "There are 31 days";
+                    break;
+                case 2:
+                    cout &lt;&lt; "There are 28/29 days";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    cout &lt;&lt; "There are 30 days";
+                    break;
+                default:
+                    cout &lt;&lt; "Invalid Month Number";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter month number : 7
+        There are 31 days
+        </code>
+        </pre>
+</body>
+</html>

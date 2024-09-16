@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>37. Program to swap two string variables without using third or temp variable.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;cstring&gt;
+        
+        using namespace std;
+        
+        int main() {
+          char str1[] = "Hello";
+          char str2[] = "World";
+        
+          cout &lt;&lt; "Before swap: str1 = " &lt;&lt; str1 &lt;&lt; ", str2 = " &lt;&lt; str2 &lt;&lt; endl;
+        
+          // Swap lengths directly if possible (caution: potential truncation)
+          if (strlen(str1) &lt; strlen(str2)) {
+            //swap(strlen(str1), strlen(str2));
+          }
+        
+          // Loop through characters and swap using in-place assignment
+          for (int i = 0; i &lt; strlen(str1); i++) {
+            char temp = str1[i];
+            str1[i] = str2[i];
+            str2[i] = temp;
+          }
+        
+          cout &lt;&lt; "After swap: str1 = " &lt;&lt; str1 &lt;&lt; ", str2 = " &lt;&lt; str2 &lt;&lt; endl;
+        
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Before swap: str1 = Hello, str2 = World
+            After swap: str1 = World, str2 = Hello
+            </code>
+            </pre>
+            
+  </body>
+</html>

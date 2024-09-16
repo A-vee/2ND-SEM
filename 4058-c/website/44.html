@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>44. C++ Program To Calculate CGPA Percentage</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            float marks[10],n;
+            cout&lt;&lt;"Enter number of subjects : "&lt;&lt;endl;
+            cin&gt;&gt;n;
+            cout&lt;&lt;endl;
+            float sum = 0;
+            for(int i=0;i&lt;n;i++) {
+                cout&lt;&lt;"Enter marks of subject "&lt;&lt;i+1&lt;&lt;" : "&lt;&lt;endl;
+                cin&gt;&gt;marks[i];
+                sum=sum+marks[i];
+            }
+            float cgp=sum/(n*10);
+            cout&lt;&lt;endl&lt;&lt;"CGPA : "&lt;&lt;cgp;
+        }
+        </code></pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter number of subjects : 
+        5
+        
+        Enter marks of subject 1 : 
+        80
+        Enter marks of subject 2 : 
+        85
+        Enter marks of subject 3 : 
+        90
+        Enter marks of subject 4 : 
+        75
+        Enter marks of subject 5 : 
+        88
+        
+        CGPA : 8.15</code></pre>
+</body>
+</html>

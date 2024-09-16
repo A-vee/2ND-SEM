@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>16. Write a C++ program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".
+</h1><pre>
+    <code>
+    #include &ltiostream&gt
+    #include &ltcmath&gt
+    class Shape {
+    public:
+        virtual double area() const = 0;
+        virtual double perimeter() const = 0;
+    };
+    
+    class Rectangle : public Shape {
+    private:
+        double length, width;
+    
+    public:
+        Rectangle(double length, double width) : length(length), width(width) {}
+    
+        double area() const override {
+            return length * width;
+        }
+    
+        double perimeter() const override {
+            return 2 * (length + width);
+        }
+    };
+    
+    class Circle : public Shape {
+    private:
+        double radius;
+    
+    public:
+        Circle(double radius) : radius(radius) {}
+    
+        double area() const override {
+            return M_PI * radius * radius;
+        }
+    
+        double perimeter() const override {
+            return 2 * M_PI * radius;
+        }
+    };
+    
+    class Triangle : public Shape {
+    private:
+        double side1, side2, side3;
+    
+    public:
+        Triangle(double side1, double side2, double side3) : side1(side1), side2(side2), side3(side3) {}
+    
+        double area() const override {
+            double s = (side1 + side2 + side3) / 2;
+            return sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        }
+    
+        double perimeter() const override {
+            return side1 + side2 + side3;
+        }
+    };
+    
+    int main() {
+        Rectangle rect(5, 3);
+        std::cout &lt&lt "Rectangle Area: " &lt&lt rect.area() &lt&lt ", Perimeter: " &lt&lt rect.perimeter() &lt&lt std::endl;
+    
+        Circle circle(4);
+        std::cout &lt&lt "Circle Area: " &lt&lt circle.area() &lt&lt ", Circumference: " &lt&lt circle.perimeter() &lt&lt std::endl;
+    
+        Triangle triangle(3, 4, 5);
+        std::cout &lt&lt "Triangle Area: " &lt&lt triangle.area() &lt&lt ", Perimeter: " &lt&lt triangle.perimeter() &lt&lt std::endl;
+    
+        return 0;
+    }</code></pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Rectangle Area: 15, Perimeter: 16
+            Circle Area: 50.2655, Circumference: 25.1327
+            Triangle Area: 6, Perimeter: 12</code></pre>
+  </body>
+</html>

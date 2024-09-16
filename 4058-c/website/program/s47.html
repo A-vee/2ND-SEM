@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>47. Write a C++ method to print characters between two characters (i.e. A to P).
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        using namespace std;
+        
+        int main() {
+            char firstCh, lastCh;
+        
+            cout &lt;&lt; "Enter the starting character: ";
+            cin &gt;&gt; firstCh;
+        
+            cout &lt;&lt; "Enter the ending character: ";
+            cin &gt;&gt; lastCh;
+        
+            if (firstCh &gt; lastCh) {
+                cout &lt;&lt; "Starting character should be less than or equal to the ending character." &lt;&lt; endl;
+                return 1;
+            }
+        
+            cout &lt;&lt; "Characters between " &lt;&lt; firstCh &lt;&lt; " and " &lt;&lt; lastCh &lt;&lt; ":" &lt;&lt; endl;
+            for (char ch = firstCh + 1; ch &lt; lastCh; ++ch) {
+                cout &lt;&lt; ch &lt;&lt; " ";
+            }
+            cout &lt;&lt; endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+
+        <pre>
+            <code>
+            Enter the starting character: A
+            Enter the ending character: F
+            Characters between A and F:
+            B C D E 
+            </code>
+            </pre>
+            
+  </body>
+</html>

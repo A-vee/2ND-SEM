@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>89. Write a C++ program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n[20], x;
+            int cp = 0, cn = 0, cz = 0, i;
+            cout &lt;&lt; "Enter total numbers of integers : ";
+            cin &gt;&gt; x;
+            for (i = 0; i &lt; x; i++)
+            {
+                cout &lt;&lt; "Enter number " &lt;&lt; i + 1 &lt;&lt; " : ";
+                cin &gt;&gt; n[i];
+        
+                if (n[i] &gt; 0)
+                {
+                    cp++;
+                }
+                else if (n[i] &lt; 0)
+                {
+                    cn++;
+                }
+                else
+                {
+                    cz++;
+                }
+            }
+            cout &lt;&lt; endl &lt;&lt; "Count of positive numbers : " &lt;&lt; cp;
+            cout &lt;&lt; endl &lt;&lt; "Count of negative numbers : " &lt;&lt; cn;
+            cout &lt;&lt; endl &lt;&lt; "Count of zeros : " &lt;&lt; cz;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter total numbers of integers: 6
+            Enter number 1: 5
+            Enter number 2: -3
+            Enter number 3: 8
+            Enter number 4: -2
+            Enter number 5: 0
+            Enter number 6: 7
+            
+            Count of positive numbers: 4
+            Count of negative numbers: 2
+            Count of zeros: 1
+            </code>
+            </pre>
+            
+    
+</body>
+</html>

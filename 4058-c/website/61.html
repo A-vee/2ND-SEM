@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>61. Write a C++ program that reads an integer and check whether it is negative, zero, or positive
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n;
+            cout &lt;&lt; "Enter any number : ";
+            cin &gt;&gt; n;
+            if (n &gt; 0)
+            {
+                cout &lt;&lt; "Entered number is positive";
+            }
+            else if (n &lt; 0)
+            {
+                cout &lt;&lt; "Entered number is negative";
+            }
+            else
+            {
+                cout &lt;&lt; "Entered number is zero";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter any number : 0
+        Entered number is zero
+        </code>
+        </pre>
+</body>
+</html>

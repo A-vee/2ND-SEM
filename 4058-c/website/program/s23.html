@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>23. Program to find the largest and smallest word in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+          string str;
+          string largest, smallest;
+          int currentWordLength = 0;
+        
+          cout &lt;&lt; "Enter a string: ";
+          getline(cin, str);
+        
+          for (char c : str) {
+            if ((c &gt;= 'a' &amp;&amp; c &lt;= 'z') || (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') || (c &gt;= '0' &amp;&amp; c &lt;= '9')) {
+              currentWordLength++;
+            } else if (currentWordLength &gt; 0) {
+              if (currentWordLength &gt; largest.length()) {
+                largest = str.substr(str.rfind(c, currentWordLength - 1) + 1, currentWordLength);
+              }
+              if (smallest.empty() || currentWordLength &lt; smallest.length()) {
+                smallest = str.substr(str.rfind(c, currentWordLength - 1) + 1, currentWordLength);
+              }
+              currentWordLength = 0;
+            }
+          }
+        
+          if (currentWordLength &gt; 0) {
+            largest = str.substr(str.length() - currentWordLength);
+            if (smallest.empty() || currentWordLength &lt; smallest.length()) {
+              smallest = str.substr(str.length() - currentWordLength);
+            }
+          } else if (smallest.empty()) {
+            cout &lt;&lt; "No words found in the string." &lt;&lt; endl;
+            return 0;
+          }
+        
+          cout &lt;&lt; "Largest word: " &lt;&lt; largest &lt;&lt; endl;
+          cout &lt;&lt; "Smallest word: " &lt;&lt; smallest &lt;&lt; endl;
+        
+          return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: The quick brown fox jumps over the lazy dog
+            Largest word: jumps
+            Smallest word: fox
+            </code>
+            </pre>
+            
+  </body>
+</html>

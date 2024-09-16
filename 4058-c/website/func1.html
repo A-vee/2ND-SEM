@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>1. Write a C++ method to find the smallest number among three numbers.
+    </h1><pre>
+        <code>
+        #include&lt;iostream>
+        using namespace std;
+        int smlth(int a,int b,int c){
+            if (a&lt;b){
+                if(a&lt;c){
+                    return a;
+                }
+                else{
+                    return c;
+                }
+            }
+            else if(b&lt;c){
+                return b;
+            }
+            else if (a==b && a==c){
+               return 0;
+            }
+            else{
+                return c;
+            }
+        }
+        int main(){
+            int n1,n2,n3;
+            cout&lt;&lt;"Enter the three numbers A,B and C: ";
+            cin&gt;&gt;n1&gt;&gt;n2&gt;&gt;n3;
+            cout&lt;&lt;"Smallest among three numbers : "&lt;&lt;smlth(n1,n2,n3); 
+            return 0;}
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the three numbers A,B and C: 
+            Smallest among three numbers : (smallest number)
+            </code>
+            </pre>
+            
+  </body>
+</html>

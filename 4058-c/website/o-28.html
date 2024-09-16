@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>28. Write a C++ program to create a class called Employee with private instance variables employee_id, employee_name, and employee_salary. Provide public getter and setter methods to access and modify the id and name variables, but provide a getter method for the salary variable that returns a formatted string.
+    </h1><pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        class Circle {
+        private:
+            double radius;
+        
+        public:
+            void setRadius(double newRadius) {
+                radius = newRadius;
+            }
+        
+            double getRadius() const {
+                return radius;
+            }
+        
+            double calculateArea() const {
+                return 3.14 * radius * radius; // Area of circle = π * r^2
+            }
+        
+            double calculatePerimeter() const {
+                return 2 * 3.14 * radius; // Perimeter of circle = 2 * π * r
+            }
+        };
+        
+        int main() {
+            Circle circle;
+        
+            circle.setRadius(5.0);
+        
+            std::cout &lt;&lt; "Circle Radius: " &lt;&lt; circle.getRadius() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Circle Area: " &lt;&lt; circle.calculateArea() &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Circle Perimeter: " &lt;&lt; circle.calculatePerimeter() &lt;&lt; std::endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Circle Radius: 5
+            Circle Area: 78.5
+            Circle Perimeter: 31.4
+            </code>
+            </pre>
+            
+  </body>
+</html>

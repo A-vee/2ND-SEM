@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>5. Define a class Date to represent dates. Overload the < operator to compare two dates.
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        class Date{
+          int month;
+          int day;
+          int year;
+          public:
+          Date(int a,int b,int c){
+            day=a;
+            month=b;
+            year=c;
+            simp();
+          }
+          int operator &lt;(Date &amp;d){
+             if(year&lt;d.year){
+               return true;
+             }
+             else{
+              return false;
+             }
+             if(month&lt;d.month){
+                return true;
+             }
+             else{
+              return false;
+             }
+             if(day&lt;d.day){
+              return true;
+             }
+             else{
+              return false;
+             }
+          }
+          void display(){
+            cout&lt;&lt;day&lt;&lt;"/"&lt;&lt;month&lt;&lt;"/"&lt;&lt;year&lt;&lt;endl;
+          }
+          void simp(){
+            day=day%31;
+            month=month+(day/12);
+            year=year+(month/12);
+            month=month%12;
+          }
+        };
+        int main(){
+          Date d1(12,24,2014),d2(52,5,2020);
+          cout&lt;&lt;"Dates : "&lt;&lt;endl;
+          d1.display();
+          d2.display();
+          cout&lt;&lt;"Comparison of dates by overloading '&lt;' operator (1:True 0:False) :"&(d1&lt;d2);
+          return 0;}
+        </code>
+        </pre>        
+    <h1>Output</h1>
+    <pre>
+        <code>
+        Dates : 
+        12/24/2014
+        20/5/2020
+        Comparison of dates by overloading '&lt;' operator (1:True 0:False) :0
+        </code>
+        </pre>
+        
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>2. Write a C++ program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.
+    </h1><pre><code>
+        #include&ltiostream&gt;
+        #include&ltstring.h&gt;
+        using namespace std;
+        
+        class Dog {
+            char name[20];
+            char breed[20];
+        public:
+            Dog(char a[], char b[]) {
+                strcpy(name, a);
+                strcpy(breed, b);
+            }
+        
+            void Display() {
+                cout &lt&lt "Name and breed of the dog : " &lt&lt name &lt&lt " " &lt&lt breed &lt&lt endl;
+            }
+        
+            void setter() {
+                cout &lt&lt "Enter the new name : ";
+                cin >> name;
+                cout &lt&lt "Enter the new breed : ";
+                cin >> breed;
+            }
+        };
+        
+        int main() {
+            Dog d1("Ron", "Bulldog"), d2("Tom", "Rottweiler");
+            cout &lt&lt "Using constructor : " &lt&lt endl;
+            d1.Display();
+            d2.Display();
+            d1.setter();
+            d2.setter();
+            cout &lt&lt "Updated values using setter : " &lt&lt endl;
+            d1.Display();
+            d2.Display();
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Using constructor :
+            Name and breed of the dog : Ron Bulldog
+            Name and breed of the dog : Tom Rottweiler
+            Enter the new name : Rocky
+            Enter the new breed : German Shepherd
+            Enter the new name : Max
+            Enter the new breed : Labrador
+            Updated values using setter :
+            Name and breed of the dog : Rocky German Shepherd
+            Name and breed of the dog : Max Labrador</code></pre>
+  </body>
+</html>

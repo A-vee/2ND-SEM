@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>39. Reverse String Word by Word
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        string reverseWords(const string&amp; str);
+        
+        int main() {
+          string str = "This is the 39th program of strings";
+          string reversed_str = reverseWords(str);
+          cout &lt;&lt; "Original string: " &lt;&lt; str &lt;&lt; endl;
+          cout &lt;&lt; "Reversed string: " &lt;&lt; reversed_str &lt;&lt; endl;
+          return 0;
+        }
+        
+        string reverseWords(const string&amp; str) {
+          string reversed;
+          string word;
+        
+          for (char c : str) {
+            if (c == ' ') {
+              if (!word.empty()) {
+                reversed = word + " " + reversed;
+                word.clear();
+              }
+            } else {
+              word += c;
+            }
+          }
+        
+          if (!word.empty()) {
+            reversed = word + " " + reversed;
+          }
+        
+          if (reversed[0] == ' ') {
+            reversed.erase(0, 1);
+          }
+        
+          return reversed;
+        }
+        </code>
+        </pre>
+        </html>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Original string: This is the 39th program of strings
+            Reversed string: strings of program 39th the is This
+            </code>
+            </pre>
+            
+  </body>
+</html>

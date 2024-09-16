@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>85. Write a C++ program that prompts the user to input an integer and then outputs the number with the digits reversed order
+    </h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int n, rem, rev = 0;
+            cout &lt;&lt; "Enter any integer : ";
+            cin &gt;&gt; n;
+            int m = n;
+            while (m != 0)
+            {
+                rem = m % 10;
+                rev = rev * 10 + rem;
+                m = m / 10;
+            }
+            cout &lt;&lt; endl &lt;&lt; "Number with reverse digits : " &lt;&lt; rev;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter any integer: 12345
+            
+            Number with reverse digits: 54321
+            </code>
+            </pre>
+            
+    
+</body>
+</html>

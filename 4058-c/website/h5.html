@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>
+        5. Write a C++ program to copy the contents of one text file to another.
+        </h1>
+        <pre>
+            <code>
+              #include&lt;iostream&gt;
+              #include&lt;fstream&gt;
+              #include&lt;string&gt;
+          
+              using namespace std;
+              int main(){
+                  fstream f1, f2;
+                  string ch;
+                  f1.open("Newfile",ios::in);
+                  f2.open("CpNewfile",ios::out);
+                  while(!f1.eof()){
+                      getline(f1,ch);
+                      f2&lt;&lt;ch;
+                      f2&lt;&lt;endl;
+                  }
+                  cout&lt;&lt;"file copied .";
+                  f1.close();
+                  f2.close();
+                  return 0;
+              }
+            </code>
+          </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              file copied .
+            </code>
+          </pre>
+  </body>
+</html>

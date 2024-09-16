@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>11. Write a C++ program to search for a specific string in a text file and display its line number(s).
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;fstream&gt;
+          #include&lt;string&gt;
+      
+          using namespace std;
+          int main(){
+              fstream f1;
+              f1.open("Newfile", ios::in);
+              string st, fn;
+              int l = 0, c = 0;
+              char ch;
+              cout &lt;&lt; "Enter the string you want to find in file : ";
+              getline(cin, fn);
+              while (!f1.eof()) {
+                  getline(f1, st);
+                  l++;
+                  size_t po = st.find(fn); 
+                  if (po != string::npos) {
+                      cout &lt;&lt; "String found in line number : " &lt;&lt; l;
+                      c = 1;
+                      break;
+                  } 
+              }
+              if (c == 0) {
+                  cout &lt;&lt; "NO such string found in file .";
+              }
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the string you want to find in file : 
+            </code>
+          </pre>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>96.Write a c++ program to find smallest among three numbers</h1>
+    <pre>
+        <code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        int main(){
+            float a, b, c;
+            cout &lt;&lt; "Enter three numbers A, B, and C : ";
+            cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+            if (a &lt; b) {
+                if (a &lt; c) {
+                    cout &lt;&lt; "A is smallest";
+                }
+                else {
+                    cout &lt;&lt; "C is smallest";
+                }
+            }
+            else if (c &lt; b) {
+                cout &lt;&lt; "C is smallest ";
+            }
+            else if (b == a &amp;&amp; b == c) {
+                cout &lt;&lt; "All three are equal ";
+            }
+            else {
+                cout &lt;&lt; "B is smallest";
+            }
+            return 0;
+        }
+        </code>
+        </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter three numbers A, B, and C: 5 3 7
+            B is smallest
+            </code>
+            </pre>
+            
+</body>
+</html>

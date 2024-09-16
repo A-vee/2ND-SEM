@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>12. Write a C++ program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.
+    </h1><pre><code>
+        #include &ltiostream&gt
+        #include &ltstring&gt
+        #include &ltctime&gt
+        
+        class Airplane {
+        private:
+            std::string a;
+            std::string b;
+            time_t c;
+        
+        public:
+            Airplane(const std::string&amp a, const std::string&amp b, time_t c) : a(a), b(b), c(c) {}
+        
+            void d() const {
+                time_t currentTime = time(nullptr);
+                if (currentTime > c) {
+                    std::cout &lt&lt "Delayed" &lt&lt std::endl;
+                } else {
+                    std::cout &lt&lt "On time" &lt&lt std::endl;
+                }
+            }
+        
+            void disp() const {
+                std::cout &lt&lt "Flight " &lt&lt a &lt&lt " to " &lt&lt b &lt&lt ", Departure time: " &lt&lt c &lt&lt ", Status: ";
+                d();
+            }
+        };
+        
+        int main() {
+            Airplane airplane("ABC123", "New York", time(nullptr) + 3600);
+        
+            airplane.disp();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Flight ABC123 to New York, Departure time: [Current time + 3600], Status: On time</code></pre>
+
+  </body>
+</html>

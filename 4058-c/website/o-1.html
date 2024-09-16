@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>1. Write a C++ program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</h1>
+    <pre><code>
+        #include&ltiostream&gt;
+        #include&ltstring.h&gt;
+        using namespace std;
+        
+        class Person {
+            char name[20];
+            int age;
+        public:
+            Person(char a[], int n) {
+                strcpy(name, a);
+                age = n;
+            }
+        
+            void Display() {
+                cout &lt&lt "Name and age of the person : " &lt&lt name &lt&lt " " &lt&lt age &lt&lt endl;
+            }
+        };
+        
+        int main() {
+            Person p1("Raj", 24), p2("Rohit", 27);
+            p1.Display();
+            p2.Display();
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Name and age of the person : Raj 24
+            Name and age of the person : Rohit 27</code></pre>
+  </body>
+</html>

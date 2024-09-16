@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>1. Enter the Matrix of rows and columns entered by the user and print in matrix format</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        #include&lt;iomanip&gt;
+        using namespace std;
+        int main(){
+            int x,y,i,j;
+            cout&lt;&lt;"Enter the rows and columns : ";
+            cin&gt;&gt;x&gt;&gt;y;
+            int mat[10][10];
+            for(i=0;i&lt;x;i++){
+                for(j=0;j&lt;y;j++){
+                    cout&lt;&lt;"Matrix element "&lt;&lt;i+1&lt;&lt;j+1&lt;&lt;" : ";
+                    cin&gt;&gt;mat[i][j];
+                }
+            }
+            cout&lt;&lt;"Matrix : "&lt;&lt;endl;
+            for(i=0;i&lt;x;i++){
+                for(j=0;j&lt;y;j++){
+                    cout&lt;&lt;setw(5)&lt;&lt;mat[i][j];
+                }
+                cout&lt;&lt;endl;
+            }
+            return 0;
+        }
+            </code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the rows and columns : 2 2
+            Matrix element 11 : 1
+            Matrix element 12 : 2
+            Matrix element 21 : 3
+            Matrix element 22 : 4
+            Matrix : 
+                1    2
+                3    4
+            </code></pre>
+  </body>
+</html>

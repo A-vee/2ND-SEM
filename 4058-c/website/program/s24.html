@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>24. Program to find the longest repeating sequence in a string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() {
+            string str;
+            cout &lt;&lt; "Enter a string: ";
+            cin &gt;&gt; str;
+        
+            int n = str.length();
+            string longestRepeatedSeq;
+            int maxLength = 0;
+        
+            for (int i = 0; i &lt; n; i++) {
+                for (int j = i + 1; j &lt; n; j++) {
+                    int len = 0;
+                    while (j + len &lt; n &amp;&amp; str[i + len] == str[j + len]) {
+                        len++;
+                    }
+        
+                    if (len &gt; maxLength) {
+                        maxLength = len;
+                        longestRepeatedSeq = str.substr(i, len);
+                    }
+                }
+            }
+        
+            if (maxLength == 0) {
+                cout &lt;&lt; "No repeating sequence found." &lt;&lt; endl;
+            } else {
+                cout &lt;&lt; "Longest repeating sequence: " &lt;&lt; longestRepeatedSeq &lt;&lt; endl;
+            }
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: abcdabca
+            Longest repeating sequence: abca
+            </code>
+            </pre>
+            
+  </body>
+</html>

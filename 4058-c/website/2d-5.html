@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>5. Program to determine whether two matrices are equal
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;iomanip&gt;
+          using namespace std;
+          int main(){
+              int x, y, m, n, i, j;
+              cout&lt;&lt;"Enter the rows and columns For A : ";
+              cin&gt;&gt;x&gt;&gt;y;
+              cout&lt;&lt;"Enter the rows and columns For B : ";
+              cin&gt;&gt;m&gt;&gt;n;
+              if (x==m && y==n){
+                  int mata[10][10], c=0;
+                  cout&lt;&lt;"Enter the elements of A matrix : "&lt;&lt;endl;
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          cin&gt;&gt;mata[i][j];
+                      }
+                  }
+                  int matb[10][10];
+                  cout&lt;&lt;"Enter the elements of B matrix :"&lt;&lt;endl;
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          cin&gt;&gt;matb[i][j];
+                      }
+                  }
+                  for(i=0;i&lt;x;i++){
+                      for(j=0;j&lt;y;j++){
+                          if (mata[i][j]!=matb[i][j]){
+                              c=1;
+                          }
+                      }
+                  }
+                  if(c==0){
+                      cout&lt;&lt;"Equal Matrices";
+                  }
+                  else{
+                      cout&lt;&lt;"Not Equal Matrices";
+                  }
+              }
+              else{
+                  cout&lt;&lt;"Not Equal Matrices";
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns For A : 2 2
+              Enter the rows and columns For B : 2 2
+              Enter the elements of A matrix : 
+              1 2
+              3 4
+              Enter the elements of B matrix :
+              1 2
+              3 4
+              Equal Matrices
+            </code>
+          </pre>
+  </body>
+</html>

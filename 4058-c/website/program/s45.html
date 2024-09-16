@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>45. Write a C++ method to count all the words in a string.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        
+        using namespace std;
+        
+        int main() 
+        {
+            char str[1000];
+            int count = 0;
+            char prevChar = ' ';
+            
+            cout &lt;&lt; "Enter a string: ";
+            gets(str);
+        
+            for (int i = 0; str[i] != '\0'; ++i) {
+                char ch = str[i];
+        
+                if (ch != ' ' &amp;&amp; ch != '\t' &amp;&amp; ch != '\n' &amp;&amp; ch != '\r') {
+                    if (prevChar == ' ' || prevChar == '\t' || prevChar == '\n' || prevChar == '\r') {
+                        count++;
+                    }
+                }
+        
+                prevChar = ch;
+            }
+        
+            cout &lt;&lt; "Number of words in the string: " &lt;&lt; count &lt;&lt; endl;
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter a string: Hello world
+            Number of words in the string: 2
+            </code>
+            </pre>
+            
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>1. Program to Check Anagram
+    </h1>
+
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int i, j, l;
+            string s1;
+            string s2;
+            cout &lt;&lt; "Enter First String : ";
+            cin &gt;&gt; s1;
+            cout &lt;&lt; "Enter Second String : ";
+            cin &gt;&gt; s2;
+            if (s1.length() == s2.length())
+            {
+                l = s1.length();
+                for (int i = 0; i &lt; l; i++)
+                    for (int j = 0; j &lt; l - i - 1; j++)
+                    {
+                        if (s1[j] &gt; s1[j + 1])
+                            swap(s1[j], s1[j + 1]);
+                        if (s2[j] &gt; s2[j + 1])
+                            swap(s2[j], s2[j + 1]);
+                    }
+                if (s1 == s2)
+                    cout &lt;&lt; "Both string are anagram." &lt;&lt; endl;
+                else
+                    cout &lt;&lt; "Both string are not anagram." &lt;&lt; endl;
+            }
+            else
+                cout &lt;&lt; "Both string are not of equal length" &lt;&lt; endl;
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter First String : hello
+            Enter Second String : world
+            Both strings are not anagrams.
+            </code>
+            </pre>
+            
+            
+  </body>
+</html>

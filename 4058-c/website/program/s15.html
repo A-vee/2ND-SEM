@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>15. Program to divide a string in 'N' equal parts.
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;string&gt;
+        
+        using namespace std;
+        
+        int main() 
+        {
+            string str;
+            int parts;
+        
+            cout &lt;&lt; "Enter string: ";
+            cin &gt;&gt; str;
+        
+            cout &lt;&lt; "Enter the number of parts to divide the string into: ";
+            cin &gt;&gt; parts;
+        
+            int length = str.length();
+            int partSize = length / parts;
+            int extraChars = length % parts;
+            int startPos = 0;
+        
+            cout &lt;&lt; "Divided string into " &lt;&lt; parts &lt;&lt; " parts:" &lt;&lt; endl;
+            for (int i=0; i&lt;parts; ++i) {
+                int currentPartSize = partSize + (extraChars-- &gt; 0 ? 1 : 0);
+                cout &lt;&lt; str.substr(startPos, currentPartSize) &lt;&lt; endl;
+                startPos += currentPartSize;
+            }
+        
+            return 0;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter string: pineapple
+            Enter the number of parts to divide the string into: 3
+            Divided string into 3 parts:
+            pin
+            eap
+            ple
+            </code>
+            </pre>
+            
+  </body>
+</html>

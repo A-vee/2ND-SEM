@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>11. Program to print the number of elements present in an array</h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main() {
+            int arr[20],n,i,c=0;
+            cout&lt;&lt;"Enter number of elements (1-20) : "&lt;&lt;endl;
+            cin&gt;&gt;n;
+            for(i=0;i&lt;n;i++) {
+                cout&lt;&lt;"Enter element "&lt;&lt;i+1&lt;&lt;" : ";
+                cin&gt;&gt;arr[i];
+                c++;
+            }
+            cout&lt;&lt;endl&lt;&lt;"Number of elements in array : "&lt;&lt;c;
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter number of elements (1-20) : 
+        5
+        Enter element 1 : 10
+        Enter element 2 : 20
+        Enter element 3 : 30
+        Enter element 4 : 40
+        Enter element 5 : 50
+        
+        Number of elements in array : 5</code>
+        </pre>
+</body>
+</html>

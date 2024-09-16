@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>28. Program to Insert a string into another string
+    </h1>
+    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int a;
+            string str, i;
+            cout &lt;&lt; "Enter the string : ";
+            getline(cin, str);
+            cout &lt;&lt; "Enter the string which you want to insert : ";
+            getline(cin, i);
+            cout &lt;&lt; "Enter the position where you want to insert : ";
+            cin &gt;&gt; a;
+            str.insert(a - 1, i);
+            cout &lt;&lt; "Resulting String : " &lt;&lt; str &lt;&lt; endl;
+        }
+        </code>
+        </pre>
+        
+        <h1>Output</h1>
+        <pre>
+            <code>
+            Enter the string : Hello World
+            Enter the string which you want to insert : beautiful 
+            Enter the position where you want to insert : 6
+            Resulting String : Hello beautiful World
+            </code>
+            </pre>
+            
+  </body>
+</html>

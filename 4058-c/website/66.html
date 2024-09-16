@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>66. Write a C++ program to create a simple calculator (1. ADDITION, 2. SUBTRACTION, 3. MULTIPLICATION, 4. DIVISION, 5. EXPONENTIAL, 6. PERCENTAGE, 7. EXIT)
+    </h1>
+    <pre><code>
+        #include&lt;iostream&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int x, y, ch;
+            float res;
+            cout &lt;&lt; "Enter first number : ";
+            cin &gt;&gt; x;
+            cout &lt;&lt; "Enter second number : ";
+            cin &gt;&gt; y;
+            cout &lt;&lt; endl &lt;&lt; "Simple Calculator : ";
+            cout &lt;&lt; endl &lt;&lt; "1) ADDITION";
+            cout &lt;&lt; endl &lt;&lt; "2) SUBTRACTION";
+            cout &lt;&lt; endl &lt;&lt; "3) MULTIPLICATION";
+            cout &lt;&lt; endl &lt;&lt; "4) DIVISION";
+            cout &lt;&lt; endl &lt;&lt; "5) EXPONENTIAL";
+            cout &lt;&lt; endl &lt;&lt; "6) PERCENTAGE";
+            cout &lt;&lt; endl &lt;&lt; "7) EXIT";
+            cout &lt;&lt; endl &lt;&lt; "Enter your choice : ";
+            cin &gt;&gt; ch;
+            if (ch == 1)
+            {
+                res = x + y;
+                cout &lt;&lt; endl &lt;&lt; "Addition : " &lt;&lt; res;
+            }
+            else if (ch == 2)
+            {
+                res = x - y;
+                cout &lt;&lt; endl &lt;&lt; "Subtraction : " &lt;&lt; res;
+            }
+            else if (ch == 3)
+            {
+                res = x * y;
+                cout &lt;&lt; endl &lt;&lt; "Multiplication : " &lt;&lt; res;
+            }
+            else if (ch == 4)
+            {
+                res = (float)x / y;
+                cout &lt;&lt; endl &lt;&lt; "Division : " &lt;&lt; res;
+            }
+            else if (ch == 5)
+            {
+                res = x * y;
+                cout &lt;&lt; endl &lt;&lt; "Exponential : " &lt;&lt; res;
+            }
+            else if (ch == 6)
+            {
+                res = (float)(x % y) / 100;
+                cout &lt;&lt; endl &lt;&lt; "Percentage : " &lt;&lt; res;
+            }
+            else if (ch == 7)
+            {
+                cout &lt;&lt; endl &lt;&lt; "Exit";
+                exit(0);
+            }
+            else
+            {
+                cout &lt;&lt; endl &lt;&lt; "Invalid Choice!";
+            }
+        }
+        </code>
+        </pre>
+    <h1>Output</h1>
+    <pre><code>
+        Enter first number : 10
+        Enter second number : 5
+        
+        Simple Calculator : 
+        1) ADDITION
+        2) SUBTRACTION
+        3) MULTIPLICATION
+        4) DIVISION
+        5) EXPONENTIAL
+        6) PERCENTAGE
+        7) EXIT
+        Enter your choice : 3
+        
+        Multiplication : 50
+        </code>
+        </pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>6. Write a C++ program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.
+</h1><pre><code>
+    #include&ltiostream&gt;
+    #include&ltstring&gt;
+    using namespace std;
+    
+    class Employee {
+        string name;
+        string jtitle;
+        long long salary;
+    public:
+        void get() {
+            cout &lt&lt "Enter the name of Employee : ";
+            cin >> name;
+            cout &lt&lt "Enter the job title : ";
+            cin >> jtitle;
+            cout &lt&lt "Enter the monthly salary : ";
+            cin >> salary;
+        }
+    
+        void ansalary() {
+            cout &lt&lt "Annual Salary : " &lt&lt 12 * salary &lt&lt endl;
+        }
+    
+        void updatesalary() {
+            cout &lt&lt "Enter the updated salary of the Employee : ";
+            cin >> salary;
+        }
+    };
+    
+    int main() {
+        Employee e1;
+        e1.get();
+        e1.ansalary();
+        e1.updatesalary();
+        return 0;
+    }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Enter the name of Employee : John
+            Enter the job title : Manager
+            Enter the monthly salary : 5000
+            Enter the updated salary of the Employee : 6000
+            
+            Annual Salary : 60000</code></pre>
+  </body>
+</html>

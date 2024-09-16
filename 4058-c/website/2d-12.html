@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>12. Program to determine whether a given matrix is a sparse matrix</h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          using namespace std;
+          int main(){
+              int x, y, i, j, c=0;
+              cout&lt;&lt;"Enter the rows and columns For Matrix: ";
+              cin&gt;&gt;x&gt;&gt;y;
+              int mat[10][10];
+              cout&lt;&lt;"Enter the elements of matrix : "&lt;&lt;endl;
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      cin&gt;&gt;mat[i][j];
+                  }
+              }
+              for(i=0;i&lt;x;i++){
+                  for(j=0;j&lt;y;j++){
+                      if(mat[i][j]==0){
+                          c++;
+                      }
+                  }
+              }
+              if(c>((x*y)/2)){
+                  cout&lt;&lt;"Sparse Matrix ";
+              }
+              else{
+                  cout&lt;&lt;"Not a Sparse Matrix ";
+              }
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns For Matrix: 3 3
+              Enter the elements of matrix : 
+              1 0 0
+              0 0 0
+              0 0 1
+              Sparse Matrix 
+            </code>
+          </pre>
+  </body>
+</html>

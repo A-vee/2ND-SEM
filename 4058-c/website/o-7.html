@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>7. Write a C++ program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.
+    </h1>
+    <pre><code>
+        #include&ltiostream&gt;
+        #include&ltstring&gt;
+        using namespace std;
+        
+        class Account {
+            string user;
+            string Acno;
+            int pin;
+            long long money;
+        
+        public:
+            Account() {
+                money = 0;
+            }
+        
+            void get() {
+                cout &lt&lt "Enter the Account holder name : ";
+                cin >> user;
+                cout &lt&lt "Enter the Account No. : ";
+                cin >> Acno;
+                cout &lt&lt "Enter the 4 digit pin :  ";
+                cin >> pin;
+            }
+        
+            string pruser() {
+                return user;
+            }
+        
+            string prAcno() {
+                return Acno;
+            }
+        
+            int prpin() {
+                return pin;
+            }
+        
+            long long prmoney() {
+                return money;
+            }
+        
+            void setmoney(long long n) {
+                money = n;
+            }
+        };
+        
+        int i = 0;
+        
+        class Bank {
+            Account a[50];
+        
+        public:
+            void add() {
+                a[i].get();
+                i++;
+            }
+        
+            int find(string acc, int p) {
+                int m = 0;
+                for (m; m < i; m++) {
+                    if (acc == a[m].prAcno() && p == a[m].prpin()) {
+                        return m;
+                    }
+                }
+                return -1;
+            }
+        
+            void mw() {
+                string ac;
+                int pin;
+                getinf(ac, pin);
+                int c = find(ac, pin);
+                if (c >= 0) {
+                    cout &lt&lt "Enter the amount of money to withdraw : ";
+                    int n;
+                    cin >> n;
+                    if ((a[c].prmoney()) >= n) {
+                        a[c].setmoney(a[c].prmoney() - n);
+                        cout &lt&lt "Money after withdrawl : " &lt&lt a[c].prmoney() &lt&lt endl;
+                    } else {
+                        cout &lt&lt "Withdrwal money is not acceptable. " &lt&lt endl;
+                    }
+                } else {
+                    cout &lt&lt "No valid account found . " &lt&lt endl;
+                }
+            }
+        
+            void md() {
+                string ac;
+                int pin;
+                getinf(ac, pin);
+                int c = find(ac, pin);
+                if (c >= 0) {
+                    cout &lt&lt "Enter the amount of money to deposit : ";
+                    int n;
+                    cin >> n;
+                    a[c].setmoney(a[c].prmoney() + n);
+                    cout &lt&lt "Money after deposit : " &lt&lt a[c].prmoney() &lt&lt endl;
+                } else {
+                    cout &lt&lt "No valid account found . " &lt&lt endl;
+                }
+            }
+        
+            void getinf(string &c, int &p) {
+                cout &lt&lt "Account no. : ";
+                cin >> c;
+                cout &lt&lt "Enter Pin : ";
+                cin >> p;
+            }
+        
+            void remove() {
+                string ac;
+                int pin;
+                getinf(ac, pin);
+                int c = find(ac, pin);
+                if (c >= 0) {
+                    cout &lt&lt "Account with holder name " &lt&lt a[c].pruser() &lt&lt " is removed from the Bank ." &lt&lt endl;
+                    for (int j = c; j < i + 1; j++) {
+                        a[j] = a[j + 1];
+                    }
+                    i--;
+                } else {
+                    cout &lt&lt "No valid account found . " &lt&lt endl;
+                }
+            }
+        };
+        
+        int main() {
+            Bank b1;
+            cout &lt&lt "Adding account : " &lt&lt endl;
+            b1.add();
+            cout &lt&lt "Money deposit : " &lt&lt endl;
+            b1.md();
+            cout &lt&lt "Money withdrawl : " &lt&lt endl;
+            b1.mw();
+            cout &lt&lt "Adding account : " &lt&lt endl;
+            b1.add();
+            cout &lt&lt "Removing account : " &lt&lt endl;
+            b1.remove();
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+        <pre><code>
+            Adding account : 
+            Enter the Account holder name : John
+            Enter the Account No. : 123456789
+            Enter the 4 digit pin :  1234
+            Money deposit : 
+            Account no. : 123456789
+            Enter Pin : 1234
+            Enter the amount of money to deposit : 5000
+            Money after deposit : 5000
+            Money withdrawl : 
+            Account no. : 123456789
+            Enter Pin : 1234
+            Enter the amount of money to withdraw : 2000
+            Money after withdrawl : 3000
+            Adding account : 
+            Enter the Account holder name : Jane
+            Enter the Account No. : 987654321
+            Enter the 4 digit pin :  4321
+            Removing account : 
+            Account no. : 987654321
+            Enter Pin : 4321
+            Account with holder name Jane is removed from the Bank .</code></pre>
+            
+  </body>
+</html>

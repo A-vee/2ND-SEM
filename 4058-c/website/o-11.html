@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>11. Write a C++ program to create a class called "Library" with a collection of books and methods to add and remove books.
+    </h1> <pre><code>
+        #include &ltiostream&gt
+        #include &ltvector&gt
+        #include &ltstring&gt
+        
+        class Library {
+        private:
+            std::vector&ltstd::string&gt books;
+        
+        public:
+            void addBook(const std::string&amp book) {
+                books.push_back(book);
+            }
+        
+            void removeBook(const std::string&amp book) {
+                for (auto it = books.begin(); it != books.end(); ++it) {
+                    if (*it == book) {
+                        books.erase(it);
+                        break;
+                    }
+                }
+            }
+        
+            void printBooks() const {
+                std::cout &lt&lt "Books in library: ";
+                for (const auto&amp book : books) {
+                    std::cout &lt&lt book &lt&lt ", ";
+                }
+                std::cout &lt&lt std::endl;
+            }
+        };
+        
+        int main() {
+            Library library;
+        
+            library.addBook("Book1");
+            library.addBook("Book2");
+            library.addBook("Book3");
+        
+            library.printBooks();
+        
+            library.removeBook("Book2");
+        
+            library.printBooks();
+        
+            return 0;
+        }</code></pre>
+        <h1>Output</h1>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>4. Program to subtract the two matrices
+    </h1>
+    <pre>
+        <code>
+          #include&lt;iostream&gt;
+          #include&lt;iomanip&gt;
+          using namespace std;
+      
+          int main() {
+              int x, y, i, j;
+              cout &lt;&lt; "Enter the rows and columns for the matrices: ";
+              cin &gt;&gt; x &gt;&gt; y;
+      
+              int matrixA[10][10], matrixB[10][10], result[10][10];
+      
+              cout &lt;&lt; "Enter elements of Matrix A: " &lt;&lt; endl;
+              for (i = 0; i &lt; x; i++) {
+                  for (j = 0; j &lt; y; j++) {
+                      cin &gt;&gt; matrixA[i][j];
+                  }
+              }
+      
+              cout &lt;&lt; "Enter elements of Matrix B: " &lt;&lt; endl;
+              for (i = 0; i &lt; x; i++) {
+                  for (j = 0; j &lt; y; j++) {
+                      cin &gt;&gt; matrixB[i][j];
+                  }
+              }
+      
+              // Subtract matrices
+              for (i = 0; i &lt; x; i++) {
+                  for (j = 0; j &lt; y; j++) {
+                      result[i][j] = matrixA[i][j] - matrixB[i][j];
+                  }
+              }
+      
+              cout &lt;&lt; "Resultant Matrix: " &lt;&lt; endl;
+              for (i = 0; i &lt; x; i++) {
+                  for (j = 0; j &lt; y; j++) {
+                      cout &lt;&lt; setw(5) &lt;&lt; result[i][j];
+                  }
+                  cout &lt;&lt; endl;
+              }
+      
+              return 0;
+          }
+        </code>
+      </pre>
+        <h1>Output</h1>
+        <pre>
+            <code>
+              Enter the rows and columns for the matrices: 2 2
+              Enter elements of Matrix A: 
+              5 6
+              7 8
+              Enter elements of Matrix B: 
+              1 2
+              3 4
+              Resultant Matrix: 
+                  4    4
+                  4    4
+            </code>
+          </pre>
+  </body>
+</html>
